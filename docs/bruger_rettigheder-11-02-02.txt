@@ -1,0 +1,7 @@
+Forskellige rettigheder for hver bruger:
+
+En elev skal ikke kunne booke 40 rum på samme dag.
+
+1. Hiraki. En type t af bruger kan booke rum, selvom de er booket af brugere med lavere niveau.
+
+2. En type bruger kan kun booke x antal rum på en dag
