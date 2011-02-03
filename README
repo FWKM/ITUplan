@@ -1,10 +1,29 @@
 TODO:
 
-Holde møde med FM
-	- hvordan bliver rum tildelt underviserne?
+Create problem definition
+	- First iteration done
 
-Lave DB design
+Arrange a meeting with FM
+	- How does FM assign and manage room for lectures and events?
 
-Lave mockups
+Create the DB design
+	- First iteration done
+		( Not done - quite simple atm )
+
+Create mockups for the visualization
 
 Lift test app
+	- comet test; user interactions and responses
+	- Threading; More users doing the same thing
+	- Server-client interaction?
+
+
+
+
+? Random points of interest ?
+	- !! The visual representation
+	- !! User rights/levels
+	- !! Concurrent room selections; avoid dead ends.
+	- Dataloss mitigation
+	- Search filters
+	- Room specifications (room attributes)
