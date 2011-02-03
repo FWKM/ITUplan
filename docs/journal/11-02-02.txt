@@ -1,0 +1,13 @@
+- Started first iteration of database-design
+- Discussed user roles, and restrictions (see document)
+- Scala, sbt and lift setups were done
+- github repo initialized, remote and locally
+
+
+next: 
+
+- Problem definition
+- Project base submission
+- Next (main) database-design iteration
+- Create (early) mockups / concepts of visualization
+- Examine the lift framework
