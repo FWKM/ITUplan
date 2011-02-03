@@ -1,0 +1,10 @@
+- Created first iteration of problem definition
+- Discussed concurrent room selection, challenges and solutions
+
+next: 
+
+- Problem definition (2. iteration - final candidate)
+- Project base submission
+- Next (main) database-design iteration
+- Create (early) mockups / concepts of visualization
+- Examine the lift framework
