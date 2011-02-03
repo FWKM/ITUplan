@@ -1,4 +1,0 @@
-In this project, we want to create a local planning system, which supports the user in the manual task of booking one or more rooms at one or more time-spans. The main problem, is the difficulty in presenting the data for the user, without knowing exactly what problem the user wants to solve, as there is infinitely many ways to book rooms.
-As a concrete example, we'll develop the system for the IT-University. 
-
-We will analyze the needs and requirements for such a system, and create a graphical userinterface, which presents the possible solutions for the user. We'll implement the system on a webserver, to make it accessible through a browser. We will use the multi-paradigm, and statically typed programming language scala to implement the system, and make use of a web-framework for scala called lift.
