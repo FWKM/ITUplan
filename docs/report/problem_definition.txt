@@ -25,7 +25,7 @@ During the project, we will:
 
 In this project, we want to create a locale planning system, which supports the user in the manual task of booking one or more rooms at one or more time-spans. The main problem, is the difficulty in presenting the data for the user, without knowing exactly what problem the user wants to solve, as there is infinitely many ways to book rooms.
 
-The system should be accessible through a browser, thus use a central threaded server to handle multiple requests. The server will be implemented in Scala, and ported to a webserver using the Lift-framework. The client side will be created with the Lift library for Scala, which natively supports javascript (to limit the number of languages used).
+The system should be accessible through a browser, thus use a central threaded server to handle multiple requests. The server will be implemented in the multi-paradigm and statically typed language Scala, and ported to a webserver using the Lift-framework. The client side will be created with the Lift library for Scala, which natively supports javascript (to limit the number of languages used).
 
 ( 
 We will use usability-studies, including domain analysis and usability-tests, to analyze requirements and determine the optimal graphical solution for such a system.
@@ -41,20 +41,9 @@ The system will be created specifically for ITU, which excludes the following fe
 - Creation, deletion and editing of rooms. The schema of rooms will be static. 
 - ( A admin-panel for super-users, allowing them to edit booking made by others ).
 - The support of multiple buildings.
+- Support of multiple browsers - we develop the application for webkit, and does not test the gui of other browsers than Google Chrome.
 - ...
 
 )
-
-During the project, we will:
-
-- Develop and create a room management system, with a user friendly graphical user interface which presents the possible solutions for the user, and the underlying datastructures.
-
-- Analyze the needs and requirements for such a system. Conduct a (rather limited, but structured) domain analysis, to determine the current practice of room allocation and management.
-
-- Carry out several usability tests on various mockups and prototypes of the GUI.
-
-- Implement the system on a webserver, to make it accessible through a browser.
-
-- Apply the multi-paradigm, and statically typed programming language scala to implement the system, and make use of a web-framework for scala called lift. 
 
 - Discuss alternative tools for implementation, and why we have chosen as we did.
