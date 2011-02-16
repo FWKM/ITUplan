@@ -1,0 +1,67 @@
+Usecases and overviews
+---------------------------
+With 4 different parameters for searching and browsing rooms, a couple of questions arise
+1. How can we display the results in the most efficient and intuitive way?
+2. Which parts of the search/filter should determine the view?
+
+Spans of time (weeks/months/semester)
+---------------------------
+When searching for available rooms over a timespan, how should the default be? and how (if) can the user change this?
+ - Default is 1 semester, should be able to narrow it, not enlarge it.
+When booking a room over a timespan, how do we present the options, and what if there is no immediately ideal options? Who to remove/change?
+ - If option without moving/killing is found, only present that.
+ - If no such is found, display the ones ranking the lowest on the food chain (Lowest number of kills needed and only from users with a lower level)
+If we do choose to kill a booking, how do we make sure it's not always Aaron A. Aaronson (who happen to be the first to sign up) or Zoey Zo Zolate (who always books last minute) that gets killed.
+ - Things to consider for this: Time of booking, number of previous kills, user-level, number of total bookings (recurring user) etc.
+ 
+
+ 
+ 
+Cases of relevance
+---------------------------
+
+##############################
+# Legend                     #
+##############################
+# W = Week                   #
+# D = Day (in week)          #
+# T = Time (of day)          #
+# R = Room                   #
+# Main case = happens often  #
+# Edge case = happens rarely #
+##############################
+
+---------------------------
+With one parameter locked
+---------------------------
+Main cases:
+W - "I need a room sometime next week"
+
+Edge cases:
+D - "I need a room on a wednesday sometime"
+T - "I need a room at 12 o'clock sometime"
+R - "I need Aud. 4 at some point"
+
+---------------------------
+With two parameters locked
+---------------------------
+Main cases:
+WD - "I need a room at thursday next week"
+WT - "I need a room at 9 o'clock next week"
+WR - "I need Aud. 1 in 2 weeks"
+DT - "I need a room mondays at 8 o'clock" (W free, so meaning a span of weeks needed here)
+
+Edge cases:
+TR - "When is Aud. 4 available at 9 o'clock?"
+
+---------------------------
+With three parameters locked
+---------------------------
+Main cases:
+WDT - "I need a room at 12 o'clock on friday next week" (Expecting this to be the most used search of them all)
+WDR - "I need room 4a14 this friday"
+
+Edge cases:
+WTR - "I need Aud. 3 at 9 o'clock next week sometime"
+DTR - "I need room 2a09 on thurdays 11 o'clock" (Probably to be used along with a semi-locked W (span))
+
