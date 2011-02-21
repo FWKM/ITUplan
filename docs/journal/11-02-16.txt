@@ -1,0 +1,3 @@
+Talked about the 4 parameters needed to make /find bookings
+Discussed use cases
+Discussed user levels & murder of bookings

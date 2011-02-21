@@ -1,0 +1,16 @@
+Prioritized list of things to do
+---------------------------------
+Mock-ups
+Usability-tests
+Decide on “final” GUI
+Implement said GUI
+Set up DB
+Algorithm design for DB usage
+Create test Lift site that can Get+Set from the DB (remotely)
+Expand test site to update automatically (using comet/ajax)
+Create user session logic
+Create basic admin panels
+Expand test site to work with concurrent users
+Rebuild site to next iteration
+Repeat until done!
+
