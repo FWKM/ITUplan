@@ -1,0 +1,42 @@
+Preface/background
+	What, why and briefly how
+	Domain - how are things done today
+	Scope
+	Tasks to support
+
+Analysis
+	How to implement it? Options, for and against.
+	Choice of platform (language, web ... )
+
+
+The user interface
+	Challenges
+	Mockups
+	Formal task-list
+	Søren Lauesen stuff ...
+	Usability, and testing
+	Proposed design
+
+
+
+
+Implementation
+	User management
+		User roles
+	Datastructures 
+		Database
+			Model
+		Algorithms
+			...
+		...
+	Server & Client
+	Lift-based user interface
+	Graphical design (?)	
+
+
+Conclusion
+	Reflection
+	Perspective
+	Possible improvements
+	Expansions
+	Conclusion!

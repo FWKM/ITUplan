@@ -1,0 +1,13 @@
+10. marts: 1 omgang mockups færdige
+11. marts - 18. marts: Bird skriver på rapport under skiferie, fawn koder stuff
+24. marts: første usability test færdig, 2. revision af muckups færdig, 2. usability test (helst udført).
+15. april: backend done.
+1. maj: frontend done. Skal der søges udsættelse??????
+2.maj: Usability test af prototype
+25. maj: Aflevering
+25.maj - 1.juli: kode-buffer.
+
+
+
+1. juli - kode stop, start på rapport
+1. august - aflevering
