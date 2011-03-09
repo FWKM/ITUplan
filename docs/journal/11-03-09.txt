@@ -1,0 +1,6 @@
+Been to scala and lift conference.
+Done interview with FM.
+Gathered ITU blueprints.
+Finalized first mockup on whiteboard.
+Finalized first usability test on paper, plan when to do the actual test.
+Made toc and plan for rest of project.
