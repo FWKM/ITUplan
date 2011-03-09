@@ -1,0 +1,50 @@
+
+General notes:
+The by far most used function will be to book a room now. Teachers will book rooms for a whole semester, probably in the beginning of each semester. To make this easy, it might be a good idea to have a "plan semester" button, which makes the advanced features readily available. This should probably be a separate part of the design anyway, as student should not be allowed to book rooms for continuous weeks.
+
+Mockup1 (simple single day booking)
+---------------------------------
+Description: 		"Book a room now" view. This will be the by far most used function, and should be simple. It should contain a way to cycle through days, and an overview of the availability of rooms.
+
+Actual design:		The left pane shows a overview of all rooms, divided into floors. The user can click on each room, to see some basic info about availability the current day and book it, using "from" and "to" drop-down menus. If the user wants to book the room another day, there is a "another day?" button, which takes them to a calendar-like overview of the availability of that particular room.
+
+The right pane contains a calendar at the top, which is used to cycle through days, changing the left pane to reflect the availability of the day selected. 
+At the bottom, there is two buttons:
+
+
+(this mockup)----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- A "find me a room" button, which finds any room available for the current day. When clicked, the lower right pane is overlayed with a box, containing info and booking-functionality. (like when you click on a | specific room in the left pane overview).
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+(not part of this mockup)----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- An "advanced"-button, which is used to meet more specific needs (like "find me a specific room on date x)
+Description in mockup2.
+
+- A "plan semester" / "continuous booking" button, only shown if the user logged in is a teacher / a user with rights to book rooms for continuous weeks. 
+Description in mockup3.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+How to test:
+- "cancel" or "back" ? : "what do you think this button does?"
+
+- simple (no special case)	 				"Book a room today"
+- simple (special case: room not available current day)		"Book room x for use as soon as possible"
+
+...
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Iterations:
+Mockup1: Changed "speech-bubble" layout to a box, overlaying the find buttons, to make sure the ITU overview is viewable always.
+Because: This avoids speech-bubbles overlaying other rooms.
