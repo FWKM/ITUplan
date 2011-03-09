@@ -1,0 +1,69 @@
+\documentclass[12pt,a4paper]{report}
+
+%Preamble
+\newcommand{\todo}[1]{\color{red}TODO:\color{black}\Large \textbf{#1} \normalsize}
+
+%Change the header of Abstrect to Executive summary
+\AtBeginDocument{%
+	\addto\captionsenglish{%
+  \renewcommand{\abstractname}%
+    {Executive Summary}%
+	}}
+
+%Usepackages - should always be before any text.
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amstext,amsthm,import}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{lscape}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{slashbox}
+
+\begin{document}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%Frontpage
+
+\title{\Huge{\textsf{\textbf{Browser based locale planning system}}}}
+\author{
+		\hline \\
+		\begin{tabular}{ l l }
+		Project: & Bachelor project \\
+		University: & ITU 2011 \\
+		Advisor: & Peter Sestoft\\
+		\end{tabular}\\
+		\mbox{} \\
+		\hline \\
+		\mbox{}\\
+		\begin{tabular} { l l l }
+				Kristian Klarskov Marquardsen & \texttt{kkma@itu.dk} &220387-1611\\
+				Frederik A. Wordenskjold Noerregaard & \texttt{fawn@itu.dk} & 140987-1727\\
+		\end{tabular}\\
+		\mbox{}}
+\date{}
+\maketitle
+
+\tableofcontents
+
+%Chapter 1
+%\import{./Chapters/Chapter1/}{chapter1}
+%Chapter 2
+%\import{./Chapters/Chapter2/}{chapter2}
+%Chapter 3
+%\import{./Chapters/Chapter3/}{chapter3}
+%Chapter 4
+%\import{./Chapters/Chapter4/}{chapter4}
+%Chapter 5
+%\import{./Chapters/Chapter5/}{chapter5}
+%Chapter 6
+%\import{./Chapters/Chapter6/}{chapter6}
+%Appendices:
+\appendix
+
+\end{document}
