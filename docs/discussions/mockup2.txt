@@ -1,0 +1,79 @@
+######################
+#   General notes:   #
+######################
+
+For this part of the test, the advanced search function, and thereby the ability to find a room based on a set of parameters (Week of the year, day of the week, time of day and specific room). The challenge lies in the presentation of results to the users.
+
+##################################################
+#  Mockup2 (Advanced search, recurring booking)  #
+##################################################
+
+-----------------
+Description
+-----------------
+We need to figure out whether a single access point from the main page can be enough to guide all the users needing it in the right direction, or if we need to refine the thought. Additionally, we need to find out the filtering prcess itself is self-explanatory enough, or if the users will dispair.
+
+Mainly, the presentation of results should be intuitive, easy to understand and highly flexible based on the parameters set by the search.
+
+
+Actual design (suggestion 1)
+----------------------
+The left pane which shows the overview of rooms will be overlayed by the advanced search filters. See 'mockup2_sug1_rough.png' for an initial suggestion.
+
+By filling in the left pane with relevant info and clicking 'ok/search' the presentation screen will be displayed in place of the filters.
+
+The right pane will still contain the calendar, and the area below could keep track of what you are currently searching for. (eg. every time you fill in a filter, the selection will be transferred to here, giving a brief and concise overview at all times.
+
+Actual design (suggestion 2)
+----------------------
+In this version, the left pane remains an overview, to assist in the room selection, and showw the results.
+
+The right pane area below the calendar will be switched to contain all the search filters.
+
+
+
+------------------
+What's there?
+------------------
+- A "find me a room" button, which finds any room available for the current day. When clicked, the lower right pane is overlayed with a box, containing info and booking-functionality. (like when you click on a | specific room in the left pane overview).
+
+- The "advanced search" button, bring up the search filters and after filling them out, presenting the results.
+
+- The ability to book recurring rooms.
+
+-----------------
+What's not?
+-----------------
+
+- A "plan semester" button, only shown if the user logged in is a teacher
+Description in mockup3.
+
+#######################
+#    How to test:     #
+#######################
+
+----------------
+Tasks to perform
+----------------
+- simple			 				"Book a room today"
+- simple							"Book a room tomorrow"
+- special case: room not available current day)			"Book room x for use as soon as possible"
+- ...
+
+
+----------------
+Questions to ask
+----------------
+- "cancel" or "back" ? : "what do you think this button does?"
+- ...
+
+
+
+
+
+#################################
+#     Changelog for mockups     #
+#################################
+
+Mockup1: Changed "speech-bubble" layout to a box, overlaying the find buttons, to make sure the ITU overview is viewable always.
+Because: This avoids speech-bubbles overlaying other rooms.
