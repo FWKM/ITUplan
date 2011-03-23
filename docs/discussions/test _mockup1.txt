@@ -1,0 +1,47 @@
+Usability test 1 - test af mockup1
+
+----------------
+Tasks to perform
+----------------
+1 - simple	    					"Book a room today"
+2 - simple	   					"Book a room tomorrow"
+3 - special case: room not available current day) 	"Book room x for use as soon as possible"
+- ...
+
+
+----------------
+Questions to ask
+----------------
+- "cancel" or "back" ? : "what do you think this button does?"
+- Calendar - is it obvious?
+
+----------------
+Lead-in
+----------------
+1.
+You and your group have met, and need to find a room to conduct group-work.
+
+2.
+Your group has finished work today, and decided to reconvene tomorrow. You have been assigned to arrange for a place to work tomorrow.
+
+3.
+Your group will be having it's exam in auditorium 3, and you wish to prepare for it in the same setting as the actual exam.
+
+
+
+
+
+
+
+
+
+Navn
+Alder
+Linie
+Semester
+
+
+
+
+
+
