@@ -42,6 +42,57 @@ Semester
 
 
 
+11 - 11.20:	Jakob 27 DMD 2. semester
 
 
 
+1. Find a room
+Trykker på "Find me a Room" - siger "trykker vel her"
+Vælger tid fra og til.
+
+
+2. Rum i morgen
+Trykker på find me a specific room. Finder hurtigt ud af at han nok skulle have valgt vha. kalenderen.
+
+
+3. Eksamen i auditorie3 en anden dag.
+Trykker på auditorie3 på kortet. Trykker på another day. 
+
+
+4. Find rum næste fredag.
+Find me a specific room. Vælger "projektor", og er nice. Spørger om man skal vælge tid her.
+
+5. Find et lokale til mere end 50 mennesker på en onsdag.
+Find me a room, cancel, find me a specific room. Task failure. Går tilbage til kortet. Trykke på et af auditorierne. Siger at han nok i stedet ville trykke på kalenderen. 
+
+
+6. Komsammen for førsteårsstuderende.
+Trykker på aud1 på kortet. Bruger kalenderen til at vælge datoer, for at se ledigheden.
+
+
+
+
+Jon, 23, SWU 6. semester
+
+1.
+Find me a room -> er nice, men klam.
+
+
+2.
+Bruger kalendervælgeren til at finde datoen -> find me a room. Nice. Er klam igen.
+
+
+3.
+Vælger dato gennem kalenderen -> find me a specific room -> Nice.
+
+
+4. 
+Som 3. 
+
+
+5.
+Find me a room. Cancel. Trykker på w på kalenderen. Task failure -> specific room. Vælger "auditorie" og ikke capacity. Nice.
+
+
+6.
+Trykker på aud1 på kortet. Trykker på datoen, trykker på start-tid og slut-tid. Trykker på book.

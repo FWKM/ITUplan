@@ -1,0 +1,8 @@
+Ændringer efter test1
+
+
+- Tilføje whiteboard checkbox til advanced search.
+- Man skal kunne ændre datoen under advanced search, og ikke ugenummeret.
+- Når man trykker på et rum på kortet, skal availability-grid komme frem.
+- Knapperne "find me a room" og "find me a specific room" skal omdøbes, så de er mere specifikke. (I test1.5 brugte folk "find me a room" som panik-knap, når de ikke vidste hvad de skulle gøre.
+- Den gamle booking-oversigt droppes helt, til fordel for gitteret.

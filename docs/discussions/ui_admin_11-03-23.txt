@@ -1,0 +1,15 @@
+Advanced søg + resultat
+
+Rum-ledighedsgitter
+
+
+
+
+
+Resultat: "ren tekst søgestreng" nederst i højre hjørne.
+
+Rum-ledighedsgitter: Koordinatsystem, tid y dato x.
+
+
+
+Administrator skal godkende bookings - kan ændre alt i en booking, inden godkendelse. Hvis ændring eller afvisning, SKAL der skrives en "hvorfor" tekst til bookeren, der mindst skal være på z tegn.
