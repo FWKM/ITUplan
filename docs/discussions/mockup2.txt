@@ -55,17 +55,23 @@ Description in mockup3.
 ----------------
 Tasks to perform
 ----------------
-- simple			 				"Book a room today"
-- simple							"Book a room tomorrow"
-- special case: room not available current day)			"Book room x for use as soon as possible"
+1 - simple			 				"Book a room with a projector for friday next week"
+2 - simple							"Book an auditorium one of the coming wednesdays"
+3 - simple							"Check availability for room X"
 - ...
 
 
 ----------------
-Questions to ask
+Lead ins
 ----------------
-- "cancel" or "back" ? : "what do you think this button does?"
-- ...
+1.
+Your group needs to practice powerpoints next friday.
+
+2.
+You have been contacted by a person of interest for your studies who would like to guest lecture. You are expecting a turnup of more than 50 people. Additionally, the POI is only available on wednesdays
+
+3.
+You want to host a gathering for all 1st year students and need Auditorium 1. Date have not been decided yet.
 
 
 

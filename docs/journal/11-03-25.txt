@@ -1,0 +1,14 @@
+-----------------
+Milestone entry
+-----------------
+Today we conducted usability tests with a couple of students, and discovered some flaws in our initial UI design. This led to a remake, addressing all the problems encountered by our test subjects, and in general a more clean, intuitive UI.
+
+We've moved around some functionality, removed a few screens so the pleasentries of familiarity will be in oour advantage when booking rooms - even when conducting more advanced searches.
+
+Additionally, a plan has been made for the coming 3 weeks as follows:
+From today and one week forward: Frederik will begin implementation of the redesigned UI, Kristian will design the course-planning part of the system and prepare that for testing
+
+The week after: Implementation of the (hopefully improved v2 ) course-planning
+
+The week after that: Usability and functionality tests of the "final" system.
+
