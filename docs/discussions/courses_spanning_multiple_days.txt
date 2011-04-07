@@ -1,0 +1,5 @@
+How to handle courses spanning multiple days in the UI?
+-Various solutions discussed, ranging from making the default interface supporting it with a multitude of dropdowns and lists, to one huge dropdown containing all the possible combinations
+
+Decision taken:
+Add a button to the default UI that switches the mode to allow for split courses. Eg. not shown on the default, but supported nonetheless.

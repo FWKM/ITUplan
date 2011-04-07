@@ -1,0 +1,189 @@
+###################################
+#   Mockup 3: Semester planning   #
+###################################
+
+---------------------------------
+Purpose of test
+---------------------------------
+The purpose of this test is to find out whether our UI fills the following criteria:
+
+1. Contains enough functionality to support the full task of assigning rooms to courses for a semester
+2. Is designed so that the target-user will be able to fulfill the task with little or no instructions
+
+
+More specifically, the points we need to address is:
+
+3. Is our attempt at 'clash resolution' satisfactory?
+4. Is the 'track management' efficient enough for the problem at hand?
+5. Will the target-user protest against the manual entering of courses etc, even though there is possibilty for re-use over the course of years?
+
+
+---------------------------------
+Tasks to perform
+---------------------------------
+The following tasks are what we need the user to perform:
+
+---------- Initiation tasks ----------
+I1. Add a course
+I2. Add a course that cannot be moved by auto-assignment
+I3. Remove the restriction from the course added by T2/T1
+I4. De-active a course that is already created
+I5. Create a new track
+I6. Edit a track (add a course and remove another one eg.)
+---------- Main tasks -----------
+M1. Plan a semester (no clash happens)
+M2. Plan a semester (clash happens)
+ M2.1. Resolve the clash automatically
+ M2.2. Resolve the clash manually
+---------- Rare task -----------
+R1. Clear the room assignment to make next semester ready
+
+
+
+---------------------------------
+Test course
+---------------------------------
+I1
+I2
+I4
+I5
+I6
+M2
+M2.1
+M2.2
+I3
+M1
+R1
+
+
+---------------------------------
+Lead-ins
+---------------------------------
+#####################
+# I1 - Add a course #
+#####################
+We already added a few courses to the system, but forgot one. Please add BTES
+[ TEST ]|[ BTES ]
+[ Week 30 ]|[ Week 49 ]
+[ 4 hours ]|[  ]
+[ 42 ]|[  ]
+[  ]|[  ]
+
+
+-> 'Add new course' tab
+-> fill in
+-> 'Save'
+
+
+#############################################################
+# I2 - Add a course that cannot be moved by auto-assignment #
+#############################################################
+Another course has been forgot, this one needs to be in AUD4 for some wierd reason
+[ AUD ]|[ BAUD ]
+[ Week 30 ]|[ Week 49 ]
+[ 4 hours ]|[  ]
+[ 42 ]|[  ]
+[ AUD4 ]|[ X ]
+
+-> 'Add new course' tab
+-> fill in
+-> 'Save'
+
+###################################################
+# I4 - De-active a course that is already created #
+###################################################
+Oops, turns out that BTES didn't get enough students this semester and have been put on hold this semester. Lets not delete it, but make sure it doesn't get a room.
+
+-> 'Edit course' tab
+-> Click BTES
+-> Click Edit
+-> Check 'Inactive box'
+-> 'Save'
+
+###########################
+# I5 - Create a new track #
+###########################
+BPRD and BSDB are on the same track, and should therefore not be planned at the same time. Lets add the track.
+
+-> 'Manage tracks' tab
+-> fill in name
+-> Select courses using the arrows
+-> 'Save'
+
+
+###############################################################
+# I6 - Edit a track (add a course and remove another one eg.) #
+###############################################################
+DMD has taken a new direction and now needs more programming. Thus, BPRD have been added to the first semester. Fix it!
+
+-> 'Manage tracks' tab
+-> Click 'DMD - sem 1' in the list
+-> Click 'Edit
+-> Select courses using the arrows
+-> 'Save'
+
+########################################
+# M2 - Plan a semester (clash happens) #
+########################################
+Alright, we're all set. Lets assign the rooms!
+
+-> Any tab
+-> Click 'Auto-assign'
+-> BAM CLASH
+
+Depending on initial reaction, go to either m2.1 or m2.2
+
+
+##########################################
+# M2.1 - Resolve the clash automatically #
+##########################################
+Fix it!
+
+-> Accept one of the solutions
+
+
+#####################################
+# M2.2 - Resolve the clash manually #
+#####################################
+Fix it!
+
+-> Switch tab to edit course
+-> Edit shit until it works
+-> try again
+
+
+##############################################################
+# I3 - Remove the restriction from the course added by I2/I1 #
+##############################################################
+The course BAUD have lost it's privileges and can no longer claim AUD4
+
+-> 'Edit course' tab
+-> Click BAUD
+-> Click Edit
+-> Check 'required off' / Clear room box
+-> 'Save'
+
+
+
+###########################################
+# M1 - Plan a semester (no clash happens) #
+###########################################
+We've fixed all the stuff that could clash, lets do it!
+
+-> 'Auto-assign'
+-> ???
+-> Profit
+
+
+##############################################################
+# R1 - Clear the room assignment to make next semester ready #
+##############################################################
+This semester was a blast, lets try again.
+
+-> 'Room assignment' tab
+-> Click the danger button
+-> accept the insane warning (possible text input)
+
+
+
+
