@@ -187,3 +187,92 @@ This semester was a blast, lets try again.
 
 
 
+
+
+
+
+
+
+
+##############################################################
+# RESULTS OF USABILITY TEST				     #
+##############################################################
+
+
+USER	Malene de Bruin
+	Studieadministration
+
+	Malene is head of semester planning. At the start of each semester, she plans and coordinates the rooms for the various courses, using tabulex and a homemade spreadsheet.
+	She is thus the exact person that will be using the semester planning part of our application.
+
+
+---------- Initiation tasks ----------
+I1. Add a course
+Skriver kursus, trykker på start week. Vælger 30. Er i tvivl om antal uger (?). Vælger duration. "NÅÅÅÅH, går altid ned af og ikke hen af.
+"Starttidspunkt, ville jeg umiddelbart lade stå blankt. Ville det være tydeligt at systemet vælger det for mig. Tror jeg ville vælge klokken 8, uden at vide hvorfor!".
+"Weekdays, not selected. Der er ikke noget room-request. Ville prøve at klikke på room required, da der er en checkbox". Forstår meningen.
+
+
+I2. Add a course that cannot be moved by auto-assignment
+Skriver navnet og kode, vælger det samme som før. "Jeg er meget i tvivl om optional, og hvad der sker når jeg ikke vælger det". Vælger required og gemmer.
+
+
+I3. Remove the restriction from the course added by T2/T1
+Trykker på edit course. Vælger kurset fra listen, trykker edit. Fjerner required -> save.
+
+
+I4. De-active a course that is already created
+Trykker på edit courses. "Ahhh, jeg skal fremkalde BTES". Vælger i listen, og trykker edit. Vælger inactive, save.
+
+
+I5. Create a new track
+Klikker på manage track. Flytter dem til added, og skriver et navn. Trykker på save.
+
+
+I6. Edit a track (add a course and remove another one eg.)
+Markerer track, trykker på edit. Markere og flytter, save.
+
+
+---------- Main tasks -----------
+M1. Plan a semester (no clash happens)
+
+
+M2. Plan a semester (clash happens)
+"Det jeg ikke kan se er hvad problemet er. Ellers ret god løsning at den foreslår alternativer. Hvad så hvis man ikke accepterer?. Jeg vil gerne selv gøre det manuelt, men det kan jeg ikke. AHHHH, det er da klart". (Efter Bird har vist hende firkanten med tekst).
+
+
+
+ M2.1. Resolve the clash automatically
+
+
+ M2.2. Resolve the clash manually
+
+
+---------- Rare task -----------
+R1. Clear the room assignment to make next semester ready
+"Ville have det dårligt med at slette alle kurserne én for én. Ville hellere gøre dem inaktive; ville føles bedre hvis de ligger der, og ikke bliver slettet".
+Finder clear plan efter Bird har uddybet. Finder knappen. "Det er meget rarere at knappen er der, clearer og ikke sletter".
+
+
+
+
+---------- Oversigten -----------
+"Kan man sortere, kan man printe, kan det blive til en plan. Det ville være nice at kunne en masse ting herfra. Vi printer tit rum og til os selv, men også til andre. Sorterer næsten altid efter linie -> tracks. Sorterer til efter udbyder linie".
+
+"Også helt oplagt at sortere på lokale, så man kan se om der er huller". 
+
+
+
+
+
+- Der skal være mulighed for efterfølgende at ændre ting. Evt. få et "uge view", og kunne flytte lidt rundt som man har lyst til.
+- Malene ville gerne kunne se de forskellige clashes visuelt. "For mig er det noget med noget visuelt, så man kan se problemet". 
+- Understøttelse af at kurser ikke følger lige efter hinanden.
+- Man skal kunne godkende clashes. Dette skal vise en liste over kurser der bliver påvirket af dette.
+- Automatic i stedet for optional.
+
+
+
+
+
+
