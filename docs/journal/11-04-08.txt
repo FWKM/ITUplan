@@ -1,0 +1,10 @@
+- meeting with Peter
+	Good visualization of the floors
+	5te should be added later
+	We use a table-view in the semester planning screen - what are the alternatives, and why is our solution better?
+	Should we include a time-slider on the UI?
+	Server-client interaction!
+	
+
+
+Usability test of semester planning with Malene
