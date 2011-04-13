@@ -1,0 +1,109 @@
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://creativecommons.org/licenses/MIT/	*/
+
+
+
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10{
+	margin-right: 24px; float: left; padding: 0;
+}
+
+.last{ margin-right: 0; }
+.tr{ text-align: right; }
+.tl{ text-align: left; }
+.right{ float: right; }
+.left{ float: left; }
+
+
+
+/*		Default Layout: 1116px. 
+		Gutters: 24px.
+		Outer margins: 0px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body, header .wrap {
+	width: 1024px;
+	padding: 0 0 84px;
+	margin: 0 auto;
+	background: rgb(232,232,232);
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+
+.col1{ width: 100px; }
+.col2{ width: 200px; }
+.col3{  width: 300px; }
+.col4{  width: 400px; }
+.col5{  width: 500px; }
+.col6{  width: 600px; }
+.col7{  width: 700px; }
+.col10{ width: 1000px; }
+
+
+
+
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 252px;
+		padding: 48px 34px 60px;
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+}
+
+
+
+.even{ background: red;   }
+.odd { background: green; }
+.last{ margin-right: 0;   }
