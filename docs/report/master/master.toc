@@ -1,2 +1,8 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Background}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Problem definition}{2}{section.1.1}
+\contentsline {chapter}{\numberline {2}Analysis}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Use cases}{4}{section.2.1}
+\contentsline {chapter}{\numberline {3}User interface}{6}{chapter.3}
+\contentsline {chapter}{\numberline {4}Implementation}{7}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{8}{chapter.5}

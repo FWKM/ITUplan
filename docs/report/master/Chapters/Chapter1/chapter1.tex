@@ -1,1 +1,32 @@
-\chapter{Background}{Tralala}
+\chapter{Background}{
+\section{Problem definition}
+In this project, we want to create a locale planning system, which supports the user in the manual task of booking one or more rooms at one or more time-spans. The main problem, is the difficulty in presenting the data for the user, without knowing exactly what problem the user wants to solve, as there is many ways to book rooms. \\
+\\
+The system should be accessible through a browser, thus use a central threaded server to handle multiple requests. The server will be implemented in the multi paradigm and statically typed language Scala, and ported to a webserver using the Lift framework. The client side will be created with the Lift library for Scala, which natively supports javascript (to limit the number of languages used). The graphical user interface will be built using a combination of web widgets and Adobe Photoshop. \\
+\\
+We will use usability studies, including domain analysis and usability tests, to analyze requirements and determine the optimal graphical solution for such a system. \\
+\\
+The final product will be a working prototype containing the following: 
+\begin{itemize}
+\item An interface, supporting the task of booking one or more rooms.
+\item An administration panel from where the users can manage their bookings. 
+\item An underlying database to store information.
+\end{itemize}
+
+
+\noindent The system will be created specifically for ITU. We also exclude the following features, which should be present in a fully functional version: 
+\begin{itemize}
+\item Creation, deletion and editing of rooms. The schema of rooms will be static. 
+\item An admin-panel for super-users, allowing them to edit booking made by others. 
+\item The support of multiple buildings. 
+\item Support of multiple browsers - we develop the application for Webkit, and do not test the GUI of other browsers than Google Chrome. 
+\end{itemize}
+Additionally, we will discuss several relevant topics such as: 
+\begin{itemize}
+\item Choice of implementation tools and available alternatives. 
+\item Competing solutions. 
+\end{itemize}
+
+
+
+}
