@@ -1,4 +1,4 @@
-Usability test 1 - test af mockup1
+﻿Usability test 1 - test af mockup1
 
 ----------------
 Tasks to perform
@@ -75,11 +75,11 @@ Trykker på aud1 på kortet. Bruger kalenderen til at vælge datoer, for at se l
 Jon, 23, SWU 6. semester
 
 1.
-Find me a room -> er nice, men klam.
+Find me a room -> er nice.
 
 
 2.
-Bruger kalendervælgeren til at finde datoen -> find me a room. Nice. Er klam igen.
+Bruger kalendervælgeren til at finde datoen -> find me a room. Nice.
 
 
 3.

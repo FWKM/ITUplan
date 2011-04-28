@@ -63,3 +63,5 @@ Questions to ask
 
 Mockup1: Changed "speech-bubble" layout to a box, overlaying the find buttons, to make sure the ITU overview is viewable always.
 Because: This avoids speech-bubbles overlaying other rooms.
+
+Mockup1: Changed the above layout to a "one-click" booking popup when "Find me a room" is pressed. This popup will contain an hour selection dropdown and ok/cancel buttons.

@@ -81,5 +81,5 @@ You want to host a gathering for all 1st year students and need Auditorium 1. Da
 #     Changelog for mockups     #
 #################################
 
-Mockup1: Changed "speech-bubble" layout to a box, overlaying the find buttons, to make sure the ITU overview is viewable always.
-Because: This avoids speech-bubbles overlaying other rooms.
+Mockup2: Advanced search has been changed to something similar to the mockup2_sug1 file but with a live search functionaility in the bottom of the big frame.
+Because: The other one was confusing for testers.
