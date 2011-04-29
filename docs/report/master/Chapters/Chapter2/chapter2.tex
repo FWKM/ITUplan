@@ -2,3 +2,20 @@
 
 \section{Design decisions}
 \todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
+
+\subsection{Concurrent room selection}
+When user x and y tries to book rooms concurrently:
+
+Possible solutions:\\
+
+- Make all rooms that fits x, unavaliable for y while x is deciding on the proper room the use.
+	Cons: All rooms fits x, NO rooms avaliable for y.
+	Pros: Easy to implement, no dead ends. (Extremely unlikely).\\
+
+
+- The screen, which shows avaliable rooms, of user y should update(update rate should increase strongly) when user x makes a booking, to make sure y doesnt hit a dead end.\\
+
+Cons: Increased number of requests to the server, dead ends possible. (Tradeoff between probability of dead ends vs. refresh-rate)\\
+Pros: High usability, and responsivenes. More flexible; allows several users to have many choices at once.\\
+
+How to handle dead ends?
