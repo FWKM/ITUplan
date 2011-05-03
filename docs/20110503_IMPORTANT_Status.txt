@@ -1,0 +1,32 @@
+I forhold til nuværende problemformulering:
+
+I gang:
+-----------------------
+Præsentation af data i forbindelse med bookning af lokale
+Usability studier, ny test upcoming
+
+Tekniske ting:
+-Interface (et rum klar, flere rum på vej)
+-Admin panel er næste punkt
+-Database er sat op og i gang med delvis testdata. Mere 'én route'
+-Backend til rum-søgning
+
+Mangler:
+-----------------------
+Domain analyse
+Diskussioner af: Implementation tools/alternativer og andre løsninger
+
+
+
+#################################################
+# I forhold til at inkludere skemaplanlægning	#
+# mangler vi, ud over alt det ovenstående	# 
+#################################################
+
+Algoritme design af heavy-hitteren
+Færdiggørelse af interface design, og bekræftigelse vha test
+Interface implementation
+Backend implementation af algoritme
+Diskussion af andre løsninger
+diskussion af tabulex implementation etc.
+
