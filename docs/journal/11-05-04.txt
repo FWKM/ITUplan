@@ -1,0 +1,35 @@
+Edward R. Tufte:
+Envisioning information
+visual display of quantitative information
+---------------------------------------------------------------
+
+Referere til kandidat projekt.
+Referere til artikler om algoritmer.
+
+
+
+Brugermanual + beskrivelse af opsætning. (Server, osv.)
+
+Evaluering før konklusion
+
+Dansk resumé
+
+kalender parameter til startdag?
+
+
+
+Problemformulering skal uddybes. Først generelt, herefter uddybning. 
+
+Scope: "Vi laver ikke et program til et universitet med 800000000 klasser, heller ikke til en folkeskole, hvor fx. mange lærere har mange klasser". 
+
+Hvad har det af betydning, at vi laver programmet til et universitet som ITU?
+
+Hvad var vores udgangspunkt, er dette ændret og til hvad?
+
+
+NØGLEORD (SPECIELT CONCURRENT ROOM SELECTION)
+- Tradeoff!!
+- Concurrent room selection: Man vil aldrig kunne opdatere hurtigt nok til at undgå at Lis den so booker et rum imens Conni Z ejer det.
+- Optimistic and pessimistic locking
+
+Graphical design -> kapitel for sig selv
