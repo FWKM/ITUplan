@@ -14,17 +14,17 @@
 \contentsline {section}{\numberline {3.3}Mockups}{8}{section.3.3}
 \contentsline {section}{\numberline {3.4}Usability}{9}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Test af mockup1}{9}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Proposed design}{10}{section.3.5}
+\contentsline {section}{\numberline {3.5}Design process}{10}{section.3.5}
+\contentsline {section}{\numberline {3.6}Proposed design}{10}{section.3.6}
 \contentsline {chapter}{\numberline {4}Implementation}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Datastructures}{11}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Datamodel}{11}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Algorithms}{11}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Server-Client relationship}{11}{section.4.2}
 \contentsline {section}{\numberline {4.3}Lift}{11}{section.4.3}
-\contentsline {section}{\numberline {4.4}Graphical design}{11}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Reflection}{13}{section.5.1}
-\contentsline {section}{\numberline {5.2}Perspective}{13}{section.5.2}
-\contentsline {section}{\numberline {5.3}Possible improvements}{13}{section.5.3}
-\contentsline {section}{\numberline {5.4}Expansions}{13}{section.5.4}
-\contentsline {section}{\numberline {5.5}Conclusion}{13}{section.5.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{12}{chapter.5}
+\contentsline {section}{\numberline {5.1}Perspective}{12}{section.5.1}
+\contentsline {section}{\numberline {5.2}Possible improvements}{12}{section.5.2}
+\contentsline {section}{\numberline {5.3}Expansions}{12}{section.5.3}
+\contentsline {section}{\numberline {5.4}Reflection}{12}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{13}{chapter.6}
