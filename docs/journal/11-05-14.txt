@@ -1,0 +1,2 @@
+Notes for report:
+We do not use transactions - why, and how do we deal with persistence then?

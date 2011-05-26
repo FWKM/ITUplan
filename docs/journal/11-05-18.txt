@@ -1,0 +1,6 @@
+Finished the quick booking functionality:
+
+	- Books a room selected by the program
+	- Cancel the booking, if it does not suit you
+
+Finished login functionality
