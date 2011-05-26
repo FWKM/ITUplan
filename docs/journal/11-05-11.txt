@@ -1,0 +1,23 @@
+journal 2011/05/11
+
+Report writing.
+
+FindRoomNow function.
+
+Changed the time format to represent the minutes after midnight, so 8.30 in the morning is represented as 8*60 + 30. This made the sql queries easier to write, as we didnt have to convert the time to something useable. 
+
+Now we still need to convert the representation of the time in the javascript implementation.
+
+The FindRoomNow function finds the smallest room (capacity), which is available now, and the next x hours. Currently it does not attempt to broaden the search, if the first query returns an empty result set.
+
+Note that the function does not join the 'planning' table, which it in theory should, to make sure that room that are currently in use for courses will not proposed as an available room.
+
+
+Politics on room-booking - in general: Something for the study admin to decide. 
+
+Specific: how many hours should a "Find room now" booking last? 4 hours as standard... Problem: What if the user wants to book the room for more hours? The user should be able to extend his booking, if he wants to keep the room - other users who have booked the room in the meantime, will have to find another room.
+
+The user should NOT be able to choose the number of hours himself, as this would for make users book for an unnecessary long period of time. (Need source  
+
+
+Remember approved field, so an admin can approve a booking
