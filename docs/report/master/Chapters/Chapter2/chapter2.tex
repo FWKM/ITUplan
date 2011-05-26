@@ -1,21 +1,104 @@
 \chapter{Analysis}
+When unifying the functions of several departments and optimizing the overall process at the same time, a multitude of non-triviel problems will need answering. Through this chapter we will go through the discussions made for and against our choices.
+
+\section{Scope}
+Our approach to designing this system has been primarily focused on usability and all that entails. As described in \ref{sec:current_situation}, the current situation holds multiple challenges. Tedious and de-centralized management of a single resource is both time consuming and highly error-prone.
+To exemplify a solid solution to this problem, we have narrowed our vision to the most used area (day-to-day booking) and the most tedious area (semester planning).
+
+The simple booking have been succesfully prototyped, whereas the semester planning have only been designed and developed theoretically, and not implemented. Doing the full scale implementation of the semester planning would of course be a possibility, but it is not crucial to prove our point of data presentation and usability and we have therefore chosen to perform all the analytical work on it, and leave out the actual implementation.
+\\ \\
+\noindent As mentioned in the original problem definition, we have also elected not to include an administration panel for super-users, as it would serve little purpose without all the features of the full system.
+
+\section{Requirements}
+% Læs søren la om Requirements
+Since the ITU does not currently have a full system, we have put up initial requirements for such a system. The requirements listed is the functionality that, when combined, provide a solution to the problem at hand.
+
+\subsection{Use cases}
+The booking of a room have four parameters; the week of the year, the day of the week, the time of day and of course, the room. With these four in mind, the searching, browsing and organising of rooms pose some relevant questions.
+\\
+
+\begin{center}
+	\begin{tabular}{ | l | l | }
+		\hline
+		\multicolumn{2}{ | c | }{Legend} \\
+		\hline
+		W & Week \\
+		D & Day \\
+		T & Time \\
+		R & Room \\
+		\hline \hline
+		Main case & High occurance \\
+		Edge case & Rare occurance \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+\subsubsection*{With one parameter locked} 
+Main cases: \\ \emph{
+W - "I need a room sometime next week" \\
+}\\
+\noindent Edge cases: \\ \emph{
+D - "I need a room on a wednesday sometime" \\
+T - "I need a room at 12 o'clock sometime" \\
+R - "I need Aud. 4 at some point" \\
+}
+\subsubsection*{With two parameters locked}
+Main cases: \\ \emph{
+WD - "I need a room at thursday next week" \\
+WT - "I need a room at 9 o'clock next week" \\
+WR - "I need Aud. 1 in 2 weeks" \\
+DT - "I need a room mondays at 8 o'clock" (W free, so meaning a span of weeks needed here) \\
+}\\
+\noindent Edge cases: \\ \emph{
+TR - "When is Aud. 4 available at 9 o'clock?" \\
+}
+\subsubsection*{With three parameters locked}
+Main cases: \\ \emph{
+WDT - "I need a room at 12 o'clock on friday next week" (Expecting this to be the most used search of them all) \\
+WDR - "I need room 4a14 this friday" \\
+}\\
+\noindent Edge cases: \\ \emph{
+WTR - "I need Aud. 3 at 9 o'clock next week sometime" \\
+DTR - "I need room 2a09 on thurdays 11 o'clock" (Probably to be used along with a semi-locked W (span)) \\
+}
 
 \section{Design decisions}
+\subsection{Platform}
+Choosing a webbased solution over a desktop application was both a choice of interest and of usability. Accessibility is a crucial factor in usability, and by allowing end-users to access the system instead of having to go through the bottleneck of a single department, the workload is both distributed and handled immediately, as opposed to being dependant on an employee from said department to perform the whole process associated with locating and booking a suitable and available room.
+\\
+The drawbacks to \todo{finish this sentence}
+
 \todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
 
 \subsection{Concurrent room selection}
-When user x and y tries to book rooms concurrently:
+The handling of concurrent users is always an issue in webbased services, and more specifically in our case it presents itself when multiple users wants to book a room at the same time. No solutions are perfect, and we've tried discovering the pros and cons of the solutions we considered.
 
-Possible solutions:\\
-
-- Make all rooms that fits x, unavaliable for y while x is deciding on the proper room the use.
-	Cons: All rooms fits x, NO rooms avaliable for y.
-	Pros: Easy to implement, no dead ends. (Extremely unlikely).\\
-
-
-- The screen, which shows avaliable rooms, of user y should update(update rate should increase strongly) when user x makes a booking, to make sure y doesnt hit a dead end.\\
-
-Cons: Increased number of requests to the server, dead ends possible. (Tradeoff between probability of dead ends vs. refresh-rate)\\
-Pros: High usability, and responsivenes. More flexible; allows several users to have many choices at once.\\
-
-How to handle dead ends?
+\subsubsection*{Possible solutions}
+These solutions are based on the the case where users \textbf{X} and \textbf{Y} are searching for rooms at the same time. They could obviously be extrapolated to cases where even more users are interacting. \\ \\
+\emph{Make all rooms that fits \textbf{X}, unavaliable for \textbf{Y} while \textbf{X} is deciding on the which room to use.}
+	\begin{itemize}
+	\item Cons:
+		\begin{itemize}
+		\item If all rooms fit the search of \textbf{X}, no rooms will be available for \textbf{Y} 
+		\end{itemize}
+	\item Pros:
+		\begin{itemize}
+		\item Easy to implement.
+		\item Extremely unlikely to encounter dead ends.
+		\end{itemize}
+	\end{itemize}
+\emph{The screen which shows avaliable rooms, of user \textbf{Y} should update when user \textbf{X} makes a booking, to make sure \textbf{Y} doesnt hit a dead end.}
+	\begin{itemize}
+	\item Cons:
+		\begin{itemize}
+		\item Increased number of requests to the server.
+		\item Dead ends possible.
+		\item Ultimately, it is a tradeoff between probability of dead ends vs. server request-rate.
+		\end{itemize}
+	\item Pros:
+		\begin{itemize}
+		\item High usability and responsiveness, resulting in a pleasant experience for the user if no dead ends are hit. 
+		\item More flexible; allows several users to have many choices at once.
+		\end{itemize}
+	\end{itemize}

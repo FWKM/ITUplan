@@ -6,56 +6,6 @@
 \\
 % info found in: 'concurrent_room_selection-11-02-03', 'meeting_study-administration_11-03-16' and 'courses_spanning_multiple_days'
 
-\section{Use cases}
-The booking of a room have four parameters; the week of the year, the day of the week, the time of day and of course, the room. With these four in mind, the searching, browsing and organising of rooms pose some relevant questions.
-\\
-To assist us in the process of deciding which parameters in a search or overview should determine the presentation, we postulate the following use cases based on number of 'locked' parameters.
-\begin{center}
-	\begin{tabular}{ | l | l | }
-		\hline
-		\multicolumn{2}{ | c | }{Legend} \\
-		\hline
-		W & Week \\
-		D & Day \\
-		T & Time \\
-		R & Room \\
-		\hline \hline
-		Main case & High occurance \\
-		Edge case & Rare occurance \\
-		\hline
-	\end{tabular}
-\end{center}
-
-
-\subsection*{With one parameter locked} 
-Main cases: \\ \emph{
-W - "I need a room sometime next week" \\
-}\\
-\noindent Edge cases: \\ \emph{
-D - "I need a room on a wednesday sometime" \\
-T - "I need a room at 12 o'clock sometime" \\
-R - "I need Aud. 4 at some point" \\
-}
-\subsection*{With two parameters locked}
-Main cases: \\ \emph{
-WD - "I need a room at thursday next week" \\
-WT - "I need a room at 9 o'clock next week" \\
-WR - "I need Aud. 1 in 2 weeks" \\
-DT - "I need a room mondays at 8 o'clock" (W free, so meaning a span of weeks needed here) \\
-}\\
-\noindent Edge cases: \\ \emph{
-TR - "When is Aud. 4 available at 9 o'clock?" \\
-}
-\subsection*{With three parameters locked}
-Main cases: \\ \emph{
-WDT - "I need a room at 12 o'clock on friday next week" (Expecting this to be the most used search of them all) \\
-WDR - "I need room 4a14 this friday" \\
-}\\
-\noindent Edge cases: \\ \emph{
-WTR - "I need Aud. 3 at 9 o'clock next week sometime" \\
-DTR - "I need room 2a09 on thurdays 11 o'clock" (Probably to be used along with a semi-locked W (span)) \\
-}
-
 \section{Mockups}
 \todo{Add all/some of the pictures from our mockups. Currently located on github.
 Explan the iterations.}

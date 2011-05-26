@@ -6,25 +6,26 @@
 \contentsline {subsection}{\numberline {1.2.2}Study Administration}{4}{subsection.1.2.2}
 \contentsline {section}{\numberline {1.3}Scope}{5}{section.1.3}
 \contentsline {chapter}{\numberline {2}Analysis}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Design decisions}{6}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Concurrent room selection}{6}{subsection.2.1.1}
-\contentsline {chapter}{\numberline {3}User interface}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Challenges}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Use cases}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Mockups}{8}{section.3.3}
-\contentsline {section}{\numberline {3.4}Usability}{9}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Test af mockup1}{9}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Design process}{10}{section.3.5}
-\contentsline {section}{\numberline {3.6}Proposed design}{10}{section.3.6}
-\contentsline {chapter}{\numberline {4}Implementation}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Datastructures}{11}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Datamodel}{11}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Algorithms}{11}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Server-Client relationship}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Lift}{11}{section.4.3}
-\contentsline {chapter}{\numberline {5}Evaluation}{12}{chapter.5}
-\contentsline {section}{\numberline {5.1}Perspective}{12}{section.5.1}
-\contentsline {section}{\numberline {5.2}Possible improvements}{12}{section.5.2}
-\contentsline {section}{\numberline {5.3}Expansions}{12}{section.5.3}
-\contentsline {section}{\numberline {5.4}Reflection}{12}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{13}{chapter.6}
+\contentsline {section}{\numberline {2.1}Scope}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Design decisions}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Platform}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Concurrent room selection}{7}{subsection.2.2.2}
+\contentsline {chapter}{\numberline {3}User interface}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Challenges}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Mockups}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Usability}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Test af mockup1}{9}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Design process}{11}{section.3.4}
+\contentsline {section}{\numberline {3.5}Proposed design}{11}{section.3.5}
+\contentsline {chapter}{\numberline {4}Implementation}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}Datastructures}{12}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Datamodel}{12}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Algorithms}{12}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Server-Client relationship}{12}{section.4.2}
+\contentsline {section}{\numberline {4.3}Lift}{12}{section.4.3}
+\contentsline {chapter}{\numberline {5}Evaluation}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}Perspective}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Possible improvements}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}Expansions}{13}{section.5.3}
+\contentsline {section}{\numberline {5.4}Reflection}{13}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{14}{chapter.6}
