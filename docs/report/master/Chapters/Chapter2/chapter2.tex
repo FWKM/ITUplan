@@ -3,15 +3,18 @@ When unifying the functions of several departments and optimizing the overall pr
 
 \label{sec:scope}
 \section{Scope}
-%Uddyb:
 Our approach to designing this system, has been primarily focused on usability and all that entails. As described in \ref{sec:current_situation}, the current situation holds multiple challenges. Tedious and de-centralized management of a single resource is both time consuming and highly error-prone.\\
-We want to implement a system with two main purposes:
+We want to implement a system which fulfills two main tasks:
 \begin{itemize}
-	\item Provide an easy way for student to find a place to work
-	\item Aid the staff in the allocation of rooms
+	\item 1. Helps the student to find a place to work
+	\item 2. Aids the staff in the allocation of rooms
 \end{itemize}
-A large part of fulfilling these tasks is the creation of a interface, which by itself maintains a high level of support.
-To exemplify a solid solution to this problem, and to keep the interface focused, we have narrowed our vision to the most used area, the day-to-day booking, and the semester planning. 
+A large part of fulfilling these tasks is the creation of an interface, which by itself maintains a high level of support. 
+% Uddyb
+Both of the above tasks can often be solved in multiple ways. A student query the database for a room with specific requirements, might lower his requirements if there is no results. On the other hand, he might decide to postphone  the activity and try again when the specific room is available.\\
+In comparison, the room allocation problem can contain not only a few solutions (which a program might be able to suggest), but hundreds of ways to allocate courses. When something is impossible to solve, the user has to be able to tell the computer what to prioritize, or which solution to use.
+A well thought out application succeeds in presenting this information to the user, and gives a proper overview so the best decisions can be taken. \\
+Therefore, the far most important and interesting aspect of our application is the userinterface, in which we have choosen to put our focus. To exemplify a solid solution to this problem, and to keep the interface focused, we have narrowed our vision to the most used area: The day-to-day booking, and the semester planning (hence the tasks mentioned above). \\
 
 The simple booking have been succesfully prototyped, whereas the semester planning have only been designed and developed theoretically, and not implemented. Doing the full scale implementation of the semester planning would be a possibility, but it is not crucial to prove our point of data presentation and usability. We have therefore chosen to perform the analytical work, and leave out large parts of the actual implementation.
 
