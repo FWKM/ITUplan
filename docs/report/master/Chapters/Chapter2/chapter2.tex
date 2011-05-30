@@ -1,13 +1,19 @@
 \chapter{Analysis}
 When unifying the functions of several departments and optimizing the overall process at the same time, a multitude of non-triviel problems will need answering. Through this chapter we will go through the discussions made for and against our choices.
 
+\label{sec:scope}
 \section{Scope}
-Our approach to designing this system has been primarily focused on usability and all that entails. As described in \ref{sec:current_situation}, the current situation holds multiple challenges. Tedious and de-centralized management of a single resource is both time consuming and highly error-prone.
-To exemplify a solid solution to this problem, we have narrowed our vision to the most used area (day-to-day booking) and the most tedious area (semester planning).
+%Uddyb:
+Our approach to designing this system has been primarily focused on usability and all that entails. As described in \ref{sec:current_situation}, the current situation holds multiple challenges. Tedious and de-centralized management of a single resource is both time consuming and highly error-prone.\\
+We want to implement a system with two main purposes:
+\begin{itemize}
+	\item Provide an easy way for student to find a place to work
+	\item Aid the staff in the allocation of rooms
+\end{itemize}
+A large part of fulfilling these tasks is the creation of a interface, which by itself maintains a high level of support.
+To exemplify a solid solution to this problem, and to keep the interface focused, we have narrowed our vision to the most used area, the day-to-day booking, and the semester planning. 
 
-The simple booking have been succesfully prototyped, whereas the semester planning have only been designed and developed theoretically, and not implemented. Doing the full scale implementation of the semester planning would of course be a possibility, but it is not crucial to prove our point of data presentation and usability and we have therefore chosen to perform all the analytical work on it, and leave out the actual implementation.
-\\ \\
-\noindent As mentioned in the original problem definition, we have also elected not to include an administration panel for super-users, as it would serve little purpose without all the features of the full system.
+The simple booking have been succesfully prototyped, whereas the semester planning have only been designed and developed theoretically, and not implemented. Doing the full scale implementation of the semester planning would be a possibility, but it is not crucial to prove our point of data presentation and usability. We have therefore chosen to perform the analytical work, and leave out large parts of the actual implementation.
 
 \section{Requirements}
 % Læs søren la om Requirements
