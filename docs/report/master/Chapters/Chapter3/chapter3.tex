@@ -1,16 +1,15 @@
 \chapter{User interface}
+\label{chap:user_interface}
 \todo{general introduction to this section, and why it warrents a whole chapter}
 
 \section{Challenges}
+\label{sec:challenges}
 \todo{What challenges must our user interface overcome?}
 \\
 % info found in: 'concurrent_room_selection-11-02-03', 'meeting_study-administration_11-03-16' and 'courses_spanning_multiple_days'
 
-\section{Mockups}
-\todo{Add all/some of the pictures from our mockups. Currently located on github.
-Explan the iterations.}
-
 \section{Usability}
+\label{sec:usability}
 \todo{Usability discussion and documentation for findings from our tests}
 \\
 % info found in: 'test _mockup1' and 'Courseplan_test_master'
@@ -95,7 +94,49 @@ Find me a room. Cancel. Trykker på w på kalenderen. Task failure, specific roo
 Trykker på aud1 på kortet. Trykker på datoen, trykker på start-tid og slut-tid. Trykker på book.
 
 \section{Design process}
-\todo{explain the process of the graphical design}
+\label{sec:design_process}
+To our project, the design of the graphical user interface is one of the most important things. Instead of focusing on hiding the difficulty of the problem by obscuring it with automization and huge calculations, we seek to present suggestions and options for solutions in such a manner that a human being can lay the final touch. It has become apparant through our tests and interviews that no solution granted by a computer alone will be sufficient - there will always be conflicts needing a (to a computer) not obvious resolution, and even in the simplest of cases where no conflicts occur, human polish and/or acceptance is key.
+
+We've undergone many iterations of each and every screen in the system, both those implemented in the prototype and those only on mockup stage. What follows is a tour through the process of the design.
+
+
+
+\subsection{Trimming the fat}
+The design of a page begins with deciding what function it should serve in our system, eg. a page to book a room for 2 hours. With that constantly in mind, we attempt to find all the possible things that particular function COULD include. Some of them are extremely basic and obvious, eg. it needs to display which room you are booking, others are more complicated, as for example the ability to check whether this room is available on a regular basis.
+
+Through the process of 'overthinking' each page, we came up with smarter solutions to cover several different items on the could-list, or found out we needed a new page to handle all the "advanced" settings as an example. Once we had settled on the functionality of the page, we began piecing the puzzle together.
+
+
+
+\subsection{Room booking design}
+For a full history of our mockups, please refer to %\ref{app:mockups}
+
+\todo{ indsæt billede af første mockup til book rum }
+%Billedtekst: First draft of the 'book room' feature.
+
+As seen above, the lower right panel was thought to be in charge of all interaction, trying to give the user the impression that they never left home, and to make sure no-one got lost. Our first usability tests quickly revealed that we had been mistaken. All the test subjects felt overwhelmed by the amount of options, and due to all the clutter did not spot the vital functions.
+
+\todo{ indsæt billede af næste mockup til book rum \& billede af weekoverview mockup }
+
+This time around, we tried making it as basic as possible and simply presenting the user with a dialog (not a pop-up, just an overlay) for selecting how many hours from now the room should be booked. The flaw with this was that noone was able to figure out the availability of a room in the near future. This is when we realized that the best successes we've had with room booking was the first draft of the week-overview screen.
+All the test subjects used the 'matrix' overview both creatively and effectively, so we decided to try and utilize that success to the maximum by redirecting even a simple booking task to the same screen.
+The only exception we have made to this is when using the "book now"-functionality, which will simply book a room for 4 hours and notify the user which one they have been assigned, with the ability to either accept or reject.
+
+\todo{ indsæt Billede af færdig book skærm }
+
+The final design to book a room, as shown above, grants availability overview of 7 days, starting with current, and supports both dragging of the mouse to select a timespan, and clicks\footnote{Click for start time, click again on end time} as we had experienced both during the course of our tests.
+To assist the user in figuring out how it works, we naturally have highlighting of both the day and time when mouse is drawn across the matrix.
+
+Søren Lauesens ---- first law of usability states that a heuristic evaluation only has a 50% hit-rate, which we admittedly found out was the case. We anticipated that our first design might be too 'dense', but never guessed that the wider overview proved more efficient for a simple booking.
+
+
+\subsection{Layout}
+Being a website poses some extra considerations - namely those of browsing habits. Two examples we will refer to, and assume basic familiarity with, in this section are wikipedia.org and google.com
+%kan dette bruges?
+\todo{ indsæt små billeder af wikipedia og google med F-pattern eyetrack }
+
+%Let us for a second imagine a search for 'random' was made on both those pages. According to research by Jakob Nielsen (---- indsæt ref), users tend to scan the page in a pattern slightly resembling a capital F, ignoring banners and everything that looks like 'off-site' content.
 
 \section{Proposed design}
+\label{sec:proposed_design}
 \todo{Explain and illustrate the proposed design}
