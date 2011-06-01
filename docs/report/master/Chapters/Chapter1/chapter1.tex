@@ -17,8 +17,8 @@ Aside from this, another part of FM is in charge of assigning offices and worksp
 \subsection{Study Administration}
 In regards to room management, the Study Administrations biggest challenge is the planning of a semester. First step is collect data from the course database to see which courses will be held in the coming semester. When a list of courses have been compiled, a system called Tabulex\footnote{http://www.tabulex.dk/} is used to create a draft schedule so no overlaps of teachers and courses required by several tracks\footnote{'Track' is the term used to describe a semesters worth of courses in a specific direction, eg. the 'Software Engineering' direction of the 'Software Development and Technology' MSc education}. The output from Tabulex is finally used to manually create the room assignments for a standard week of the semester.
 
-The other function of the Study Administration is to assign rooms required by exams, for both the examnation itself and for the prepation-time required by some exams. Unfortunately, not all courses have ended by the time exams begin, so apart from rooms being occupied the problem of privacy and noise presents itself.
-\\
+The other function of the Study Administration is to assign rooms required by exams, for both the examnation itself and for the prepation-time required by some exams. Unfortunately, not all courses have ended by the time exams begin, so apart from rooms being occupied the problem of privacy and noise presents itself.\\
+
 \todo{Perhaps reformatting and elobaration }
 \label{sec:scope}
 \section{Scope}
@@ -36,5 +36,23 @@ A well thought out application succeeds in presenting this information to the us
 Therefore, the far most important and interesting aspect of our application is the userinterface, in which we have choosen to put our focus. To exemplify a solid solution to this problem, and to keep the interface focused, we have narrowed our vision to the most used area: The day-to-day booking, and the semester planning (hence the tasks mentioned above). \\
 
 The simple booking have been succesfully prototyped, whereas the semester planning have only been designed and developed theoretically, and not implemented. Doing the full scale implementation of the semester planning would be a possibility, but it is not crucial to prove our point of data presentation and usability. We have therefore chosen to perform the analytical work, and leave out large parts of the actual implementation.
+
+\section{Target audience} % (fold)
+\label{sec:target_audience}
+Our application is implemented solely for ITU. We could have implemented a general solution capable of adapting to many instutions, and while this is our general line of thought, a good UI needs to contain various elements specific to the domain in which it is used. This includes a map of the university for easy navigation and localization of rooms, and many application specific options. It turns out that many aspects of such a system differs from domain to domain (see \ref{sec:design_decisions}), which is hard to represent in a 100\% generic solution.\\
+
+Our target audience can thus be divided into two very specific, but different groups:
+\begin{itemize}
+\item Students at ITU
+\item Employees at ITU
+\end{itemize}
+
+% Mention age. Maybe formalize it, and make a paragraph about
+% each group.
+While we cannot make any assumptions about the IT skill level of the employees, we can definitely make the assumption that the students have a good amount of experience with the general use of a computer. \\
+Though there is a chance that the employees does not have a lot of experience with IT, we know from our domain research (\ref{sec:xx}) that they currently use similar programs for doing the semester planning. \\
+
+
+% section target_audience (end)
 
 \todo{Limitations/inclusions of our project work goes here}

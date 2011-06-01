@@ -1,5 +1,49 @@
 \chapter{Implementation}
 
+\section{Choice of platform}
+Choosing a webbased solution over a desktop application was both a choice of interest and of usability. Accessibility is a crucial factor in usability, and by allowing end-users to access the system instead of having to go through the bottleneck of a single department, the workload is both distributed and handled immediately, as opposed to being dependant on an employee from said department to perform the whole process associated with locating and booking a suitable and available room.
+\\
+The drawbacks to \todo{finish this sentence}
+
+\todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
+
+\section{Challenges}
+\label{sec:challenges}
+\todo{What challenges must our user interface overcome?}
+\\
+% info found in: 'concurrent_room_selection-11-02-03', 'meeting_study-administration_11-03-16' and 'courses_spanning_multiple_days'
+\subsection{Concurrent room selection}
+The handling of concurrent users is always an issue in webbased services, and more specifically in our case it presents itself when multiple users wants to book a room at the same time. No solutions are perfect, and we've tried discovering the pros and cons of the solutions we considered.
+
+\subsubsection*{Possible solutions}
+These solutions are based on the the case where users \textbf{X} and \textbf{Y} are searching for rooms at the same time. They could obviously be extrapolated to cases where even more users are interacting. \\ \\
+\emph{Make all rooms that fits \textbf{X}, unavaliable for \textbf{Y} while \textbf{X} is deciding on the which room to use.}
+	\begin{itemize}
+	\item Cons:
+		\begin{itemize}
+		\item If all rooms fit the search of \textbf{X}, no rooms will be available for \textbf{Y} 
+		\end{itemize}
+	\item Pros:
+		\begin{itemize}
+		\item Easy to implement.
+		\item Extremely unlikely to encounter dead ends.
+		\end{itemize}
+	\end{itemize}
+\emph{The screen which shows avaliable rooms, of user \textbf{Y} should update when user \textbf{X} makes a booking, to make sure \textbf{Y} doesnt hit a dead end.}
+	\begin{itemize}
+	\item Cons:
+		\begin{itemize}
+		\item Increased number of requests to the server.
+		\item Dead ends possible.
+		\item Ultimately, it is a tradeoff between probability of dead ends vs. server request-rate.
+		\end{itemize}
+	\item Pros:
+		\begin{itemize}
+		\item High usability and responsiveness, resulting in a pleasant experience for the user if no dead ends are hit. 
+		\item More flexible; allows several users to have many choices at once.
+		\end{itemize}
+	\end{itemize}
+
 \section{Datastructures}
 \todo{Introduction to this section}
 
