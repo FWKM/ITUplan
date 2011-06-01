@@ -1,0 +1,50 @@
+\chapter{Analysis}
+\label{chap:analysis}
+When unifying the functions of several departments and optimizing the overall process at the same time, a multitude of non-triviel problems will need answering. Through this chapter we will go through the discussions made for and against our choices.
+
+
+\section{Requirements}
+\label{sec:requirements}
+% Læs søren la om Requirements
+Since the ITU does not currently have a full system, we have put up initial requirements for such a system.
+As described in the target audience \todo{ ref}, the system will be used by a wide variety of people, and there will be virtually no way to train them, thus putting a very high bar for user-friendliness. We have met this problem head-on by writing up all the tasks our system must support, along with quality requirements describing to what level our users must have succesfull uses. \cite{lauesen}
+
+\subsection{Tasks}
+\label{subsec:tasks}
+The following tasks are the actions able to be performed within our system. The full list including subtasks covering all scenarios can be found in appendix \todo{ref til full task list}
+
+\begin{itemize}\itemsep1pt
+\item[\textbf{1.}] \textbf{Day-to-day booking}
+\item[\textbf{T1.1}] Book room. May or may not be a specific room or a specific time/day
+\item[\textbf{T1.2}] Check availability of room. May or may not be today.
+\item[\textbf{T1.3}] Cancel booking. May or may not be before the booked timeslot.
+\item[\textbf{T1.4}] Extend booking. May or may not be before the booked timeslot.
+\\
+\item[\textbf{2.}] \textbf{School Administration}
+\item[\textbf{T2.1}] Create course. May or may not have full information available at the point of creation.
+\item[\textbf{T2.2}] Create track.
+\item[\textbf{T2.3}] Edit course.
+\item[\textbf{T2.4}] Edit track.
+\item[\textbf{T2.5}] Plan semester. A full solution may or may not be possible
+\end{itemize}
+
+\subsection{Quality Requirements}
+\label{subsec:quality_requirements}
+Based on the task list above, we can finally put forth the list of quality requirements we wish to meet in able to consider the level of usability acceptable.
+\begin{enumerate}\itemsep1pt
+\item Without instructions, 90\% of novice users must be able to complete T1.1 to T1.4 without variants.
+\item Without instructions, 80\% of novice users must be able to complete T1.1 to T1.4 including variants.
+\item With a maximum of 30 minutes instructions, 90\% of administration personel must be able to complete T2.1 to T2.5.
+\item Without instructions, 50\% administration personel must be able to complete T2.1 to T2.5.
+\end{enumerate}
+
+
+\section{Design decisions}
+\subsection{Platform}
+Choosing a webbased solution over a desktop application was both a choice of interest and of usability. Accessibility is a crucial factor in usability, and by allowing end-users to access the system instead of having to go through the bottleneck of a single department, the workload is both distributed and handled immediately, as opposed to being dependant on an employee from said department to perform the whole process associated with locating and booking a suitable and available room.
+\\
+The drawbacks to \todo{finish this sentence}
+
+\todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
+
+
