@@ -19,21 +19,21 @@
 \contentsline {section}{\numberline {3.2}Usability tests}{9}{section.3.2}
 \contentsline {section}{\numberline {3.3}Design process}{9}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Trimming the fat}{9}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Room booking design}{10}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Layout}{11}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Proposed design}{11}{section.3.4}
-\contentsline {chapter}{\numberline {4}Implementation}{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}Choice of platform}{12}{section.4.1}
-\contentsline {section}{\numberline {4.2}Challenges}{12}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Concurrent room selection}{12}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Datastructures}{13}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Datamodel}{13}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Algorithms}{14}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Server-Client relationship}{14}{section.4.4}
-\contentsline {section}{\numberline {4.5}Lift}{14}{section.4.5}
-\contentsline {chapter}{\numberline {5}Evaluation}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Perspective}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Possible improvements}{15}{section.5.2}
-\contentsline {section}{\numberline {5.3}Expansions}{15}{section.5.3}
-\contentsline {section}{\numberline {5.4}Reflection}{15}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusion}{16}{chapter.6}
+\contentsline {subsection}{\numberline {3.3.2}'Instant booking' design}{10}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Layout}{12}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Proposed design}{12}{section.3.4}
+\contentsline {chapter}{\numberline {4}Implementation}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Choice of platform}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Challenges}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Concurrent room selection}{14}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Datastructures}{15}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Datamodel}{15}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Algorithms}{16}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Server-Client relationship}{16}{section.4.4}
+\contentsline {section}{\numberline {4.5}Lift}{16}{section.4.5}
+\contentsline {chapter}{\numberline {5}Evaluation}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Perspective}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Possible improvements}{17}{section.5.2}
+\contentsline {section}{\numberline {5.3}Expansions}{17}{section.5.3}
+\contentsline {section}{\numberline {5.4}Reflection}{17}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusion}{18}{chapter.6}
