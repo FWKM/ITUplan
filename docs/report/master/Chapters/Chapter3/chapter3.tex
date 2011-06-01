@@ -7,91 +7,44 @@
 \todo{What challenges must our user interface overcome?}
 \\
 % info found in: 'concurrent_room_selection-11-02-03', 'meeting_study-administration_11-03-16' and 'courses_spanning_multiple_days'
+\subsection{Concurrent room selection}
+The handling of concurrent users is always an issue in webbased services, and more specifically in our case it presents itself when multiple users wants to book a room at the same time. No solutions are perfect, and we've tried discovering the pros and cons of the solutions we considered.
+
+\subsubsection*{Possible solutions}
+These solutions are based on the the case where users \textbf{X} and \textbf{Y} are searching for rooms at the same time. They could obviously be extrapolated to cases where even more users are interacting. \\ \\
+\emph{Make all rooms that fits \textbf{X}, unavaliable for \textbf{Y} while \textbf{X} is deciding on the which room to use.}
+	\begin{itemize}
+	\item Cons:
+		\begin{itemize}
+		\item If all rooms fit the search of \textbf{X}, no rooms will be available for \textbf{Y} 
+		\end{itemize}
+	\item Pros:
+		\begin{itemize}
+		\item Easy to implement.
+		\item Extremely unlikely to encounter dead ends.
+		\end{itemize}
+	\end{itemize}
+\emph{The screen which shows avaliable rooms, of user \textbf{Y} should update when user \textbf{X} makes a booking, to make sure \textbf{Y} doesnt hit a dead end.}
+	\begin{itemize}
+	\item Cons:
+		\begin{itemize}
+		\item Increased number of requests to the server.
+		\item Dead ends possible.
+		\item Ultimately, it is a tradeoff between probability of dead ends vs. server request-rate.
+		\end{itemize}
+	\item Pros:
+		\begin{itemize}
+		\item High usability and responsiveness, resulting in a pleasant experience for the user if no dead ends are hit. 
+		\item More flexible; allows several users to have many choices at once.
+		\end{itemize}
+	\end{itemize}
 
 \section{Usability}
 \label{sec:usability}
 \todo{Usability discussion and documentation for findings from our tests}
 \\
 % info found in: 'test _mockup1' and 'Courseplan_test_master'
-\subsection{Test af mockup1}
 
-Tasks to perform\\
-1 - simple: "Book a room today" \\
-2 - simple: "Book a room tomorrow" \\
-3 - special case: room not available current day: "Book room x for use as soon as possible" \\
-- ... \\
-
-
-Questions to ask \\
-- "cancel" or "back" ? : "what do you think this button does?" \\
-- Calendar - is it obvious? \\
-
-
-Lead-in \\
-1.
-You and your group have met, and need to find a room to conduct group-work.\\
-
-2.
-Your group has finished work today, and decided to reconvene tomorrow. You have been assigned to arrange for a place to work tomorrow.\\
-
-3.
-Your group will be having it's exam in auditorium 3, and you wish to prepare for it in the same setting as the actual exam. \\
-
-
-11 - 11.20:	Jakob 27 DMD 2. semester\\
-
-
-
-1. Find a room\\
-Trykker på Find me a Room \- siger trykker vel her.
-Vælger tid fra og til.\\
-
-
-2. Rum i morgen\\
-Trykker på find me a specific room. Finder hurtigt ud af at han nok skulle have valgt vha. kalenderen.\\
-
-
-3. Eksamen i auditorie3 en anden dag.\\
-Trykker på auditorie3 på kortet. Trykker på another day. \\
-
-
-4. Find rum næste fredag.\\
-Find me a specific room. Vælger "projektor", og er nice. Spørger om man skal vælge tid her.\\
-
-5. Find et lokale til mere end 50 mennesker på en onsdag.\\
-Find me a room, cancel, find me a specific room. Task failure. Går tilbage til kortet. Trykke på et af auditorierne. Siger at han nok i stedet ville trykke på kalenderen. \\
-
-
-6. Komsammen for førsteårsstuderende.\\
-Trykker på aud1 på kortet. Bruger kalenderen til at vælge datoer, for at se ledigheden.\\
-
-
-
-
-Jon, 23, SWU 6. semester\\
-
-1.
-Find me a room, OK. \\
-
-
-2.
-Bruger kalendervælgeren til at finde datoenm find me a room, OK.\\
-
-
-3.
-Vælger dato gennem kalenderen, find me a specific room, OK.\\
-
-
-4. 
-Som 3. \\
-
-
-5.
-Find me a room. Cancel. Trykker på w på kalenderen. Task failure, specific room. Vælger "auditorie" og ikke capacity. OK. \\
-
-
-6.
-Trykker på aud1 på kortet. Trykker på datoen, trykker på start-tid og slut-tid. Trykker på book.
 
 \section{Design process}
 \label{sec:design_process}
