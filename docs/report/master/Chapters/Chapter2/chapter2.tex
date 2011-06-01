@@ -11,19 +11,40 @@ When unifying the functions of several departments and optimizing the overall pr
 \label{sec:requirements}
 % Læs søren la om Requirements
 Since the ITU does not currently have a full system, we have put up initial requirements for such a system.
-As described in the target audience \todo{ ref}, the system will be used by a wide variety of people, and there will be virtually no way to train them, thus putting a very high bar for user-friendliness. We have met this problem head-on by writing up all the tasks our system must support, along with quality requirements describing to what level our users must have succesfull uses. \cite{lauesen}
-
-\todo{This section should conclude with a initial list of required tasks}
+As described in the target audience \ref{sec:xx}, the system will be used by a wide variety of people, and there will be virtually no way to train them, thus putting a very high bar for user-friendliness. We have met this problem head-on by writing up all the tasks our system must support, along with quality requirements describing to what level our users must have succesfull uses. \cite{lauesen}
 
 \subsection{Non-functional requirements} % (fold)
 \label{subsec:non_functional_requirements}
+Preparing for the creation of mockups following various usability tests, it is nessesary to set up a reference point to what we actually want to measure. This helps us to keep the following mockups and usability tests focused.\\
+In a perfect world, all of the 5 usability requirements \cite{lauesen} would be met, though this is rarely desired. This does not emulate a clear focus of what should be prioritized in the application. Here follows a rundown of the most important usability factors.
+\begin{itemize}
+	\item \textbf{Task efficiency}\\
+	Since the task of finding a room often will be done on the fly, on the way to school, or right before a meeting takes place, it is important that the application is responsive and gives the user a proper response to a booking query. It should give the user a good overview to support his decision, and suggest alternatives if his query cannot be met. In general, we have failed if the user finds it more effective to book a room the old fashioned way, by asking the Facility Management.
+	\item \textbf{Understandability}\\
+	The domain analysis suggested that the staff responsible for doing the semester planning had a large need to double-check that the important tasks performed by the system was done correctly. \ref{sec:xx}. In general, they had very little confidence in the system. Therefore, to avoid resistance towards change, it is important that the system communicates clearly with the user, during normal use, and expecially in error prone situations to avoid confusion.
+	\item \textbf{Ease of learning}\\
+	The set of people using our system is large and will change rapidly. It is therefore important that the system can be used "out of the box". If not, people will simply not use it, as it takes to much of their already limited time to get familiar with. Also, there is a close relation between ease of learning, and the effectiveness of the support the system offers. If the user does not understand how to use the system, they will indeed not be able to benefit from the support layer.
+	\item \textbf{Subjective satisfaction}\\
+	Some might argue that the subjective satisfaction is not very relevant in our case, because we're developing a tool for daily support and not a program that in any way should be amusing or entertaining. \\
+However experts believe \cite{nielsen_metrics} that users are more willing to accept the program and trust its efficiency if they find it visually appealing. Apple is a good example of using design and pleasing aesthetics as major selling points. The iPad used this to brand itself, thus creating a need that in reality was not present. %Source?
+\end{itemize}
+%%%% REMEMBER TO ADD PERFORMANCE REQUIREMENTS AND STUFF %%%%
 
-% subsection non_functional_requirements (end)
+\subsection{Functional requirements}
+\label{subsec:functional_requirements}
+To establish a foundation for the requirements of our system, we have considered the functionality our system must contain. These functional requirements only contains goals, and not \emph{how} they must be met, as we will adjust the way they take place based on usability factors.
 
-\subsection{Functional requirements} % (fold)
-\label{sub:functional_requirements}
+The system must... \begin{enumerate}
+\item distinguish users from eachother
+\item store data and information persistently
+\item support the user in performing the tasks specified in section \ref{sec:tasks}
+\end{enumerate}
 
-% subsection functional_requirements (end)
+In regard to the first item, all students and faculty at the ITU already have unique logins, and it would be natural to reuse those for our system. Being a webbased system, it comes as no surprise that we wish the data to be stored persistantly so different computers at different times, without the loss of bookings or the like.
+Naturally, the system has no use without actually fulfilling the tasks it has been designed to, hence the listing as a functional requirement.\\
+
+Our functional requirements are fairly scarce compared to some systems, but this stems from the fact that the system, from an end-user perspective, is pretty simple. Our vision is simply to enforce this perspective, and provide the \emph{expected} functionality, without hindrance of high complexity.
+
 
 \subsection{Quality Requirements}
 \label{subsec:quality_requirements}
@@ -53,10 +74,5 @@ The following tasks are the actions able to be performed within our system. The 
 \item[\textbf{T2.4}] Edit track.
 \item[\textbf{T2.5}] Plan semester. A full solution may or may not be possible
 \end{itemize}
-
-\section{Usability factors} % (fold)
-\label{sec:usability_criteria}
-
-% section usability_criteria (end)
 
 
