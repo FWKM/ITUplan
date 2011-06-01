@@ -17,12 +17,11 @@
 \contentsline {chapter}{\numberline {3}User interface design}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Mockups}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Usability tests}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}Usability}{9}{section.3.3}
-\contentsline {section}{\numberline {3.4}Design process}{9}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Trimming the fat}{10}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Room booking design}{10}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Layout}{11}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Proposed design}{11}{section.3.5}
+\contentsline {section}{\numberline {3.3}Design process}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Trimming the fat}{9}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Room booking design}{10}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Layout}{11}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Proposed design}{11}{section.3.4}
 \contentsline {chapter}{\numberline {4}Implementation}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}Choice of platform}{12}{section.4.1}
 \contentsline {section}{\numberline {4.2}Challenges}{12}{section.4.2}
