@@ -1,0 +1,25 @@
+-rette efter feedback
+
+#chapter2
+-domain analysis
+
+#chapter3
+-Use cases
+-Mockups
+-Usability tests
+-Proposed design
+
+#chapter4
+-challenges
+-datastructures
+-Server-client
+-Lift
+
+#chapter5
+-perspective
+-possible improvements
+-expansions
+-reflection
+
+#chapter6
+-conclusion
