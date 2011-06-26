@@ -39,28 +39,28 @@ The other function of the Study Administration is to assign rooms required by ex
 In the following, we will describe the two main tasks and how they relate to each other.
 
 \subsection{Day to day booking}
-Our program should provide an interface to support booking of rooms at the IT University. Users of this function, might have very different requirements. Students might just need a room to work, while an employee might book a specific room in advance for a meeting. Others might need specific equipment to be available. Because of the many requirements, the program should not only provide the user with options, but also \emph{suggest} solutions.\\
-Since most people using our application will be students looking for a room without any specific requirements, the simple task of finding \emph{any} room should be easy accessible and quick to use. \\
+Our program should provide an interface to support booking of rooms at the IT University. Users of this function might have very different requirements. Students might just need a room to work, while an employee might book a specific room in advance for a meeting. Others might need specific equipment to be available. Because of the many requirements, the program should not only provide the user with options, but also suggest solutions.\\
+Since most people using our application will be students looking for a room without any specific requirements, the simple task of finding an \emph{available} room should be easy accessible and quick to use. \\
 
 The day to day booking should thus contain:
 
 \begin{itemize}
 	\item A general overview of the available rooms to book.
 	\item An interface that quickly books a room, using a minimum of options. (\textbf{quickbook})
-	\item An interface that presents the user with several options, like the need for specific equipment, room capacity, time of day, etc. (\textbf{Selective booking})
+	\item An interface that presents the user with several options, such as the need for specific equipment, room capacity, time of day, etc. (\textbf{Selective booking})
 \end{itemize}
 
 The application should:
 
 \begin{itemize}
-	\item Suggest \emph{a single room} to the user, when using the quickbook function. The room suggested, should be the most \emph{optimal} room, in terms of efficient room allocation. This means that the application should suggest the smallest room, with the least amount of equipment available.
-	\item Suggest a list of rooms that fulfill the maximum number of requirements, given as input by the user through the selective booking function. If all requirements can be fulfilled, only the most optimal rooms (see above) should be presented to the user.
+	\item Suggest \emph{a single room} to the user, when using the quickbook function. The room suggested, should be the \emph{optimal} room, in terms of efficient room allocation. This means that the application should suggest the smallest room, with the least amount of equipment available.
+	\item Suggest a list of rooms that fulfil the maximum number of requirements, given as input by the user through the selective booking function. If all requirements can be fulfilled, only the optimal rooms (see above) should be presented to the user.
 \end{itemize}
 
 To exemplify a working application, the day to day booking will be fully implemented.
 
 \subsection{Semester planning}
-In addition to the day to day booking, we will design the user interface for a semester planning system. The interface should assist the administration in utilizing the rooms to the maximum potential by taking as many relevant factors in to consideration as possible. At the point when a semester needs to be planned, most courses only have a start-week and an end-week, along with the number of enrolled students. Some courses can, eg. due to external teachers with busy schedules, have narrowed down their options, and we must of course including support for these scenarios.
+In addition to the day to day booking, we will design the user interface for a semester planning system. Planning a semester is in the case of ITU not just a matter of assignment. Each semester have more courses and day/time combinations than there is rooms, so the essence of it,is providing the tools to prioritize in an informed manner. At the point when a semester needs to be planned, most courses only have a start-week and an end-week, along with the number of enrolled students. Some courses can, eg. due to external teachers with busy schedules, have narrowed down their options, and we must of course including support for these scenarios.
 Worth noting, and part of our considerations in the design, is that there will only be a few people ever using this part of the system, and these people will be easily accessible for training.
 
 The semester planning should contain:
