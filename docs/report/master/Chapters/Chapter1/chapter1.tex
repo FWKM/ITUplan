@@ -35,7 +35,7 @@ The other function of the Study Administration is to assign rooms required by ex
 \todo{Perhaps reformatting and elobaration }
 \label{sec:scope}
 \section{Scope}
-As we have primarily focused on the usability of the program, the actual implementation has been a second priority. We have divided the project into two main tasks, which together constitute to the main body of the program. The success of the project depends on how well the interfaces for these two tasks have been designed.\\
+ Since we want to focus on the creation of a solid interface that solves the above problems, the implementation has been a second priority. We have divided the project into two main tasks, which together constitute to the main body of such an application. The success of the project depends on how well the interfaces for these two tasks have been designed.\\
 In the following, we will describe the two main tasks and how they relate to each other.
 
 \subsection{Day to day booking}
@@ -57,25 +57,49 @@ The application should:
 	\item Suggest a list of rooms that fulfill the maximum number of requirements, given as input by the user through the selective booking function. If all requirements can be fulfilled, only the most optimal rooms (see above) should be presented to the user.
 \end{itemize}
 
+To exemplify a working application, the day to day booking will be fully implemented.
+
 \subsection{Semester planning}
-...
+In addition to the day to day booking, we will design the user interface for a semester planning system. The interface should assist the administration in utilizing the rooms to the maximum potential by taking as many relevant factors in to consideration as possible. At the point when a semester needs to be planned, most courses only have a start-week and an end-week, along with the number of enrolled students. Some courses can, eg. due to external teachers with busy schedules, have narrowed down their options, and we must of course including support for these scenarios.
+Worth noting, and part of our considerations in the design, is that there will only be a few people ever using this part of the system, and these people will be easily accessible for training.
+
+The semester planning should contain:
+
+\begin{itemize}
+	\item An interface to manage courses
+	\item An interface to manage the aforementioned tracks
+	\item An interface to handle any problems with planning that cannot be resolved automatically
+	\item An interface to view/review the current semester's allocation
+\end{itemize}
+
+The application should:
+
+\begin{itemize}
+	\item Attempt to not put courses in meeting rooms, unless all class rooms are unavailable in all possible scenarios
+	\item Provide alternatives to assignments and allow for wishes/preferences
+	\item Provide suggestions for resolutions if no full semester plan is possible
+\end{itemize}
+
+
+We will design the user interface for the semester planning, but not implement or add the required functionality. Doing the full scale implementation would be a possibility, but it is not crucial to prove our point of data presentation and usability. We have therefore chosen to perform the analytical work, and leave out large parts of the actual implementation.
 
 \subsection{Relations}
-How the two tasks relate...
+Even though the two tasks present very different functionality, the relationship between them needs to be defined, as they both occupy rooms. \\
 
-\textbf{Old:}
-Our approach to this project, has been primarily focused on the design and overall usability of the application. \\
+The semester planning should have precedence at all times. This means that any day to day bookings interfering with the semester planning will be deleted. Because of this, it should also not be possible to book a room during the use of the semester planning interface. \\
+A day to day booking cannot be made, if it overlaps with a scheduled event (like a lecture) created through the event planning interface.\\
 
+Not all users should have access to the semester planning. Only users defined as \emph{administrators} have access to this part of the system.
 
+\subsection{Functionality out of scope}
+Some functionality are not relevant to the functionality and interface of the two main tasks in our scope. The following list presents components that we discuss in this report, but do not implement.
 
-A large part of fulfilling these tasks is the creation of an interface, which by itself maintains a high level of support. 
-% Uddyb
-Both of the above tasks can often be solved in multiple ways. A student query the database for a room with specific requirements, might lower his requirements if there is no results. On the other hand, he might decide to postphone  the activity and try again when the specific room is available.\\
-In comparison, the room allocation problem can contain not only a few solutions (which a program might be able to suggest), but hundreds of ways to allocate courses. When something is impossible to solve, the user has to be able to tell the computer what to prioritize, or which solution to use.
-A well thought out application succeeds in presenting this information to the user, and gives a proper overview so the best decisions can be taken. \\
-Therefore, the far most important and interesting aspect of our application is the userinterface, in which we have choosen to put our focus. To exemplify a solid solution to this problem, and to keep the interface focused, we have narrowed our vision to the most used area: The day-to-day booking, and the semester planning (hence the tasks mentioned above). \\
+\begin{itemize}
+	\item A personal interface, listing all booking made by the user. Through this interface, it should be possible to review, edit and delete bookings. Each administrator of the system, should have access to \emph{all} booking, and should be able to approve or disapprove bookings.
+	\item A communication protocol for sending and receiving messages. This is nessesary if e.g. a booking is deleted by an administrator through the semester planning interface.
+	\item Some kind of restrictions to the day to day booking. It should e.g. not be possible for a user to book all available rooms at the same time.
+\end{itemize}
 
-The simple booking have been succesfully prototyped, whereas the semester planning have only been designed and developed theoretically, and not implemented. Doing the full scale implementation of the semester planning would be a possibility, but it is not crucial to prove our point of data presentation and usability. We have therefore chosen to perform the analytical work, and leave out large parts of the actual implementation.
 
 \section{Target audience} % (fold)
 \label{sec:target_audience}
