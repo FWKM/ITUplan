@@ -1,15 +1,15 @@
 \chapter{Background}
 \section{Introduction}
-In this project we have designed an application which fullfils two tasks, concerning the use of rooms at the IT University (ITU). We have developed a user friendly interface for booking of rooms(\textbf{day to day booking}), and an interface which helps the staff in assigning rooms to courses at the start of a semester (\textbf{semester planning}).\\
+In this project we have designed an application which fullfils two tasks concerning the use of rooms at the IT University (ITU). We have developed a user friendly interface for booking of rooms(\textbf{day to day booking}), and an interface which helps the staff in assigning rooms to courses at the start of a semester (\textbf{semester planning}).\\
 
 Currently, no application keeps track of the day to day bookings. This is done manually by the Facility Management(FM).\\
 Our day to day booking interface will provide a larger degree of flexibility when finding a place to work, conduct meetings etc., as it provides the possibility to book rooms in advance and get an overview of the available rooms at the moment.\\
 
- Additionally, the current semester planning is inefficient, decentralized and very time consuming. This process is currently done manually, with support from an application (Tabulex) normally used in elementary schools. When two courses overlap each other, the program does not suggest any alternative solutions to this conflict. This makes it hard, and very time consuming to come up with a proper alternative solution, as one change often results in another conflict.\\
-Finally, Tabulex does not keep track of the capacity of each rooms, which makes it impossible to use the rooms efficiently, as you cannot supply the program with knowledge about how the rooms are actually used.\\
-We want to construct a program that centralizes the semester planning, and aids the persons responsible as much as possible, to make it easier for the staff to make a good justified decision based on the information adn suggestions provided by the application. \\
+ Additionally, the current semester planning is inefficient, decentralized and very time consuming. This process is currently done manually, with support from an application (Tabulex) normally used in elementary schools. When two courses overlap each other, the program does not suggest any alternative solutions to this conflict. This makes it difficult, and very time consuming to come up with a proper alternative solution, as one change often results in another conflict.\\
+Finally, Tabulex does not keep track of the capacity of each rooms, which makes it impossible to do a proper allocation, as you cannot supply the program with knowledge about how the rooms are actually used.\\
+We want to construct a program that centralizes the semester planning, and aids the persons responsible as much as possible, to make it easier for the staff to make a good and justified decision based on the information and suggestions provided by the application. \\
 
-The program has been implemented as a web based solution, to make it globally accessible. As our main focus is to create a solid user interface, parts of the application will not be implemented. With this in mind, we chose lift as our webframework, as it provides many features relevant to our product out of the box. 
+The program has been implemented as a web based solution, to make it globally accessible. As our main focus is to create a solid user interface, parts of the application will not be implemented. With this in mind, we have chosen a webframework named Lift, written in Scala, which provides us with some needed functionality out of the box.
 
 \pagebreak
 \label{sec:current_situation}
@@ -17,9 +17,15 @@ The program has been implemented as a web based solution, to make it globally ac
 As of writing, room management at the ITU is split between the Study Administration and the Facilities Management. Within those departments there is another division of labour which all in all adds to the confusion of handling the limited rooms efficiently.
 
 \subsection{Facilities Management}
-The information desk, controlled by FM, is currently in charge of the day-to-day use of the meeting rooms. When a student or teacher wishes to reserve or use a room, the FM employee will refer to a binder with a paper-overview of current status, and if they succesfully find an available room a form is filled out, photocopied and archived.
+The information desk, controlled by FM, is currently in charge of the day-to-day use of the meeting rooms. When a person wishes to reserve or use a room, the FM employee will refer to a binder with a paper-overview of the current status.\\
 
-Aside from this, another part of FM is in charge of assigning offices and workspaces to teachers, teaching assistants and researchers. This is done through a locally stored Microsoft Access database, and is handled primarily by one person.
+This approach presents several problems:
+\begin{itemize}
+	\item It is not possible for the students to book a room in advance. Employees can book rooms in advance for conferences, faculty meethings etc., but the students can only book a room on the current day.
+	\item It is not possible to get an overview of the rooms currently available. This is a problem when you have specific requirements like the need for specific equipment, or when you need a room with a specific capacity. FM can answer some of these inqueries, but they rely on experience as they do not have this information available anywhere.\\ Additionally, only FM can tell you if and which rooms are currently unbooked, which at times can be a time consuming process in busy periods.
+\end{itemize}
+
+SLET? : (Aside from this, another part of FM is in charge of assigning offices and workspaces to teachers, teaching assistants and researchers. This is done through a locally stored Microsoft Access database, and is handled primarily by one person.)
 
 \subsection{Study Administration}
 In regards to room management, the Study Administrations biggest challenge is the planning of a semester. First step is collect data from the course database to see which courses will be held in the coming semester. When a list of courses have been compiled, a system called Tabulex\footnote{http://www.tabulex.dk/} is used to create a draft schedule so no overlaps of teachers and courses required by several tracks\footnote{'Track' is the term used to describe a semesters worth of courses in a specific direction, eg. the 'Software Engineering' direction of the 'Software Development and Technology' MSc education}. The output from Tabulex is finally used to manually create the room assignments for a standard week of the semester.
@@ -29,12 +35,39 @@ The other function of the Study Administration is to assign rooms required by ex
 \todo{Perhaps reformatting and elobaration }
 \label{sec:scope}
 \section{Scope}
-Our approach to designing this system, has been primarily focused on usability and all that entails. As described in \ref{sec:current_situation}, the current situation holds multiple challenges. Tedious and de-centralized management of a single resource is both time consuming and highly error-prone.\\
-We want to implement a system which fulfills two main tasks:
+As we have primarily focused on the usability of the program, the actual implementation has been a second priority. We have divided the project into two main tasks, which together constitute to the main body of the program. The success of the project depends on how well the interfaces for these two tasks have been designed.\\
+In the following, we will describe the two main tasks and how they relate to each other.
+
+\subsection{Day to day booking}
+Our program should provide an interface to support booking of rooms at the IT University. Users of this function, might have very different requirements. Students might just need a room to work, while an employee might book a specific room in advance for a meeting. Others might need specific equipment to be available. Because of the many requirements, the program should not only provide the user with options, but also \emph{suggest} solutions.\\
+Since most people using our application will be students looking for a room without any specific requirements, the simple task of finding \emph{any} room should be easy accessible and quick to use. \\
+
+The day to day booking should thus contain:
+
 \begin{itemize}
-	\item 1. Helps the student to find a place to work
-	\item 2. Aids the staff in the allocation of rooms
+	\item A general overview of the available rooms to book.
+	\item An interface that quickly books a room, using a minimum of options. (\textbf{quickbook})
+	\item An interface that presents the user with several options, like the need for specific equipment, room capacity, time of day, etc. (\textbf{Selective booking})
 \end{itemize}
+
+The application should:
+
+\begin{itemize}
+	\item Suggest \emph{a single room} to the user, when using the quickbook function. The room suggested, should be the most \emph{optimal} room, in terms of efficient room allocation. This means that the application should suggest the smallest room, with the least amount of equipment available.
+	\item Suggest a list of rooms that fulfill the maximum number of requirements, given as input by the user through the selective booking function. If all requirements can be fulfilled, only the most optimal rooms (see above) should be presented to the user.
+\end{itemize}
+
+\subsection{Semester planning}
+...
+
+\subsection{Relations}
+How the two tasks relate...
+
+\textbf{Old:}
+Our approach to this project, has been primarily focused on the design and overall usability of the application. \\
+
+
+
 A large part of fulfilling these tasks is the creation of an interface, which by itself maintains a high level of support. 
 % Uddyb
 Both of the above tasks can often be solved in multiple ways. A student query the database for a room with specific requirements, might lower his requirements if there is no results. On the other hand, he might decide to postphone  the activity and try again when the specific room is available.\\
