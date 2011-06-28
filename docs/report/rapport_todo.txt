@@ -2,8 +2,10 @@
 
 #chapter2
 -domain analysis
+-subtask creation [In progress: Bird]
+- politics
 
-#chapter3
+#chapter3 [In progress: Fred]
 -Use cases
 -Mockups
 -Usability tests

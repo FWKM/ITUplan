@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{tabulex}
+Tabulex ApS.
+\newblock Home of tabulex.
+\newblock \url{http://www.tabulex.dk/}.
+
 \bibitem{lauesen}
 Soren Lauesen.
 \newblock {\em User Interface Design; A software Engineering Perspective}.
@@ -8,5 +13,11 @@ Soren Lauesen.
 \bibitem{nielsen_metrics}
 Jakob Nielsen.
 \newblock Alert box january 21, 2001: Usability metrics.
+\newblock \url{http://www.useit.com/alertbox/20010121.html}.
+
+\bibitem{porter}
+Joshua Porter.
+\newblock {\em Designing for the Social Web}.
+\newblock New Riders Publishing, 2008.
 
 \end{thebibliography}

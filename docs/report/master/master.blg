@@ -1,8 +1,9 @@
 This is BibTeX, Version 0.99cThe top-level auxiliary file: master.aux
 The style file: plain.bst
 Database file #1: bib.bib
-Illegal end of database file---line 13 of file bib.bib
- : }
+I was expecting a `,' or a `}'---line 26 of file bib.bib
  :  
+ :  ADDRESS = {Berkeley}
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 (There was 1 error message)
