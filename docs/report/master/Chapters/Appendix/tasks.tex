@@ -1,0 +1,203 @@
+\section{Tasks}
+\subsection*{Simple task list}
+\begin{itemize}\itemsep1pt
+\item[\textbf{1.}] \textbf{Day-to-day booking}
+\item[\textbf{T1.1}] Book room. May or may not be a specific room or a specific time/day
+\item[\textbf{T1.2}] Check availability of room. May or may not be today.
+\item[\textbf{T1.3}] Cancel booking. May or may not be before the booked timeslot.
+\item[\textbf{T1.4}] Extend booking. May or may not be before the booked timeslot.
+\\
+\item[\textbf{2.}] \textbf{Semester planning}
+\item[\textbf{T2.1}] Create course. May or may not have full information available at the point of creation.
+\item[\textbf{T2.2}] Create track.
+\item[\textbf{T2.3}] Edit course.
+\item[\textbf{T2.4}] Edit track.
+\item[\textbf{T2.5}] Plan semester. A full solution may or may not be possible
+\end{itemize}
+
+\subsection*{Detailed task list}
+% Task 1.1 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T1.1:} \hspace{26mm}Book room} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}User opens system } \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}User have gotten a room } \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 10 bookings pr. day} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm}No rooms are available } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Find room & \\
+	1a. No specific room needed & System suggests any available room\\
+	1b. User has specific needs & System allows to search by parameters\\
+	1c. No available rooms & System allows to search at future dates\\ \hline
+	2.  Book room & \\
+	2a. User does not specify booking duration & System suggests a standard time duration \\
+	2b. User specifies time interval & \\ \hline
+	3. Confirm booking & \\
+	3a. User confirms & \\
+	3b. User declines & System cancels the booking \\ \hline
+\end{tabular}
+% Task 1.1 end
+\newline
+\vspace{1cm}
+\newline
+% Task 1.2 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T1.2:} \hspace{26mm}Check availability of room} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}User selects a room } \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}User has gotten the required information } \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 15 lookups pr. day} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm}Checking past current week } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Select room & \\ \hline
+	2.  View availability & System shows availability for current week\\
+	2a. For day in current week & \\
+	2b. For day past current week & System allows browsing by week \\ \hline
+\end{tabular}
+% Task 1.2 end
+\newline
+\vspace{1cm}
+\newline
+% Task 1.3 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T1.3:} \hspace{26mm}Cancel booking} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}User has an unwanted booking } \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}Booking is cancelled } \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 0.5 times pr. day} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm}User has many bookings } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Select booking & \\
+	1a. User has one booking & \\
+	1b. User has several bookings & System shows a sortable list \\ \hline
+	2.  Cancel booking & \\ \hline
+	3. Confirm cancellation & \\
+	3a. User accepts & System cancels booking \\
+	3b. User declines & System does not cancel booking \\ \hline
+\end{tabular}
+% Task 1.3 end
+\newline
+\vspace{1cm}
+\newline
+% Task 1.4 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T1.4:} \hspace{26mm}Extend booking} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}User needs more time with a room} \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}Booking is extended } \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 2 times pr. day} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm}Room is already booked} \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Select booking & \\
+	1a. User has one booking & \\
+	1b. User has several bookings & System shows a sortable list \\ \hline
+	2. Check availability & \\
+	2a. Room is available & \\
+	2b. Room is unavailable & System suggests similar room \\ \hline
+	3.  Extend booking & \\
+	3a. User does not specify booking duration & System suggests a standard time duration \\
+	3b. User specifies time interval & \\ \hline
+	4. Confirm extension & \\
+	4a. User confirms & \\
+	4b. User declines & \\ \hline
+\end{tabular}
+% Task 1.4 end
+\newline
+\vspace{1cm}
+\newline
+% Task 2.1 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T2.1:} \hspace{26mm}Create course} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}Course data is available} \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}Course have been created} \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 100 courses pr. semester} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm} - } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Create course & \\ \hline
+	2.  Fill data & \\
+	2a. All data is available & \\
+	2b. Not all data is available & System allows to partially fill in data \\ \hline
+	3.  Submit course & \\ \hline
+\end{tabular}
+% Task 2.1 end
+\newline
+\vspace{1cm}
+\newline
+% Task 2.2 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T2.2:} \hspace{26mm}Create track} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}Courses have been created} \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}Track has been created} \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 15 pr. semester} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm} - } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Create track & \\ \hline
+	2.  Assign course(s) to track & \\ \hline
+	3.  Save track & \\ \hline
+\end{tabular}
+% Task 2.2 end
+\newline
+\vspace{1cm}
+\newline
+% Task 2.3 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T2.3:} \hspace{26mm}Edit course} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}Updated course data is available} \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}Course has been udpated} \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 10 courses pr. semester} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm} - } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Find course & \\
+	1a. The unique ID of the course is known & System sorts by ID\\
+	1b. The unique ID is unknown & System allows sorting by long name\\ \hline
+	2.  Update data & \\ 
+	2a. Remove data/contraints & \\
+	2b. Add data/contraints & \\\hline
+	3.  Save changes & \\ \hline
+\end{tabular}
+% Task 2.3 end
+\newline
+\vspace{1cm}
+\newline
+% Task 2.4 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T2.4:} \hspace{26mm}Edit track} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}Courses needs to be added/removed from track} \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}Track has been updated} \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 5 pr. semester} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm} - } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Find track & System shows list of long names\\ \hline
+	2.  Update track & \\ 
+	2a. Add course(s) & \\
+	2b. Remove course(s) & \\\hline
+	3.  Save track & \\ \hline
+\end{tabular}
+% Task 2.4 end
+\newline
+\vspace{1cm}
+\newline
+% Task 2.5 start
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T2.5:} \hspace{26mm}Plan semester} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}Courses and tracks have been created} \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}All active courses have a room assigned} \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of once pr. semester} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm}No solution is possible due to constraints } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1. Start the planning & \\ \hline
+	2. View result & \\
+	2a. No problems occur & \\
+	2b. Clash(es) occur & System suggests changes to courses that would allow for a solution \\ \hline
+	3. Tweak result & \\
+	3a. Alternatives were provided & \\
+	3b. No alternatives & Manual tweaking of courses necesarry \\ \hline
+	4. Confirm track schedules & System provides a track-by-track overview \\ \hline
+	5. Approve semester plan & \\ \hline
+\end{tabular}
+% Task 2.5 end

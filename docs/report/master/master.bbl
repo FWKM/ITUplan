@@ -5,6 +5,11 @@ Tabulex ApS.
 \newblock Home of tabulex.
 \newblock \url{http://www.tabulex.dk/}.
 
+\bibitem{steve}
+Steve Krug.
+\newblock {\em Don't make me think}.
+\newblock Pearson Education Ltd., 2005.
+
 \bibitem{lauesen}
 Soren Lauesen.
 \newblock {\em User Interface Design; A software Engineering Perspective}.
