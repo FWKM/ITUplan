@@ -1,9 +1,40 @@
 \chapter{Implementation}
+The implemention of the application can roughly be divided into two parts: A server, being the layer between the user and the database, and a client presenting the data to the user. This chapter will describe the requirements for each part, the technical challenges of the project and how they were met. 
+
 
 \section{Choice of platform}
-Choosing a webbased solution over a desktop application was both a choice of interest and of usability. Accessibility is a crucial factor in usability, and by allowing end-users to access the system, the workload is both distributed and handled immediately, as opposed to being dependant on a single employee to perform the whole process associated with locating and booking a suitable and available room.
-\\
-The drawbacks to \todo{finish this sentence}
+We decided to create a web based solution instead of a desktop application, mostly based on the nature of the project but also on our own interests. The web based solution does not require a client to be installed on the users system, which makes it instantly accessible. The webbased solution also makes the program available on any device with an internet connection; from a laptop, a smartphone or a dedicated monitor at ITU.\\
+
+This is of course a tradeoff, as we have much more experience with developing desktop applications, which would probably be much faster and cause fewer errors to debug. However, we do think it was a natural choice to put the application on the internet, because of the large number of people who will use it everyday.
+
+\section{Language}
+Since we mainly focus on the UI, we wanted to use a framework for the development process, giving us some functionality "out of the box". This would reduce the time spent on the technial implementation, and give us more time to focus on the UI.\\
+We have chosen to use \emph{Scala}\cite{scala} as the implementation language; a multi-paradigm language running on the JVM. Scala is a superset of java, featuring some functional programming constructs, like pattern matching and immutable types. While it is possible to use the java libraries, Scala provides many immutable alternatives to make concurrent programming easier. \\
+
+A large motivation for choosing Scala, was the rich functionality provided by the Scala based web framework \emph{Lift} \cite{lift}. Lift is designed as a framework for developing web applications, with a high focus on security and performance. Lift provides us with the following functionality relevant to our project:
+
+\begin{itemize}
+	\item \textbf{Sitemap}\\
+	A sitemap is used to represent the structure of a website. Each page in the structure can be specified to require a certain level of authorization to be accessible. \\
+	\item \textbf{Sessions}\\
+	Lift support handling of multiple users with sessions. A session is a cookie, with some information about the user associated with it.\\
+	\item \textbf{Xml bindings}\\
+	Lift uses xml as reference points for dynamic code injection. The static parts of the application are built using normal HTML. XML are used as placeholders, or bindings, for the data that are supposed to change during a session. This makes it possible to completely seperate the development of the presentation layer (the client), and the data layer (the server).
+\end{itemize}
+
+Lift is thus giving us a lot of the functionality we need to make our application work, but it also poses a large challenge, as Lift requires decent experience with Scala, which we do not yet have.
+
+\section{Development environment}
+\label{sec:development_environment}
+During development, we have used a tool called Simple Build Tool(SBT)\cite{sbt} to compile and test our application. SBT comes with a local web server, and a Lift project template, seperating the client and server. Appendix \ref{app:lift_structure} describes the basic structure of such a project.
+
+\section{Technical requirements}
+\label{sec:tech_req}
+
+\subsection{Server}
+\label{sub:server}
+The server is the layer between the user and the database, taking care of all transactions. It should be able to handle multiple users at once, and handle different user roles.
+
 
 \todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
 
