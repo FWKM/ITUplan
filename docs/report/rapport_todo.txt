@@ -2,7 +2,6 @@
 
 #chapter2
 -domain analysis
--subtask creation [In progress: Bird]
 - politics
 
 #chapter3 [In progress: Fred]
