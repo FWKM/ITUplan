@@ -9,16 +9,64 @@ The steps are:
 \item Amend prototype 
 \end{enumerate}
 
-This chapter have been split into two parts due to the differences between them. We will provide a detailed walkthrough of the process for an element in each part, and the full history of mockups can be found in \ref{app:mockups}.
-\section{Prototypinng}
-\label{sec:prototyping}
+The semester planning and day to day booking have been described seperately, due to the differences between them. We will provide a detailed walkthrough of the process for an element in each part, and the full history of mockups can be found in appendix \ref{app:mockups}.
+
+\subsection{Usability testing}
+\label{sec:usability_testing}
+Choosing which, and how many, test subjects is needed for a test is a heavily debated subject in the usability community. Most tend to agree that 5 or below is more than enough for each round. The controversy arise when figuring out how representative the test subjects most be for your target audience. Soren Lauesen opens the corresponding chapter with: \cite{lauesen}
+\begin{quotation}
+\noindent \emph{``A usability test must of course be made with users that correspond to the real users we expect in practice.''}
+\end{quotation}
+However, Steve Krug has a different view: \cite{steve}
+\begin{quotation}
+\noindent \emph{``The importance of recruiting representative users is overrated. [...]''} \\
+\noindent \emph{``The best-kept secret of usability testing is the extent to which it doesn't much matter who you test.''}
+\end{quotation}
+
+What we can take away from their different arguments for and against, is that testing with representative users is \emph{good}, but not vital when it simply comes to eliminating problems.
+We have chosen to do both. The system is intended to be used by everyone at ITU, which will also include newly started students and faculty.
+Another point of agreement among the experts, is that testing early and often will \emph{always} trumps testing with many users at a later point. \cite{lauesen}\cite{steve}\cite{nielsen_five_users}
+
+
+
+
+
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+	\begin{tabular}{|l|r|r|r||r|}
+		\hline
+		 & Round 1 & Round 2 & Round 3 & Total \\ \hline
+		Day to day & 2 & 2 & 2 & 6\\ \hline
+		Semester & 1 & 1 & 1 & 3 \\ \hline
+	\end{tabular}
+\end{center}
+\caption{Overview of test users per round}
+\label{fig:usa_users}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+We have tested our user interface mockups by using the Think-aloud test,  The full test documentation can be found in appendix \ref{app:tests}.
+
+\section{Day to day booking}
+\label{sec:day_to_day_booking_ui}
+As described in previous chapters, the day to day booking should be usable without any instructions. We have tried to imitate familiar designs, and use common design conventions. As Steve Krug puts it\cite{steve}: 
+\begin{quotation}
+\emph{``All conventions start life as somebody's bright idea. If the idea works will enough, other sites imitate it and eventually enough people have seen it in enough places that it needs no explanation.''}
+\end{quotation}
+
+\subsection{Wireframe}
+\label{subsec:wireframe}
 \todo{relevance? rename/move/divide}
-When designing a prototype, there is no systematic way of deciding how many screens are needed, and what they need to contain \cite{lauesen}.
-
-
-What does exist, is conventions and typical behaviour, so we have tried to utilize this to construct a wireframe design for the frontpage \cite{garrett}. The wireframe seen on figure \ref{fig:wireframe_frontpage} is what later evolved to our main view.
-
-Based on the user and task analysis conducted in \ref{chap:analysis}
+The front page serves as a portal to the rest of the system, and thus it should be easy to understand. To ensure that we had the vital navigation functions in place before beginning the mockups, we constructed a wireframe\cite{garrett}. The wireframe, as seen on figure \ref{fig:wireframe_frontpage}, has the following elements:
 
 \begin{figure}[htb]
 \begin{center}
@@ -42,17 +90,13 @@ Based on the user and task analysis conducted in \ref{chap:analysis}
 	A panel containing buttons used to enter the booking interface, or the semester planning.
 \end{itemize}
 
-\section{Usability tests} % (fold)
-\label{sec:usability_tests}
-%%%% MENTION SOMETHING ABOUT SCENARIOS %%%%
-
-% section usability_tests (end)
 
 
-\section{Design process}
+
+\subsection{Design process}
 \label{sec:design_process}
 
-\subsection{Design of the day to day booking interface}
+\subsubsection{Design of the day to day booking interface}
 For a full history of our mockups, please refer to %\ref{app:mockups}
 
 \begin{figure}[htb]
@@ -105,14 +149,9 @@ Søren Lauesens first law of usability\cite{lauesen} states that a heuristic eva
 \todo{fix it}
 
 
-\subsection{Layout}
-%maybe move?
-Being a website poses some extra considerations - namely those of browsing habits. Two examples we will refer to, and assume basic familiarity with, in this section are wikipedia.org and google.com
-%kan dette bruges?
-\todo{ indsæt små billeder af wikipedia og google med F-pattern eyetrack }
-
-%Let us for a second imagine a search for 'random' was made on both those pages. According to research by Jakob Nielsen (---- indsæt ref), users tend to scan the page in a pattern slightly resembling a capital F, ignoring banners and everything that looks like 'off-site' content.
-
-\section{Proposed design}
+\subsection{Proposed design}
 \label{sec:proposed_design}
 \todo{Explain and illustrate the proposed design}
+
+\section{Semester planning}
+\label{sec:semester_planning_ui}

@@ -5,3 +5,5 @@ ituplan/target/
 ituplan/project/boot/
 *.psd
 *.pdf
+*.blg
+*.bbl
