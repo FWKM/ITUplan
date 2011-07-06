@@ -1,5 +1,4 @@
-This is BibTeX, Version 0.99c (Web2C 7.5.7)
-The top-level auxiliary file: master.aux
+This is BibTeX, Version 0.99cThe top-level auxiliary file: master.aux
 The style file: plain.bst
 Database file #1: bib.bib
 I was expecting a `,' or a `}'---line 31 of file bib.bib
@@ -22,45 +21,10 @@ I was expecting a `,' or a `}'---line 62 of file bib.bib
  :  TITLE = {Scala Language}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 10 entries,
-            2118 wiz_defined-function locations,
-            533 strings with 4639 characters,
-and the built_in function-call counts, 2037 in all, are:
-= -- 170
-> -- 70
-< -- 0
-+ -- 31
-- -- 20
-* -- 65
-:= -- 347
-add.period$ -- 24
-call.type$ -- 10
-change.case$ -- 33
-chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 90
-empty$ -- 221
-format.name$ -- 20
-if$ -- 435
-int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 8
-newline$ -- 47
-num.names$ -- 20
-pop$ -- 88
-preamble$ -- 1
-purify$ -- 30
-quote$ -- 0
-skip$ -- 77
-stack$ -- 0
-substring$ -- 51
-swap$ -- 10
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 32
-warning$ -- 0
-while$ -- 20
-width$ -- 12
-write$ -- 85
-(There were 4 error messages)
+I was expecting a `,' or a `}'---line 68 of file bib.bib
+ :  
+ :  TITLE = {Alert box March 19, 2000: Why You Only Need to Test with 5 Users}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in nielsen_five_users
+(There were 5 error messages)
