@@ -31,7 +31,7 @@ SBT support automatic compiling, so when a file included in the project is chang
 
 \section{Technical requirements}
 \label{sec:tech_req}
-This section describes the technical requirements for the server and the client. General requirements have been described in section \ref{subsec:functional_requirements}.
+This section describes the technical requirements for the server and the client. General requirements have been described in section \ref{subsec:functional_requirements}, and the actual implementation will be discussed in section \ref{xxxx}.
 
 \subsection{Server}
 \label{sub:req_server}
@@ -50,7 +50,9 @@ This section describes the technical requirements for the server and the client.
 	\item \textbf{Clickable map with server callback}\\
 	The client should present a clickable map of the rooms at ITU. When the user selects a room, the view should change and let the user book the selected room for the current day. This requires that the client sends data to the server, which is usually done within a <form> element using a submit button. However, as we are dealing with a clickable image, this is not an option. Lift does not support interactions with images, but does support callbacks from javascript functions. We can thus use a html clickable map\cite{html_map}, and attach a javascript callback through Lift, enabling us to call a function when the user selects a room.
 	\item \textbf{Interactive Calendar}\\
-	The users should be able to select 
+	The users should be able to select a different day than the current, giving them the option to book a room in advance. JQueryui\cite{jqueryui} offers a datepicker widget\cite{jqueryui_date}, which supports this functionality.
+	\item \textbf{Custom time and day picker}\\
+	Because our day and time picker \ref{chap2_req:xx} is a custom made widget and very application specific, it has to be made from scratch. Since Lift support callbacks through javascript, it's possible to create such a widget by using this functionality together with simple html attributes as date and time identifiers.
 \end{itemize}
 
 \section{Database design}
@@ -90,6 +92,7 @@ These solutions are based on the the case where users \textbf{X} and \textbf{Y} 
 	\hline
 \end{tabular}
 
+\todo{Write an implementation section for both the client and server. Mention the use of photoshop!}
 \section{Datastructures}
 \todo{Introduction to this section}
 
