@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{tabulex}
 Tabulex ApS.
@@ -10,6 +10,9 @@ Jesse~James Garrett.
 \newblock {\em The Elements of User Experience: User-Centered Design for the
   Web and Beyond}.
 \newblock New Riders Publishing, 2010.
+
+\bibitem{sbt}
+Mark Harrak.
 
 \bibitem{steve}
 Steve Krug.
@@ -26,9 +29,20 @@ Jakob Nielsen.
 \newblock Alert box january 21, 2001: Usability metrics.
 \newblock \url{http://www.useit.com/alertbox/20010121.html}.
 
+\bibitem{scala}
+Martin Odersky.
+
+\bibitem{lift}
+David Pollak.
+
 \bibitem{porter}
 Joshua Porter.
 \newblock {\em Designing for the Social Web}.
 \newblock New Riders Publishing, 2008.
+
+\bibitem{html_map}
+W3C.
+\newblock Html map and area elements.
+\newblock \url{http://www.w3.org/TR/html40/struct/objects.html#h-13.6.1}.
 
 \end{thebibliography}

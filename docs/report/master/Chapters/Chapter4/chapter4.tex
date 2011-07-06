@@ -26,24 +26,44 @@ Lift is thus giving us a lot of the functionality we need to make our applicatio
 
 \section{Development environment}
 \label{sec:development_environment}
-During development, we have used a tool called Simple Build Tool(SBT)\cite{sbt} to compile and test our application. SBT comes with a local web server, and a Lift project template, seperating the client and server. Appendix \ref{app:lift_structure} describes the basic structure of such a project.
+During development, we have used a tool called Simple Build Tool(SBT)\cite{sbt} to compile and test our application. SBT comes with a local web server (called Jetty), and a Lift project template, seperating the client and server. Appendix \ref{app:lift_structure} describes the basic structure of such a project.\\
+SBT support automatic compiling, so when a file included in the project is changed, Jetty will automatically compile the changed file(s) and restart the webserver.
 
 \section{Technical requirements}
 \label{sec:tech_req}
+This section describes the technical requirements for the server and the client. General requirements have been described in section \ref{subsec:functional_requirements}.
 
 \subsection{Server}
-\label{sub:server}
-The server is the layer between the user and the database, taking care of all transactions. It should be able to handle multiple users at once, and handle different user roles.
+\label{sub:req_server}
+\begin{itemize}
+	\item \textbf{General authorization}\\
+	The server should not allow access to the system unless the user is logged in. The sitemap functionality in Lift should be used to request authorization and present the appropriate pages.
+	\item \textbf{User levels}\\
+	In our system, we need two different user roles; one for staff members which should have access to the semester planning application(\emph{super users}), and one for all other users (\emph{basic users}). Specific user roles are assigned an integer indicating the users \emph{level}. Super users are level 2, while basic users are level 1. The server should use the sitemap to only present the semester planning to super users, thus users with a level of 2. 
+	\item \textbf{Support of multiple users}\\
+	Lift Sessions should be used to distinguish users from each other. The Session associated with a user is not a placeholder for the actual user \emph{object}, but merely a unique identifier. The Session cookie should only contain the unique ID of the user, fetched from the database.
+\end{itemize}
+
+\subsection{Client}
+\label{sub:req_client}
+\begin{itemize}
+	\item \textbf{Clickable map with server callback}\\
+	The client should present a clickable map of the rooms at ITU. When the user selects a room, the view should change and let the user book the selected room for the current day. This requires that the client sends data to the server, which is usually done within a <form> element using a submit button. However, as we are dealing with a clickable image, this is not an option. Lift does not support interactions with images, but does support callbacks from javascript functions. We can thus use a html clickable map\cite{html_map}, and attach a javascript callback through Lift, enabling us to call a function when the user selects a room.
+	\item \textbf{Interactive Calendar}\\
+	The users should be able to select 
+\end{itemize}
+
+\section{Database design}
+\label{sec:database_design}
 
 
 \todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
 
 \section{Challenges}
 \label{sec:challenges}
-\todo{What challenges must our user interface overcome?}
-\\
 % info found in: 'concurrent_room_selection-11-02-03', 'meeting_study-administration_11-03-16' and 'courses_spanning_multiple_days'
 \subsection{Concurrent room selection}
+\label{sub:challenges_concurrent_rooms}
 The handling of concurrent users is always an issue in webbased services, and more specifically in our case it presents itself when multiple users wants to book a room at the same time. No solutions are perfect, and we've tried discovering the pros and cons of the solutions we considered.
 
 \subsubsection*{Possible solutions}
