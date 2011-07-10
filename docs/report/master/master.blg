@@ -1,30 +1,32 @@
 This is BibTeX, Version 0.99cThe top-level auxiliary file: master.aux
 The style file: plain.bst
 Database file #1: bib.bib
-I was expecting a `,' or a `}'---line 31 of file bib.bib
+I was expecting a `,' or a `}'---line 39 of file bib.bib
  :  
  :  ADDRESS = {Berkeley}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 50 of file bib.bib
+I was expecting a `,' or a `}'---line 58 of file bib.bib
  :  
  :  TITLE = {Lift Framework}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 56 of file bib.bib
+I was expecting a `,' or a `}'---line 64 of file bib.bib
  :  
  :  TITLE = {Simple Build Tool for Scala}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 62 of file bib.bib
+I was expecting a `,' or a `}'---line 70 of file bib.bib
  :  
  :  TITLE = {Scala Language}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 68 of file bib.bib
+I was expecting a `,' or a `}'---line 76 of file bib.bib
  :  
  :  TITLE = {Alert box March 19, 2000: Why You Only Need to Test with 5 Users}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in nielsen_five_users
+Warning--to sort, need author or key in jqueryui
+Warning--to sort, need author or key in jqueryui_date
 (There were 5 error messages)
