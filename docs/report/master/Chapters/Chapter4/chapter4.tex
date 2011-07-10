@@ -57,6 +57,32 @@ This section describes the technical requirements for the server and the client.
 
 \section{Database design}
 \label{sec:database_design}
+From the requirements in section \ref{sec:requirements} and the technical requirements above, we derived the database design seen in figure \ref{fig:db_design}. While parts of the design are trivial, here follows the ideas behind some of the more non trivial elements.
+
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.6\textwidth]{images/db-design.png}
+\end{center}
+\caption{Database design}
+\label{fig:db_design}
+\end{figure}
+
+\subsection{Course and planning table}
+\label{sub:course_planning_table}
+The course tabel contains information about a specific course. It should be possible to create a course without immediately adding it to the semester planning, which is why the two tables seem to contain some of the same data. The \emph{room\_req} field is a \emph{room request} field. We learned from section \ref{xx} that teachers often have specific room requests, which this field reflects. This might be a wish, or an actual request which should be respected by the application, if e.g. a course requires equipment only available in one room. In that case, the \emph{req\_req} field is set to 1, indicating that this is a constraint and not a wish. 
+
+\subsection{Day and time modelling}
+\label{sub:day_and_time_modelling}
+We have chosen not to use the built in date field type in MySQL, because we use javascript to exchange data between the client and the server. Javascript does not understand this data type by default, and while it might be possible to write a function that creates an object representing the same type, we will still have to deal with string splitting and concatination. This is very inefficient and takes up more space compared to using simple integers.\\
+We have thus used integers to represent all kinds of date and time data. An example is the \emph{booking} table, which contains information about a specific booking. \emph{time} and \emph{endtime} represents the start time and end time of the booking respectively, by the number of minutes after midnight. If a booking starts 10.30 in the morning, the start time field will thus be 630. This way of representing the time has a couple of advantages:
+
+\begin{itemize}
+	\item Simple calculations can be used to find the duration of a booking, and the actual time the fields represent. We do not need to work with strings, which makes the code clearner and more efficient.
+	\item For the same reason, user validation is quick and easy to perform.
+	\item We can still execute specific date and time sql queries by using basic relationel operators, which makes it more efficient to e.g. lookup bookings after a specific time.
+\end{itemize}
+
 
 
 \todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
@@ -93,17 +119,3 @@ These solutions are based on the the case where users \textbf{X} and \textbf{Y} 
 \end{tabular}
 
 \todo{Write an implementation section for both the client and server. Mention the use of photoshop!}
-\section{Datastructures}
-\todo{Introduction to this section}
-
-\subsection{Datamodel}
-\todo{Explain our database design and datamodel}
-
-\subsection{Algorithms}
-\todo{Outline the important algorithms in our program, and why they are awesome}
-
-\section{Server-Client relationship}
-\todo{Explain the design; what we do, and what lift handles for us.}
-
-\section{Lift}
-\todo{This section probably doesn't belong here, but it needs to be somewhere.}
