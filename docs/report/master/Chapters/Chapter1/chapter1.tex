@@ -12,8 +12,8 @@ We want to construct a program that centralizes the semester planning, and aids 
 The program has been implemented as a web based solution, to make it globally accessible. As our main focus is to create a solid user interface, parts of the application will not be implemented. With this in mind, we have chosen a web framework named Lift, written in Scala, which provides us with some needed functionality out of the box.
 
 \pagebreak
-\label{sec:current_situation}
-\section{Current situation}
+\section{Domain analysis}
+\label{sec:domain_analysis}
 As of writing, room management at the ITU is split between the Study Administration and the Facilities Management. Within those departments there is another division of labour which all in all adds to the confusion of handling the limited rooms efficiently.
 
 \subsection{Facilities Management}
@@ -84,6 +84,9 @@ We will design the user interface for the semester planning, but not implement o
 Even though the two tasks present very different functionality, the relationship between them needs to be defined, as they both occupy rooms. \\
 
 The semester planning should have precedence at all times. This means that any day to day bookings interfering with the semester planning will be deleted. Because of this, it should also not be possible to book a room during the use of the semester planning interface. \\
+
+In practice there might be exceptions, that we cannot predict. ITU might have a very important meeting that should not be deleted, or overwritten by the semester planning algorithm. These exceptions will be taken into consideration when implementing the application.
+
 A day to day booking cannot be made, if it overlaps with a scheduled event (like a lecture) created through the event planning interface.\\
 
 Not all users should have access to the semester planning. Only users defined as \emph{administrators} have access to this part of the system.
@@ -96,22 +99,3 @@ Some functionality are not relevant to the functionality and interface of the tw
 	\item A communication protocol for sending and receiving messages. This is nessesary if e.g. a booking is deleted by an administrator through the semester planning interface.
 	\item Some kind of restrictions to the day to day booking. It should e.g. not be possible for a user to book all available rooms at the same time.
 \end{itemize}
-
-
-\section{Target audience} % (fold)
-\label{sec:target_audience}
-Our application is implemented solely for ITU. It would have been possible to implement a general solution capable of adapting to many instutions, and while this is our general line of thought, a good UI needs to contain various elements specific to the domain in which it is used. This includes a map of the university for easy navigation and localization of rooms, and many application specific options. These features might not be nessesary for e.g. another university, which examplifies the difficulty in creating a general room-booking application without compromising the required functionality.\\
-
-Our target audience can thus be divided into two groups:
-\begin{itemize}
-\item Student body at ITU
-\item Employees at ITU
-\end{itemize}
-
-\subsection*{Student body}
-The student body covers ages 18 - 40+ and with very different backgrounds. Based on the nature of the university, it is fair to assume that most students have atleast basic familiarity with IT and computer use in general.
-
-\subsection*{Employees}
-The computer proficiency of the employees can range from expert to novice, and no clear-cut distinctions can be made. We have, however, observed that the majority of the people our system would affect are using tools with some similarities, and are therefore assuming their proficiency to be above novice users.\\
-
-Note that even though our day to day booking interface will mostly be used by students, we can make no assumptions that the target audience for this part of the application \emph{only} contains students. We need to make sure the day to day booking can be used by a very wide range of people, including also the employees.

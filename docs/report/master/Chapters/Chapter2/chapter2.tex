@@ -1,11 +1,25 @@
 \chapter{Analysis}
 \label{chap:analysis}
 When unifying the functions of several departments and optimizing the overall process at the same time, a multitude of non-triviel problems will need answering. Through this chapter we will go through the discussions made for and against our choices.
+\todo{Write a better introduction to this chapter}
 
-\section{Domain analysis} % (fold)
-\label{sec:domain_analysis}
+\section{Target audience} % (fold)
+\label{sec:target_audience}
+Our application is implemented solely for ITU. It would have been possible to implement a general solution capable of adapting to many instutions, and while this is our general line of thought, a good UI needs to contain various elements specific to the domain in which it is used. This includes a map of the university for easy navigation and localization of rooms, and many application specific options. These features might not be nessesary for e.g. another university, which examplifies the difficulty in creating a general room-booking application without compromising the required functionality.\\
 
-% section domain_analysis (end)
+Our target audience can thus be divided into two groups:
+\begin{itemize}
+\item Student body at ITU
+\item Employees at ITU
+\end{itemize}
+
+\subsection*{Student body}
+The student body covers ages 18 - 40+ and with very different backgrounds. Based on the nature of the university, it is fair to assume that most students have atleast basic familiarity with IT and computer use in general.
+
+\subsection*{Employees}
+The computer proficiency of the employees can range from expert to novice, and no clear-cut distinctions can be made. We have, however, observed that the majority of the people our system would affect are using tools with some similarities, and are therefore assuming their proficiency to be above novice users.\\
+
+Note that even though our day to day booking interface will mostly be used by students, we can make no assumptions that the target audience for this part of the application \emph{only} contains students. We need to make sure the day to day booking can be used by a very wide range of people, including also the employees.
 
 \section{Requirements}
 \label{sec:requirements}
