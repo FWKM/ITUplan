@@ -61,6 +61,7 @@ The table in figure \ref{fig:usa_users} shows how many users have been tested fo
 \label{fig:usa_users}
 \end{figure}
 
+
 The results from our tests can be found in the following sections, whereas the full test documentation can be found in appendix \ref{app:tests}.
 
 \section{Day to day booking}
@@ -98,24 +99,42 @@ The front page serves as a portal to the rest of the system, and thus it should 
 
 
 \subsection{Test results}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=1\textwidth]{images/result_day}
+\end{center}
+\caption{Test results for the day to day booking}
+\label{fig:results_day}
+\end{figure}
+
+Figure \ref{fig:results_day} provides an overview of our findings from the usability testing of the day to day system. We have used the problem classification defined by Soren Lauesen\cite{lauesen}.
+
+Reading the results, it becomes clear that we did not initially succeed in making vital functions of the system intuitive enough for users to utilize the indended functions. What may come as a surprise, is that most users at some point or the other, raised the complexity of the assigned task by accessing the advanced search function instead of the intended simpler functions.
+
+What stands out here is that user 6 encountered two problems, one of which resulted in him not completing the assigned task. Naturally, this is not something we could wish for in the last round of testing, but it did provide insight as to how users with very little technical knowledge interpret our system.
+
+The following section provides a walkthrough as to how a single part of the system have been designed, as direct results of the problems found in the test.
 
 \subsection{Design process}
 \label{sec:design_process}
 
 \subsubsection{Design of the day to day booking interface}
-For a full history of our mockups, please refer to %\ref{app:mockups}
+
+For a full history of our mockups, please refer to %\ref{app:mockups_day} \\
+\\
 
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
 \includegraphics[width=0.6\textwidth]{images/bookRoomMockup}
 \end{center}
-\caption{First draft of the simple booking panel}
+\caption{First draft of the booking panel}
 \label{fig:book_room_mockup}
 \end{figure}
 
 Seen on figure \ref{fig:book_room_mockup} is the function of the main screen, which was thought to be in charge of all interaction, trying to give the user the impression that they never left the homepage, and to make sure no-one got lost in subscreens and menus. Our first usability tests quickly revealed that we had been mistaken. All the test subjects felt overwhelmed by the amount of options, and due to all the clutter did not spot the vital functions.
-
+\pagebreak
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
@@ -125,8 +144,13 @@ Seen on figure \ref{fig:book_room_mockup} is the function of the main screen, wh
 \label{fig:book_room_mockup2}
 \end{figure}
 
-Second time around, we tried making it as basic as possible and simply presenting the user with a dialog (not a pop-up, just an overlay) for selecting how many hours from now the room should be booked. The flaw with this was that noone was able to figure out the availability of a room in the near future. This is when we realized that the best successes we've had with room booking was the first draft of the week-overview screen.
+Second time around, we tried making it as basic as possible and simply presenting the user with a dialog (not a pop-up, just an overlay) for selecting how many hours from now the room should be booked. The flaw with this was that noone was able to figure out the availability of a room in the near future. This is when we realized that the best successes we've had with room booking was the first draft of the week-overview screen. \\
+\\
+This round of testing was probably the one with the biggest impact on the final design. As shown on the test results from figure \ref{fig:results_day}, \emph{quick booking} was not thought of yet in the first round. During the course of this test, we discovered general satisfaction with the simplicity of the overlaying panel even though it did not provide the needed functional for the intended task. However, we decided to find a new use for it, and that is how quick booking came to, along with simple booking being redefined to what it is now.
 
+The result of this redefinition is described in section \ref{chap1:day_to_day_booking}. In summary, simple booking changed to become the interface used when clicking a room on the map view, whereas quick booking became the instant way of getting any available room.
+
+\pagebreak
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
@@ -136,23 +160,24 @@ Second time around, we tried making it as basic as possible and simply presentin
 \label{fig:week_mockup}
 \end{figure}
 
-All the test subjects used the 'matrix' overview shown on figure \ref{fig:week_mockup} both creatively and effectively, so we decided to try and utilize that success to the maximum by redirecting even a simple booking task to the same screen.
-The only exception we have made to this is when using the "book now"-functionality, which will simply book a room for 4 hours and notify the user which one they have been assigned, with the ability to either accept or reject.
+All the test subjects used the 'matrix' overview shown on figure \ref{fig:week_mockup} both creatively and effectively, so we decided to try and utilize that success to the maximum by redirecting all bookings, bar the quick booking, to the same screen.
 
+As shown, we have decided to invert the x/y-axes as opposed to normal day-time overviews in eg. Outlook or Google Calendar. This is done because of the standard timeline being from left to right, and not top to bottom. We have simply added 7 timelines on top of each, as we thought it more intuitive when trying to get an overview. Our assumptions proved correct from every single test, as not a single user had a problem understanding the view immediately.
+
+\pagebreak
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
 \includegraphics[width=1\textwidth]{images/weekFinal}
 \end{center}
-\caption{The almost finished screen for a week overview on a specific room.}
+\caption{The finished screen for a week overview on a specific room, also used by Simple booking.}
 \label{fig:week_final}
 \end{figure}
 
 The final design to book a room, as shown on figure \ref{fig:week_final}, grants an availability overview of 7 days, starting with the current day. Through our tests, we noted test subjects trying to drag the mouse to select, and others clicking for a start time followed by a click on end time, so we have chosen to allow for both.
-To assist the user in figuring out how it works, we have added highlighting of both the day and time when mouse is moved across the matrix.
+To further assist the user in figuring out how it works, we have added highlighting of both the day and time when mouse is moved across the matrix.
 
-Søren Lauesens first law of usability\cite{lauesen} states that a heuristic evaluation of usability flaws only has a 50\% hit-rate, which we admittedly found out was the case. We anticipated that our first design might be too dense, but never guessed that the wider overview proved more efficient for a simple booking.
-\todo{fix it}
+The test results in figure \ref{fig:results_day} show a task failure for simple booking in last round, which was caused by him not discovering that the map was clickable, but once we intervened and directed him towards this view, he did succeed.
 
 
 \subsection{Proposed design}
