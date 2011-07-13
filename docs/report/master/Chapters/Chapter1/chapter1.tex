@@ -10,15 +10,16 @@ We want to construct a system that centralizes the semester planning, and aids t
 
 The program has been implemented as a web based solution, to make it globally accessible. We have chosen a web framework named Lift, written in Scala, which provides us with some needed functionality out of the box. This allows us to put our main focus on creating a solid user interface. Due to this choice of focus, some parts of the system have not been implemented.
 
-
-%-- This goes in current situation instead!
-%When two courses overlap each other, the program does not suggest any alternative solutions to this conflict. This makes it difficult, and very time consuming to come up with a proper alternative solution, as one change often results in another conflict.\\
-%Finally, Tabulex does not keep track of the capacity of each rooms, which makes it impossible to do a proper allocation, as you cannot supply the program with knowledge about how the rooms are actually used.\\
-
 \pagebreak
 \section{Domain}
 \label{sec:domain}
 As of writing, room management at the ITU is split between the Study Administration and the Facilities Management. Within those departments there is another division of labour which all in all adds to the confusion of handling the limited rooms efficiently.
+
+% -- Skal ind i rapporten:
+% Current situation indeholder mange interessante oplysninger.
+% Der savnes dog et overblik over ressourcerne: de forskellige typer
+% lokaler (mødelokaler, undervisningslokaler, kontorer -- hvoraf de
+% sidste er uden for scope her).
 
 \subsection{Facilities Management}
 The information desk, controlled by FM, is currently in charge of the day to day use of the meeting rooms. When a person wishes to reserve or use a room, the FM employee will refer to a binder with a paper-overview of the current status of each single room.\\
@@ -36,6 +37,10 @@ The other function of the Study Administration is to assign rooms required by ex
 
 \subsection{Current systems}
 \label{sub:current_systems}
+\subsubsection*{Tabulex}
+\label{subsub:tabulex}
+When two courses overlap each other, the program does not suggest any alternative solutions to this conflict. This makes it difficult, and very time consuming to come up with a proper alternative solution, as one change often results in another conflict.\\
+Finally, Tabulex does not keep track of the capacity of each rooms, which makes it impossible to do a proper allocation, as you cannot supply the program with knowledge about how the rooms are actually used.\\
 
 \label{sec:scope}
 \section{Scope}
