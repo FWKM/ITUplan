@@ -1,6 +1,8 @@
 \chapter{User interface design}
 \label{chap:user_interface_design}
 \section{Method}
+\label{sec:method}
+We have chosen several different methods and processes that enable us to achieve results in a consistent manner. In this section, we will describe the methods we have applied, and explain why they were chosen over similar alternatives.
 
 \subsection{Iterative design}
 When designing a user interface with the intention of reaching a high level of usability, a systematic approach is key. The process we have used, can be roughly divided in to 4 steps, where the latter part can be repeated until the Quality Requirements, listed in \ref{subsec:quality_requirements}, have been met. \cite{lauesen} \\
@@ -16,6 +18,19 @@ The semester planning and day to day booking have been described seperately, due
 
 \subsection{Usability testing}
 \label{sec:usability_testing}
+With usability being our primary focus, choosing a proper method of testing said usability is key. A number of different variations of user-based testing exist:\cite{lauesen}
+\begin{itemize}
+\item \textbf{Observe only} - Let the user work out the task on his own, and simply observe his struggles
+\item \textbf{Think aloud} - Let the users explain their thoughts and decision as they (try to) complete the tasks
+\item \textbf{Cooperation} - Have two users solve the tasks together, and encourage them to discuss what is going on
+\end{itemize}
+
+Among the most widely used technique for testing user interfaces in development stages are the think aloud method.\cite{steve} As one can imagine, not all test subjects find it natural to explain their thoughts as they go, but with interested questions from the test evaluator, most users get familiar with the concept very fast. We have chosen the think aloud test for two primary reasons.
+First, because even in the worst cases where a user does not adapt to explaining why and what they do, you can still get the same, if not better, results than with the \emph{observe only} test.
+Secondly, the \emph{cooperation} test has the potential danger of concealing usability problems. In the case where test subjects \emph{t1} and \emph{t2} are cooperating on a task, a problem t1 would have encountered alone, will not be discovered due to p2 solving it beforehand, and vice versa. This results in potentially only finding problems which both users would have encountered on their own. 
+
+Surprisingly, we have not found any description of this problem by the established experts, and can therefore not verify our theory, but have nonetheless decided to avoid this version of usability testing, based on this. \\
+\\
 Choosing which, and how many, test subjects is needed for a test is a heavily debated subject in the usability community. Most tend to agree that 5 or below is more than enough for each round. The controversy arise when figuring out how representative the test subjects most be for your target audience. Soren Lauesen opens the corresponding chapter with: \cite{lauesen}
 \begin{quotation}
 \noindent \emph{``A usability test must of course be made with users that correspond to the real users we expect in practice.''}
@@ -28,7 +43,7 @@ However, Steve Krug has a different view: \cite{steve}
 
 What we can take away from their different arguments for and against, is that testing with representative users is \emph{good}, but not vital when it simply comes to eliminating problems.
 We have chosen to do both. The system is intended to be used by everyone at ITU, which will also include newly started students and faculty.
-Another point of agreement among the experts, is that testing early and often will \emph{always} trumps testing with many users at a later point. \cite{lauesen,steve,nielsen_five_users}
+Another point of agreement among the experts, is that testing early and often will \emph{always} trump testing with many users at a later point. \cite{lauesen,steve,nielsen_five_users}
 
 The table in figure \ref{fig:usa_users} shows how many users have been tested for each part of the system for each round. As seen, we've opted to only test one user for the semester planning, which is simply due to the lack of people with the required knowledge, and the very narrow target audience.
 
@@ -57,7 +72,6 @@ As described in previous chapters, the day to day booking should be usable witho
 
 \subsection{Wireframe}
 \label{subsec:wireframe}
-\todo{relevance? rename/move/divide}
 The front page serves as a portal to the rest of the system, and thus it should be easy to understand. To ensure that we had the vital navigation functions in place before beginning the mockups, we constructed a wireframe\cite{garrett}. The wireframe, as seen on figure \ref{fig:wireframe_frontpage}, has the following elements:
 
 \begin{figure}[htb]
