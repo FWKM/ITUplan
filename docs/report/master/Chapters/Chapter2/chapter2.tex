@@ -96,9 +96,21 @@ The following tasks are the actions able to be performed within our system. The 
 \end{itemize}
 
 \section{Domain specific challenges}
-Throughout the project, we encountered some very domain specific challenges, that ultimately should be answered by ITU. They are nevertheless important to our application and will thus be discussed in this section.
+Throughout the project, we encountered some very domain specific challenges, that ultimately should be answered by ITU. They are nevertheless important to our application and will be highlighted in this section. We have discussed these issues with a member of the study administration, and our default choices are based on that, but it is something that ITU is an institution must decide on policies for.
 
+\subsection{Approval}
+\label{subsec:approval}
+It is very plausible that FM wishes to assume full control of the rooms. In practice, this would mean that users could make requests for rooms, and FM would then manually have to approve or decline every request. We find it a very reasonable wish, but with a caveat: If FM is not constantly active, it would not be a big improvement over the current way of handling rooms, but simply a new look to an old way. In our prototype, we have assumed that FM would be willing to accept the users making bookings themselves, and simply grant them the power to delete bookings at will.
 
+\subsection{Limiting bookings}
+\label{subsec:limiting_bookings}
+To prevent abuse, such as a student booking the whole school for a month straight, it is important to have some limitations based on user levels. For example, limiting a student to have one or two active bookings, and possibly more for staff and faculty. This would be of course be a non-issue if aforementioned approval system was indeed decided upon.
+
+\subsection{Overriding bookings}
+\label{subsec:overriding_bookings}
+We mention  in section \ref{subsec:relations} that semester planning should take precedency over day to day booking, and that it might not always be the case in reality. This is a policy that ITU internally have to sort out, and we will have to adjust the application according to their final decision. By deault, we will however allow day to day bookings to be overwritten, as it is our belief that a good allocation of resources for a whole semester is better than a single meeting/appointment. \\
+\\
+Another concern regarding prioritizing bookings, are the cases of extending bookings. If a users wishes to extend a booking for a room they currently occupy, and another booking has been made already, it could be considered if the current occupant should be allowed to extend if a replacement room can be found automatically for the secondary booking. By default however, extending is only possible if the room is not booked.
 
 
 

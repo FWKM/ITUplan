@@ -61,6 +61,7 @@ Finally, Tabulex does not keep track of the capacity of each rooms, which makes 
 In the following, we will describe the two main tasks and how they relate to each other.
 
 \subsection{Day to day booking}
+\label{chap1:day_to_day_booking}
 Our program should provide an interface to support booking of rooms at the IT University. Users of this function might have very different requirements. Students might just need a room to work, while an employee might book a specific room in advance for a meeting. Others might need specific equipment to be available. Because of the many requirements, the program should not only provide the user with options, but also suggest solutions.\\
 Since most people using our application will be students looking for a room without any specific requirements, the simple task of finding any available room should be easy accessible and quick to use. \\
 
@@ -82,6 +83,7 @@ The application should:
 To exemplify a working application, the day to day booking will be fully implemented.
 
 \subsection{Semester planning}
+\label{chap1:semester_planning}
 In addition to the day to day booking, we will design the user interface for a semester planning system. Planning a semester is in the case of ITU not just a matter of assignment. Each semester have more courses and day/time combinations than there is rooms, so the essence of it,is providing the tools to prioritize in an informed manner. At the point when a semester needs to be planned, most courses only have a start-week and an end-week, along with the number of enrolled students. Some courses can, eg. due to external teachers with busy schedules, have narrowed down their options, and we must of course including support for these scenarios.
 Worth noting, and part of our considerations in the design, is that there will only be a few people ever using this part of the system, and these people will be easily accessible for training.
 
@@ -106,6 +108,7 @@ The application should:
 We will design the user interface for the semester planning, but not implement or add the required functionality. Doing the full scale implementation would be a possibility, but it is not crucial to prove our point of data presentation and usability. We have therefore chosen to perform the analytical work, and leave out large parts of the actual implementation.
 
 \subsection{Relations}
+\label{subsec:relations}
 Even though the two tasks present very different functionality, the relationship between them needs to be defined, as they both occupy rooms. \\
 
 The semester planning should have precedence at all times. This means that any day to day bookings interfering with the semester planning will be deleted. Because of this, it should also not be possible to book a room during the use of the semester planning interface. \\
