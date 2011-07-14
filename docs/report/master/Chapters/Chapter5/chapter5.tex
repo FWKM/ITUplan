@@ -22,12 +22,31 @@ This is the single greatest benefactor of a succesful implementation, as the cur
 \subsection{Students, faculty and staff}
 For the daily visitors to ITU, finding a meeting room or workspace would be greatly simplified, as the need to wait in line at the information desk would be eliminated. Additionally, rooms can be reserved from home, so no one would have the dissappointment of showing up, only to discover that no room is available.
 
-\section{Possible improvements}
-\todo{If this was a commercial product, what would we change/add/fix etc.}
+\section{Expansions and improvements}
+The following is a list of features we would have liked to be a part of the systsm, if we had had the time. Some parts of our application could also be improved, these are mentioned here as well.
 
-\section{Expansions}
-\todo{Consider if this section is needed. Perhaps it could fit into the above.
-If not, we could talk about ridding the need for tabulex, centralizing everything in our system and so forth.}
+\begin{itemize}
+	\item \textbf{Responsiveness}\\
+	The application does not use any ajax or jquery to improve the user experience. Ajax could have been used to avoid refreshing the page when e.g. selecting a room to book from the map. JQuery could have been used to create fluid animations, like sliding effects, for a better user experience. 
+	
+	\item \textbf{Timespan dragging}\\
+	When you select when you want to book a room, you select a timespan by first clicking on the starting time of your booking, and then the endtime. One of our test users tried to drag from the start- to end time, which obviously did not work, because we had not implemented it. It should have worked though, as it apparently seemed intuitive. Another user mentioned the exact same thing, which made us believe that this should be part of a final version.
+	
+	\item \textbf{Map overlays to show availability}\\
+	While we have covered the need for finding a specific room, as well as just any available room, it is not possible for the users to get an overview of the current room availability, which might be practical for some users. We would have liked this to be implemented as an overlay on the frontpage map, so a room colored with a red background meant that the room was currently in use.
+	
+	\item \textbf{Integration with the student base}\\
+	With the proper integration, the system could utilize all the information on people currently in the student base, and provide a new hub for information.
+	
+	\item \textbf{Mobile version}\\
+	The ability to access the system from a mobile device would allow users to book while in transit for example. Note that many devices already have decent support for normal webpages.
+	
+	\item \textbf{Office management}\\
+	Anoter possible expansion specific to ITU, is the ability to manage the offices we have excluded from our scope. In theory, it could function a lot like the semester planning, but would obviously be less complex, due to the fact that offices are booked for a longer period, several people can fit into them and there are currently enough space for all the people requiring it.
+	
+	\item \textbf{Portability}\\
+	It could be interesting to expand the system to allow for use by other institutions. The user interface itself, bar the map, is already reusable, but in able for other instutions with other policies and work distribution, some changes would be in order. For example, support for multiple buildings and an extensive administration panel for fine-tuning permissions, setting default values and managing rooms.
+\end{itemize}
 
 \section{Reflection}
 \label{sec:reflection}
@@ -43,19 +62,3 @@ When looking back, Lift was still the right choice for the application, but prob
 This type of project has been very different to us, as none of our previous projects, or courses for that matter, have been focusing on interfaces. We have only had one single course about designing user interfaces, on our first semester. \\
 This project was a nice change of phase, and something we enjoyed and learned a lot from. During the project, we learned how much of a difference a well designed user interface actually makes, when doing the usability tests.\\
 While it has been a good experience, it has also been a challenge. Becuase of our rather limited knowledge and experience with GUI building, we basically started from scratch. We had to study a lot of litterature to be able to make base our choices on other than personal taste and intuition. Before we finally decided on the first mockup, which we afterwards tested and changed, we spent a lot of time on initial mockups written on whiteboards, which later were discarded because they simply did not work the next day we revisited them. This process was repeated 4 times before the first initial mockup of the frontpage, and a couple of times in between the iterations, after the actual usabilty tests.\\ With all initial and tested mockups included, we've done about 15 mockups for our relative simple application.
-
-\subsection{Expansions and improvements}
-The following is a list of features we would have liked to be a part of the systsm, if we had had the time. Some parts of our application could also be improved, these are mentioned here as well.
-
-\begin{itemize}
-	\item \textbf{Responsiveness}\\
-	The application does not use any ajax or jquery to improve the user experience. Ajax could have been used to avoid refreshing the page when e.g. selecting a room to book from the map. JQuery could have been used to create fluid animations, like sliding effects, for a better user experience. 
-	
-	\item \textbf{Timespan dragging}\\
-	When you select when you want to book a room, you select a timespan by first clicking on the starting time of your booking, and then the endtime. One of our test users tried to drag from the start- to end time, which obviously did not work, because we had not implemented it. It should have worked though, as it apparently seemed intuitive. Another user mentioned the exact same thing, which made us believe that this should be part of a final version.
-	
-	\item \textbf{Map overlays to show availability}\\
-	While we have covered the need for finding a specific room, as well as just any available room, it is not possible for the users to get an overview of the current room availability, which might be practical for some users. We would have liked this to be implemented as an overlay on the frontpage map, so a room colored with a red background meant that the room was currently in use.
-	\item Integration with the student base
-	\item Mobile version
-\end{itemize}
