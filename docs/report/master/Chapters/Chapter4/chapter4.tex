@@ -85,39 +85,48 @@ We have thus used integers to represent all kinds of date and time data. An exam
 	\item We can still execute specific date and time sql queries by using basic relationel operators, which makes it more efficient to e.g. lookup bookings after a specific time.
 \end{itemize}
 
-
-
-\todo{How to implement, discussion of for and against our choices of platform, language, etc etc. Possibly split this in to several sections}
-
-\section{Challenges}
+\section{Technical improvements}
 \label{sec:challenges}
 % info found in: 'concurrent_room_selection-11-02-03', 'meeting_study-administration_11-03-16' and 'courses_spanning_multiple_days'
+The folllowing section contains challenges that are non trivial, which we have discussed throughout the project, but not implemented, as this would have changed to focus of the project. We will present the challenges, and suggest the solution we find most approriate for the project.
 \subsection{Concurrent room selection}
 \label{sub:challenges_concurrent_rooms}
-The handling of concurrent users is always an issue in webbased services, and more specifically in our case it presents itself when multiple users wants to book a room at the same time. No solutions are perfect, and we've tried discovering the pros and cons of the solutions we considered.
+The handling of concurrent users is a central issue in many applications where multiple users will use use the program at the same time. in our case it presents itself when multiple users wants to book the same room simoustainly.
 
-\subsubsection*{Possible solutions}
-These solutions are based on the the case where users \textbf{X} and \textbf{Y} are searching for rooms at the same time. They could obviously be extrapolated to cases where even more users are interacting. 
-\subsubsection*{Solution 1}
+\subsubsection*{Scenario and possible solutions}
+These solutions are based on the simple scenario where users \textbf{X} and \textbf{Y} are searching for rooms at the same time. They could obviously be extrapolated to cases where even more users are interacting. We assume that \textbf{X} was the first user to click the search button. Online users should be tracked, to make the logging possible.
+\subsubsection*{Hide bookings from certain users}
 \begin{tabular}{|p{6cm}|p{6cm}|}
 \hline 
 	\multicolumn{2}{|p{12cm}|}{Make all rooms that fits \textbf{X}, unavailable for \textbf{Y} while \textbf{X} is deciding on which room to use.} \\ \hline \hline
 	\multicolumn{1}{|c|}{\textbf{Pros}} & \multicolumn{1}{c|}{\textbf{Cons}} \\ \hline
-	Easy to implement & If all rooms fit the search of \textbf{X}, no rooms will be available for \textbf{Y} \\ \hline
-	Extremely unlikely to encounter dead ends. & \\
+	Easy to implement & If all rooms fit the search of \textbf{X}, no rooms will be available for \textbf{Y}. If there are 10 rooms in total, and 10 users search for 10 random rooms, no rooms will ever be available for the next user. \\
 	\hline
 \end{tabular}
 \\
-\subsubsection*{Solution 2}
+\subsubsection*{Dynamic refresh}
 \begin{tabular}{|p{6cm}|p{6cm}|}
 \hline
-	\multicolumn{2}{|p{12cm}|}{The screen which shows available rooms for user \textbf{Y} should update when user \textbf{X} makes a booking.} \\ \hline \hline
+	\multicolumn{2}{|p{12cm}|}{The screen which shows available rooms for user \textbf{Y} should update when user \textbf{X} selects a room for booking.} \\ \hline \hline
 	\multicolumn{1}{|c|}{\textbf{Pros}} & \multicolumn{1}{c|}{\textbf{Cons}} \\ \hline
-	High usability and responsiveness, resulting in a pleasant experience for the user if no dead ends are hit. & Increased number of requests to the server. \\ \hline
-	More flexible; allows several users to have many choices at once. & Dead ends are a possibility. \\
+	High usability and responsiveness & Increased number of requests to the server. \\ \hline
+	More flexible; allows several users to have many choices at once. & If user \textbf{X} changes his mind during a booking, user \textbf{Y} misses a valid opportunity to book the room.\\
 	\hline
-	\multicolumn{2}{|p{12cm}|}{Ultimately, it is a tradeoff between probability of dead ends vs. server request-rate.} \\
+	\multicolumn{2}{|p{12cm}|}{Ultimately, this solution is a tradeoff between the probability of concurrent selections occuring and server-request rate. If the server is set to refresh each second, this might reduce the probability of errors, but the server might not scale very well.} \\
+	\hline
+\end{tabular}
+\subsubsection*{User awareness}
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline
+	\multicolumn{2}{|p{12cm}|}{Information about whether or not other users are looking at the same room will be presented for the user, to make him/her aware that other people might be interested in the room. } \\ \hline \hline
+	\multicolumn{1}{|c|}{\textbf{Pros}} & \multicolumn{1}{c|}{\textbf{Cons}} \\ \hline
+	It does not come as a sudden surprise if the room is booked before them. & Increased number of requests to the server. \\ \hline
+	\multicolumn{2}{|p{12cm}|}{Basically this is not a different solution than \textbf{dynamic refresh}, but just a way of minimizing the server requests, making it perform better, but increases the probability of concurrent selections.} \\
 	\hline
 \end{tabular}
 
+Of all these solutions, the most effective would be \textbf{dynamic refresh}. This is however also generating the most server requests, but since the number of seconds between each refresh can be varied, this seems like a flexible solution as well. It could be made even better, by making each client sending a signal to the server when a booking was made, so the server could notify the clients.\\
+
 \todo{Write an implementation section for both the client and server. Mention the use of photoshop!}
+
+% TODO nævn quickbooking løsningen; når man trykker på knappen bookes et rum automatisk, og slettes hvis man trykker cancel. Dette gøres for at undgå at der ikke er en bruger der booker det samme rum mens man overvejer om man skal have rummet eller ej. Referer til concurrent room selection problemet.
