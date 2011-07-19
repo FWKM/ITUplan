@@ -180,8 +180,50 @@ The test results in figure \ref{fig:results_day} show a task failure for simple 
 
 
 \subsection{Proposed design}
-\label{sec:proposed_design}
-\todo{Explain and illustrate the proposed design}
+\label{sec:proposed_design_dtd}
+The process described above have naturally been repeated for each part of the system, resulting in our proposed design for the final interface.
+Following is a description of all the screens that have been implemented, and their respective functions.
+
+\subsubsection*{Front page}
+\pagebreak
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=1\textwidth]{images/screens/frontpage}
+\end{center}
+\caption{The finished frontpage design}
+\label{fig:frontpage}
+\end{figure}
+The frontpage shown on figure \ref{fig:frontpage} adheres a lot to the wireframe described above. 
+We have made a couple of important decisions with the design. First off, we have decided to resize the rooms on the overview so they do not match the actual size of the rooms in reality. We have of course kept the location, and the approximate scale to adjecent rooms, but all the very small rooms have been enlarged to allow for easier selection.
+Secondly, all offices, bathrooms, closets and kitchens have been left out. This is done to reduce clutter, and emphasize the rooms we are concerned with.
+
+\pagebreak
+\subsubsection*{Quick Booking}
+\pagebreak
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=1\textwidth]{images/screens/quick_booking}
+\end{center}
+\caption{The overlay when quick booking is pressed}
+\label{fig:quick_overlay}
+\end{figure}
+Shown on figure \ref{fig:quick_overlay} is the overlay appearing when the 'Quick Booking'-button is pressed.
+It simply finds the smallest available room and books it for a default 4-hour span. The technicalities behind this function is described further in section \ref{XX}.
+
+\pagebreak
+\subsubsection*{Simple Booking}
+\pagebreak
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=1\textwidth]{images/screens/simple_booking}
+\end{center}
+\caption{The overview and simple booking screen used when a specific room is clicked on the map}
+\label{fig:simple_booking}
+\end{figure}
+
 
 \section{Semester planning}
 \label{sec:semester_planning_ui}
