@@ -85,13 +85,9 @@ We have thus used integers to represent all kinds of date and time data. An exam
 	\item We can still execute specific date and time sql queries by using basic relationel operators, which makes it more efficient to e.g. lookup bookings after a specific time.
 \end{itemize}
 
-\section{Technical improvements}
-\label{sec:challenges}
-% info found in: 'concurrent_room_selection-11-02-03', 'meeting_study-administration_11-03-16' and 'courses_spanning_multiple_days'
-The folllowing section contains challenges that are non trivial, which we have discussed throughout the project, but not implemented, as this would have changed to focus of the project. We will present the challenges, and suggest the solution we find most approriate for the project.
-\subsection{Concurrent room selection}
+\section{Concurrent room selection}
 \label{sub:challenges_concurrent_rooms}
-The handling of concurrent users is a central issue in many applications where multiple users will use use the program at the same time. in our case it presents itself when multiple users wants to book the same room simoustainly.
+While we expect a lot of users to actively using our application at the same time, the problem with concurrent room selections has to be adressed. While the actual implementation has been left out because of our focus for the project, we have had a lot of considerations about how this can be solved.\\
 
 \subsubsection*{Scenario and possible solutions}
 These solutions are based on the simple scenario where users \textbf{X} and \textbf{Y} are searching for rooms at the same time. They could obviously be extrapolated to cases where even more users are interacting. We assume that \textbf{X} was the first user to click the search button. Online users should be tracked, to make the logging possible.
@@ -128,5 +124,120 @@ These solutions are based on the simple scenario where users \textbf{X} and \tex
 Of all these solutions, the most effective would be \textbf{dynamic refresh}. This is however also generating the most server requests, but since the number of seconds between each refresh can be varied, this seems like a flexible solution as well. It could be made even better, by making each client sending a signal to the server when a booking was made, so the server could notify the clients.\\
 
 \todo{Write an implementation section for both the client and server. Mention the use of photoshop!}
+\section{Actual implementation}
+\label{sec:actual_implementation}
 
-% TODO nævn quickbooking løsningen; når man trykker på knappen bookes et rum automatisk, og slettes hvis man trykker cancel. Dette gøres for at undgå at der ikke er en bruger der booker det samme rum mens man overvejer om man skal have rummet eller ej. Referer til concurrent room selection problemet.
+\subsection{User authorization}
+User authorization has been implemented using the built in Sitemap feature of Lift. In a Boot file, used to initialize the program, a sitemap object is created:
+
+\begin{verbatim}
+    val siteMap = SiteMap(
+        Menu("Index") / "index"	>> AuthRequired >> Hidden,
+        Menu("Advanced") / "advanced" >> Hidden,
+        Menu("RoomBooking") / "room-booking" >> AuthRequired >> Hidden,
+        Menu("Login") / "login" >> LoginAuth >> Hidden,
+        Menu("Your Reservations") / "reservations" >> AuthRequired,
+        Menu("Logout") / "logout" >> EarlyResponse(() => {
+            Session.loggedIn.apply(0)
+            Full(RedirectResponse("login"))
+        })
+    )
+    // Tell Lift to use our sitemap
+    LiftRules.setSiteMap(siteMap)
+\end{verbatim}
+
+Each line represents one page, which is added to the static menu simply by using its constructor. The name after the slash is the actual name of the html page. A page can be assigned several functions which should be called before each page is evaluated and shown. In our sitemap, all pages should call the \emph{AuthRequired} function, which redirects the user to the login page if not logged in. Several pages calls the \emph{Hidden} function, which is a built in function in Lift. Hidden pages are not shown in the menu, and cannot be accessed directly. \\
+The logout menu item uses an anonymous inner function, to sign out the user, by setting the session cookie to 0 (see section \ref{sub:sessions}), and redirecting to the login screen.\\
+
+\subsection{User sessions}
+\label{sub:sessions}
+Handling of multiple users in Lift is done by using the built in \emph{SessionVar} class:
+
+\begin{verbatim}
+    object Session{
+        object loggedIn extends SessionVar[Int](0)
+        object uid extends SessionVar[Int](-1)
+        object currentRoom extends SessionVar[String]("-1")
+    }
+\end{verbatim}
+
+While our \emph{Session} object is static, a cookie for each SessionVar is stored on the users computer when the object is created, thus making it possible for the users to share the global Session object, while still having individual data stored in the SessionVar object. \\
+As an example, take the uid object. This extends a SessionVar of type Int, with a default value of -1. When the user signs in, this value is changed from the default value to the specific id of the user, fetched from the database.\\
+
+Setting and retrieving the values can be done in constant time:
+\begin{verbatim}
+	// In another class, do something with the user id
+	room.book(Session.uid.is)
+	
+	// ... Change it, e.g. when the user signs out
+	Session.uid.apply(-1)
+\end{verbatim}
+This is a convient way of always having access to the unique id of the user.
+
+\subsection{Quickbooking}
+\label{sub:quickbooking}
+When the user click the \emph{Quick Booking} button on the frontpage (see ref \ref{xx}), the application searches the database for an optimal room(see section \ref{scope}).\\
+
+JQuery is used to attach a click-listener to the button:
+
+\begin{verbatim}
+jQuery('#quickfind').click(function(){
+    liftAjax.lift_ajaxHandler('""" + funcName2 + """='+uid, null, null, null);
+});
+\end{verbatim}
+
+\emph{funcName2} Queries the database for an available room, and returns the room id if any is found:
+
+\begin{verbatim}
+    val func2 = () => {
+        var roomid = Database.findRoomNow
+        if(roomid != -1){
+            var booking = Database.bookRoom(rid = roomid)
+            ...
+        }
+        else{
+           // No rooms
+           ...
+        }
+    }
+\end{verbatim}
+
+The \emph{bookRoom} function of the \emph{Database} object only takes a single parameter. Other options are automatically assigned by predefined method signatures:
+
+\begin{verbatim}
+def bookRoom(uid : Int = Session.uid.is, rid : Int, 
+             from : Int = now, to: Int = now + 240){ ... }
+\end{verbatim}
+
+Here, the user id (uid) is retrieved from the \emph{Session} object, the beginning time of the booking is set to the current time, and the booking is by default set to last 4 hours. \\
+The function books the room, and notifies the user.\\
+
+If the user for some reason changes his mind and wants to cancel his booking, the cancel button can be used. This will delete the booking that was just created. \\
+It might seem strange that we first book the room, and then cancels it, instead of just booking the room when the user accepts it. However, by booking the room immediately, we avoid concurrency issues which could occur if user \textbf{Y} books the same room as user \textbf{X} is about to accept.
+
+\subsection{Simple Booking}
+The Simple Booking time selector function had to be implemented from scratch, as it was highly application specific. We wanted to make a function that allowed the user to select a time range, on a specific day of the week. (See section \ref{xx} for screenshots of this functionality). \\
+We desided to only use Javascript for this, by including all relevant information in the html tags, and only use Lift to call a function to book the room in the selected time span. Each day is divided into blocks from 7 in the morning to 21 in the evening. It is possible to select even and half hour blocks:
+
+\begin{verbatim}
+    for(var j = 7; j < 21; j++){
+        t = j * 60;
+        t30 = t + 30;
+        html = html + '<div class="timeBlock block'+t+'"></div>';
+        if(j != 20) {
+            html = html + '<div class="timeBlock block'+t30+'"></div>';	
+        }
+    }
+\end{verbatim}
+
+Block420 is thus the block representing 420 minutes after midnight = 7 in the morning. JQuery is used to store the time values when a user clicks on a timeblock. JQuery can react on all elements with the class timeblock, and use the \emph{this} selector to reach just the element the user selected:
+
+\begin{verbatim}
+    $("#theGrid li").not(".topLabel").find(".timeBlock").click(function(){
+        beginClick = (!beginClick);
+        var timeSelector = (($(this).attr('class')).split(" "))[1];
+        var timeLabel = $("#theGrid ul li.topLabel").find("."+timeSelector);
+    });
+\end{verbatim}
+
+The \emph{timeLabel} variable are set to the node in the header which has the same \emph{timeSelector} class as the block the user selected. The actual time is shown in human readable form in the inner html of the header, making it easy to retrieve the actual time the user selected through this node, by calling the \emph{html()} function of the \emph{timeLabel} variable.
