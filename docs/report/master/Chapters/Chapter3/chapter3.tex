@@ -223,7 +223,40 @@ It simply finds the smallest available room and books it for a default 4-hour sp
 \caption{The overview and simple booking screen used when a specific room is clicked on the map}
 \label{fig:simple_booking}
 \end{figure}
+When a specific room on the map overview is clicked, the screen displayed on figure \ref{fig:simple_booking} will be presented. The specifics of this part of the system has been discussed on in the example of the design process in section \ref{sec:design_process}.
+It is worth noting that it only shows a 7-day overview, starting with today. We have considered to allow for scrolling back and forth in weeks, to allow the curious users to check bookings further in the future than a week.
+We decided to not implement it in the prototype, as it would be an unnecesarry distraction for almost all situations this view would be used for.
+Our tests revealed that users tend to utilize 'Advanced Search' for everything that was not immediately easy, and we concluded that if a booking needed to be made far in the future, that would be the function they used.
 
+\pagebreak
+\subsubsection*{Advanced Booking}
+\pagebreak
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=1\textwidth]{images/screens/advanced_mockup}
+\end{center}
+\caption{The design of the not-implemented advanced booking.}
+\label{fig:advanced_mockup}
+\end{figure}
+The mockup on figure \ref{fig:advanced_mockup} shows the concept for our advanced booking screen. We have not made a search button, but instead allowed the result section to update dynamically for each parameter entered.
+Note that the search result pane is filled with results from an example search, and does not correspond to the displayed default values in the form above.
+
+The narrow design allows it to only overlay the map, and thus leave the calendar still visible. 
+If a date is clicked on the calendar, the week number and day is filled into the search form. This functionality is not advertised by text, as it is not necesarry to succesfully use the system, and the text should be either very long, or run the risk of being confusing rather than helpful.\cite{steve}
+
+\pagebreak
+\subsubsection*{Your Reservations}
+\pagebreak
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=1\textwidth]{images/screens/reservations}
+\end{center}
+\caption{A users overview of ongoing/upcoming bookings}
+\label{fig:reservations}
+\end{figure}
+The personal reservation screen, reached by the link in the top menu, is displayed on figure \ref{fig:reservations}. We have decided to omit past bookings from the view, as they would serve no real purpose other than increasing clutter for very active users.
 
 \section{Semester planning}
 \label{sec:semester_planning_ui}
