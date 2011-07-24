@@ -40,7 +40,7 @@ This approach presents several problems:
 
 \subsection{Study Administration}
 The SA manages the class rooms and the auditoriums, thus also in charge of allocating rooms for lectures and examinations. \\
-In regards to room management, the Study Administrations biggest challenge is the planning of a semester. First step is to collect data from the course database to see which courses will be held in the coming semester. When a list of courses have been compiled, a system called Tabulex is used to create a draft schedule to avoid overlaps of teachers and courses required by several different educations. The output from Tabulex is finally used to manually create the room assignments for a standard week of the semester.\\
+In regards to room management, the Study Administrations biggest challenge is the planning of a semester. First step is to collect data from the course database to see which courses will be held in the coming semester. When a list of courses have been compiled, a system called Tabulex is used to create a draft schedule to avoid overlaps of teachers and courses required by several different educations. On the computers at ITU, it takes Tabulex up to 8 hours to generate this data. The output from Tabulex is finally used to manually create the room assignments for a standard week of the semester.\\
 
 \subsection{Current systems}
 \label{sub:current_systems}
@@ -52,23 +52,23 @@ The Study Administration uses an Excel sheet to get an overview of the availabil
 Tabulex is the program used by the part of the Study Administration that allocates rooms for courses. In Tabulex, a user defines the relationship between classes, rooms, teachers and courses. Binding 1 of each together, you have an entity representing a class attending a specific course in a specific room held by a specific teacher. When all entities have been defined, Tabulex arranges them in a weekly schema, in such a way that no resources of different entities overlap, like making sure no teachers teach two course simoustanely and no rooms are used for two courses at the same time.\\
 
 Tabulex is good at allocating general schemas, but it lack a lot of functionality relevant for ITU. When two courses overlap each other, which might happen if the distribution of resources makes it impossible for the algorithm to make a schema, Tabulex does not suggest any alternative solutions, or at least provide some information about the problematic entities in question. This makes it difficult, and very time consuming to come up with a proper alternative solution, as the user has to make a manual correction, which often results in another conflict. \\
-Tabulex also does not keep track of equipment in each room. This is possible to solve through Tabulex though, as you can assign custom rules for the program to respect. As this is just simple rules, it might be understand why these rules were created in the first place, if you were not the person responsible. This makes it hard for more than one person to use the application.\\
+Tabulex also does not keep track of equipment in each room. This is possible to solve through Tabulex though, as you can assign custom rules for the program to respect. As this is just simple rules, it might be hard to understand why these rules were created in the first place, if you were not the person responsible. This makes it hard for more than one person to use the application.\\
 Finally, Tabulex does not keep track of the capacity of each rooms, which makes it hard to do a proper allocation, as you cannot put smaller classes in small rooms, and visa versa.
 
 \label{sec:scope}
 \section{Scope}
  Since we want to focus on the creation of a solid interface that solves the above problems, the implementation has been a second priority. We have divided the project into two main tasks, which together constitute to the main body of such an application. The success of the project depends on how well the interfaces for these two tasks have been designed.\\
-In the following, we will describe the two main tasks and how they relate to each other.
+In the following, we will describe the two main tasks and how they relate to each other. In general, we will work with all types of rooms except the offices, as they are handled differently. It would not make any sense to book an office, as they are assigned specifically to staff and students.
 
 \subsection{Day to day booking}
 \label{chap1:day_to_day_booking}
-Our program should provide an interface to support booking of rooms at the IT University. Users of this function might have very different requirements. Students might just need a room to work, while an employee might book a specific room in advance for a meeting. Others might need specific equipment to be available. Because of the many requirements, the program should not only provide the user with options, but also suggest solutions.\\
+Our program should provide an interface to support booking of rooms (excluding offices) at the IT University. Users of this function might have very different requirements. Students might just need a room to work, while an employee might book a specific room in advance for a meeting. Others might need specific equipment to be available. Because of the many requirements, the program should not only provide the user with options, but also suggest solutions.\\
 Since most people using our application will be students looking for a room without any specific requirements, the simple task of finding any available room should be easy accessible and quick to use. \\
 
 The day to day booking should thus contain:
 
 \begin{itemize}
-	\item A general overview of the available rooms to book.
+	\item A general overview of the available auditoriums, meeting- and class rooms to book.
 	\item An interface that quickly books a room, using a minimum of options. (\textbf{Quick booking})
 	\item An interface for booking a room, selected by clicking on that specific room. (\textbf{Simple booking})
 	\item An interface that presents the user with several options, such as the need for specific equipment, room capacity, time of day, etc. (\textbf{Advanced booking})
@@ -81,8 +81,7 @@ The application should:
 	\item Suggest a list of rooms that fulfil the maximum number of requirements, given as input by the user through the selective booking function. If all requirements can be fulfilled, only the optimal rooms (see above) should be presented to the user.
 \end{itemize}
 
-To exemplify a working application, the day to day booking will be fully implemented.
-\todo{DONT LIE}
+To exemplify a working application, we will implement major parts of the day to day booking interface.
 
 \subsection{Semester planning}
 \label{chap1:semester_planning}

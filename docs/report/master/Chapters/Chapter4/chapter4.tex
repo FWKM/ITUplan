@@ -1,5 +1,5 @@
 \chapter{Implementation}
-The implemention of the application can roughly be divided into two parts: A server, being the layer between the user and the database, and a client presenting the data to the user. This chapter will describe the requirements for each part, the technical challenges of the project and how they were met. 
+The implemention of the application can roughly be divided into two parts: A server, being the layer between the user and the database, and a client presenting the data to the user. This chapter will describe the requirements for each part, the technical challenges of the project and how they were met.
 
 
 \section{Choice of platform}
@@ -53,13 +53,14 @@ This section describes the technical requirements for the server and the client.
 	The users should be able to select a different day than the current, giving them the option to book a room in advance. JQueryui\cite{jqueryui} offers a datepicker widget\cite{jqueryui_date}, which supports this functionality.
 	\item \textbf{Custom time and day picker}\\
 	Because our day and time picker \ref{chap2_req:xx} is a custom made widget and very application specific, it has to be made from scratch. Since Lift support callbacks through javascript, it's possible to create such a widget by using this functionality together with simple html attributes as date and time identifiers.
+	\item \textbf{XML Exporter}\\
+	It should be possible to export the data created during semester planning. Since the data will be used in multiple ways (for printing, digital archiving, etc.) the output should be in XML for maximum application support.\\ 
+The exporter has to be manually created, e.g. by using a Java XML generator.
 \end{itemize}
 
 \section{Database design}
 \label{sec:database_design}
 From the requirements in section \ref{sec:requirements} and the technical requirements above, we derived the database design seen in figure \ref{fig:db_design}. While parts of the design are trivial, here follows the ideas behind some of the more non trivial elements.
-
-\todo{TEACHERS AS AN ENTITY}
 
 \begin{figure}[htb]
 \begin{center}

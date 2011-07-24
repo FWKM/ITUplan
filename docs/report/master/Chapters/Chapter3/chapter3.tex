@@ -61,8 +61,18 @@ The table in figure \ref{fig:usa_users} shows how many users have been tested fo
 \label{fig:usa_users}
 \end{figure}
 
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=1\textwidth]{images/result_day}
+\end{center}
+\caption{Test results for the day to day booking}
+\label{fig:results_day}
+\end{figure}
 
-The results from our tests can be found in the following sections, whereas the full test documentation can be found in appendix \ref{app:tests}.
+Figure \ref{fig:results_day} provides a full overview of our findings from the usability testing of the day to day system, which we will use as a reference in the day to day booking chapters. We have used the problem classification defined by Soren Lauesen\cite{lauesen}.\\
+
+The full test documentation can be found in appendix \ref{app:tests}.
 
 \section{Day to day booking}
 \label{sec:day_to_day_booking_ui}
@@ -70,7 +80,7 @@ As described in previous chapters, the day to day booking should be usable witho
 \begin{quotation}
 \emph{``All conventions start life as somebody's bright idea. If the idea works will enough, other sites imitate it and eventually enough people have seen it in enough places that it needs no explanation.''}
 \end{quotation}
-
+The function that went through most interations was the \emph{simple booking} function. This function will thus be the focus of each iterations in the day to day booking chapters. We will go through the process of creating and testing each mockup related to this function.\\
 \subsection{Wireframe}
 \label{subsec:wireframe}
 The front page serves as a portal to the rest of the system, and thus it should be easy to understand. To ensure that we had the vital navigation functions in place before beginning the mockups, we constructed a wireframe\cite{garrett}. The wireframe, as seen on figure \ref{fig:wireframe_frontpage}, has the following elements:
@@ -97,32 +107,13 @@ The front page serves as a portal to the rest of the system, and thus it should 
 	A panel containing buttons used to enter the booking interface, or the semester planning.
 \end{itemize}
 
+\emph{We will refer to the different wireframe sections as (wire:section). For example, the advanced booking button is referred to as (wire:5.2).} 
 
-\subsection{Test results}
-\begin{figure}[htb]
-\begin{center}
-\leavevmode
-\includegraphics[width=1\textwidth]{images/result_day}
-\end{center}
-\caption{Test results for the day to day booking}
-\label{fig:results_day}
-\end{figure}
-
-Figure \ref{fig:results_day} provides an overview of our findings from the usability testing of the day to day system. We have used the problem classification defined by Soren Lauesen\cite{lauesen}.
-
-Reading the results, it becomes clear that we did not initially succeed in making vital functions of the system intuitive enough for users to utilize the indended functions. What may come as a surprise, is that most users at some point or the other, raised the complexity of the assigned task by accessing the advanced search function instead of the intended simpler functions.
-
-What stands out here is that user 6 encountered two problems, one of which resulted in him not completing the assigned task. Naturally, this is not something we could wish for in the last round of testing, but it did provide insight as to how users with very little technical knowledge interpret our system.
-
-The following section provides a walkthrough as to how a single part of the system have been designed, as direct results of the problems found in the test.
-\pagebreak
-\subsection{Design process}
-\label{sec:design_process}
-
-\subsubsection{Design of the day to day booking interface}
-
-For a full history of our mockups, please refer to %\ref{app:mockups_day} \\
-\\
+\subsection{[Itr. 1]}
+\subsubsection{Mockup}
+\label{sub:first_mockup}
+The first thing we wanted to test was the booking dialog, as this was a major part of the user interaction. When the user selected a room on the map, the dialog seen in figure \ref{fig:book_room_mockup} should appear in the function panel (wire:5)
+ We wanted to give the user the impression that they never left the homepage, and to make sure no-one got lost in subscreens and menus.
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
@@ -132,24 +123,41 @@ For a full history of our mockups, please refer to %\ref{app:mockups_day} \\
 \label{fig:book_room_mockup}
 \end{figure}
 
-Seen on figure \ref{fig:book_room_mockup} is the function area of the main screen, which was thought to be in charge of all interaction, trying to give the user the impression that they never left the homepage, and to make sure no-one got lost in subscreens and menus. Our first usability tests quickly revealed that we had been mistaken. All the test subjects felt overwhelmed by the amount of options, and due to all the clutter did not spot the vital functions.
+\subsubsection{Test}
+\label{mock1:test}
+In our first usability test, the users were to complete the following tasks:
+
+\begin{enumerate}
+	\item Find a random room
+	\item Find a random room tomorrow
+	\item Find a specific room
+	\item Various variations of tasks involving finding rooms with specific requirements
+\end{enumerate}
+
+All the users had no problems completing task 1-3, but when the rooms needed to fulfil specific requirements, the  users felt overwhelmed by the amount of options, and did not spot the vital functions due to too much noise. This resultet in a task-failure for all test users. Also, our \emph{another day} button was often ignored. \\
+
+What may come as a surprise, is that both users at some point or the other, tried to complete the simple tasks by using the advanced search button (wire:5.2) instead of e.g. using the map to select a room (wire:4). \\
 \pagebreak
+
+
+\subsection{[Itr. 2]}
+\subsubsection{Mockup}
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
 \includegraphics[width=0.8\textwidth]{images/bookRoomMockup2}
 \end{center}
-\caption{Second attempt at the simple booking. This time as a window overlaying the main view.}
+\caption{Second attempt at the simple booking. This time as a window overlaying the overview (wire:4)}
 \label{fig:book_room_mockup2}
 \end{figure}
 
-Second time around, we tried making it as basic as possible and simply presenting the user with a dialog (not a pop-up, just an overlay) for selecting how many hours from now the room should be booked. The flaw with this was that noone was able to figure out the availability of a room in the near future. This is when we realized that the best successes we've had with room booking was the first draft of the week-overview screen. \\
-\\
-This round of testing was probably the one with the biggest impact on the final design. As shown on the test results from figure \ref{fig:results_day}, \emph{quick booking} was not thought of yet in the first round. During the course of this test, we discovered general satisfaction with the simplicity of the overlaying panel even though it did not provide the needed functional for the intended task. However, we decided to find a new use for it, and that is how quick booking came to, along with simple booking being redefined to what it is now.
+Second time around, we tried making it as basic as possible to reduce the clutter, to make the users realize that this screen was for very simple tasks. We simply presented the user with a dialog for selecting how many hours from now the room should be booked. This made all the test users pass the simple booking task, and it made them realize that the advanced search button(wire:5.2) should be used for tasks including specific room requirements. It did present another problem though: Now, no test users were able to figure out the availability of a room in the near future, as there was no button indicating this functionality when you had selected a room. The calendar (wire:3) was actually intended for this purpose, but this was not used for any of the users.\\
 
-The result of this redefinition is described in section \ref{chap1:day_to_day_booking}. In summary, simple booking changed to become the interface used when clicking a room on the map view, whereas quick booking became the instant way of getting any available room.
-
+This round of testing was probably the one with the biggest impact on the final design. As shown on the test results from figure \ref{fig:results_day}, \emph{quick booking} was not thought of yet in the first round. Even though it created another problem of not providing the needed functional for getting a weekly overview, we discovered general satisfaction with the simplicity of the overlaying panel seen in figure \ref{fig:book_room_mockup2}. We wanted to keep this simplicity, while still making sure users could find a week overview of each room, which led to a very different third iteration.
 \pagebreak
+
+\subsection{[Itr. 3]}
+\subsubsection{Mockup}
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
@@ -159,11 +167,31 @@ The result of this redefinition is described in section \ref{chap1:day_to_day_bo
 \label{fig:week_mockup}
 \end{figure}
 
-All the test subjects used the 'matrix' overview shown on figure \ref{fig:week_mockup} both creatively and effectively, so we decided to try and utilize that success to the maximum by redirecting all bookings, bar the quick booking, to the same screen.
+In previous mockups, both users clicked on the specific room in an attempt to find the weekly overview.
+In this iteration, we changed the mockup to do exactly this. When the users clicked on a room on the map (wire:4), the screen would change to the view in figure \ref{fig:week_mockup}.\\
 
-As shown, we have decided to invert the x/y-axes as opposed to normal day-time overviews in eg. Outlook or Google Calendar. This is done because of the standard timeline being from left to right, and not top to bottom. We have simply added 7 timelines on top of each, as we thought it more intuitive when trying to get an overview. Our assumptions proved correct from every single test, as not a single user had a problem understanding the view immediately.
+As shown, we have decided to invert the x/y-axes as opposed to normal day-time overviews in eg. Outlook or Google Calendar. This is done because of the standard timeline being from left to right, and not top to bottom. We have simply added 7 timelines on top of each, as we thought it more intuitive when trying to get an overview. Our assumptions proved correct from every single test, as not a single user had a problem understanding the view immediately.\\
 
+\subsubsection{Test}
+All the test subjects used this overview effectively, when trying to book a room for a day not being the current. While the users passed the simple room booking tests in the second iteration, we did not test this again, but changed the function slightly due to new information gained through our domain research (Section \ref{xx}). The "find me a room" button (wire:5.1) did not present the users with an option to choose the duration of the booking anymore, but simply booked the room for 4 hours. The user would then have the opportunity to extend the booking if necessary. Also, the room was now booked immediatly as the user clicked the button, to prevent problems with concurrent bookings (see section \ref{xx}). Finally, we changed the label from "Find me a room", to "Quick Booking", which reflected the actual functionality of the button.\\
+Figure \ref{xx} in the final design section (section \ref{xx}) shows the quick booking dialog as presented to the user.
 \pagebreak
+
+
+
+
+%???????%
+
+\todo{MAYBE put this somewhere:The result of this redefinition is described in section \ref{chap1:day_to_day_booking}. In summary, simple booking changed to become the interface used when clicking a room on the map view, whereas quick booking became the instant way of getting any available room.}
+
+\todo{Put this somewhere:What stands out here is that user 6 encountered two problems, one of which resulted in him not completing the assigned task. Naturally, this is not something we could wish for in the last round of testing, but it did provide insight as to how users with very little technical knowledge interpret our system.}
+
+\todo{Put this somewhere: For a full history of our mockups, please refer to xx} %\ref{app:mockups_day} \\
+
+%???????%
+
+
+
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
