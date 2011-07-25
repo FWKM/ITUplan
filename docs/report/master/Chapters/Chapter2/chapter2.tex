@@ -7,6 +7,40 @@ When unifying the functions of several departments and optimizing the overall pr
 We have chosen to implement the application solely for ITU, to include support for domain specific constraints and situations. The semester planning part of our application is not a trivial problem to solve. It fact, it is a so called NP-problem, which is a problem that is unsolvable within a reasonable period of time. This is due to the many types of constraints, which can vary a lot for each domain. While we concentrate on the UI and not the algorithms that should actually solve the problem, we still need to provide the data nessesary for the algorithm to function.\\
 By making it a domain specific problem, we can limit the number of constraints to reduce the complexity of the problem. This makes it possible for us to include only the relevant user interface elements, and exclude the elements that \emph{might} have been relevant for other domains. This reduces clutter of the interface, and makes it possible for us to include support for the needed domain specific elements.
 
+\section{Existing solutions}
+\label{sec:existing_solutions}
+Existing solutions can be divided into two categories:
+
+\begin{itemize}
+	\item \textbf{Room management software}\\
+This kind of software gives a good visualization of available rooms on a current day. All programs have taken a general approach by listing each room on the x-axis, time on the y-axis and boxes representing a reservation with information inside it. Figure \ref{fig:app1} shows an example of such an application.\\
+
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.6\textwidth]{images/app1.png}
+\end{center}
+\caption{Meeting Room Manager by NetSimplicity \cite{meeting_room_manager}}
+\label{fig:app1}
+\end{figure}
+
+While having nothing to do with semester planning, this representation works as a room booking system if you only have a few rooms. On a 800x600 resolution monitor, 5 rooms is enough to make horizontal scroll nessesary, making it hard to get an good overview of the current occupation of the rooms.
+
+\item \textbf{Schema based planning software}\\
+These applications are developed for primary schools and universities. They show weekdays on the the x-axis, time on the y-axis and a box in the schema represents a booked time slot. This gives a good weekly overview, but you cannot get an overview of how a specific room is used. More importantly, ITU needs another abstraction level, the tracks, representing one semester for a particular class, which is not possible to represent in any of the applications. This would make it hard to gather information from a particular track, as the related courses would be scattered throughout the overview. Figure \ref{app2} shows an example of a schema planning application.
+\end{itemize}
+
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.6\textwidth]{images/app2.png}
+\end{center}
+\caption{EMS Campus by DEA \cite{ems_campus}}
+\label{fig:app2}
+\end{figure}
+
+In general, all of the applications take a general approach. This makes the user interface less user friendly, as important application specific variables cannot be taken into account, like a map of the specific building or domain specific naming conventions.
+
 \section{Target audience} % (fold)
 \label{sec:target_audience}
 Our target audience can be divided into two groups:
