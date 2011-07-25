@@ -275,12 +275,84 @@ The personal reservation screen, reached by the link in the top menu, is display
 
 \section{Semester planning}
 \label{sec:semester_planning_ui}
-The key challenge for designing the semester planning user interface, is to find an optimal way to represent the data.
+\todo{fill this} %The key challenge for designing the semester planning user interface, is to find an optimal way to represent the data.
 
 \subsection{Wireframe}
 \label{subsec:wire_sem}
+With our agile approach to designing the system, we have focused on getting testable mockups done as soon as possible. For most of the screens in the semester planning, this means drawing on a whiteboard where we can quickly add, remove and edit the screens until we have a satisfactory mockup, based on the data collected from interviews and analysis. However, for the screens which contains a lot of information, or requires a lot of user input, we have utilized the wireframe again to try and organize the data more systematic.
+
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.6\textwidth]{images/wireframe_tracks}
+\end{center}
+\caption{Wireframe for the track management}
+\label{fig:wireframe_tracks}
+\end{figure}
+
+Our first whiteboard mockups had track assignment done via the course management, where the user would add the tracks to a course as it was created. We quickly realized that by decentralizing the track management and handling it on a course to course basis, an important overview would be lost.
+
+This lead us to take all things track related away from the course management, and add it to a wireframe, shown on figure \ref{fig:wireframe_tracks}. With a single view for all things track-related, confusion is less likely as users will not need to browse different screens, to gather all information the subject\cite{lauesen}.
+
+The same view have been utilized for the teacher management, both out of convenience, and to reduce the amount of learning needed to succesfully use the system.
 
 
-\subsection{Test Results}
-\label{subsec:test_results_sp}
+\subsection{Design phase}
+\label{subsec:design_phase_sem}
+\subsubsection{Limiting the test}
+Our tests for the semester planning have not been as numourous as for the day to day booking, they have however been a lot more extensive in terms of time, tasks and discussions.
+We interviewed the member of Study Administration who currently handles the semester planning, and tested our mockups with her aswell.
+
+The advantages of having \emph{the} end-user available through the process are significant. It allows us to potentially leap over several iterations, as we can make the initial mockups a lot more detailed. Additionally, we can draw constant feedback and inspiration from a user with extensive domain-specific knowledge.
+It is important to note that there are potential pitfalls connected with this aswell. By narrowing down our test users, we run the risk of hiding potential issues that our specific test subject solves with tacit knowledge.
+
+\todo{forklar at dette er forskellen på det vi siger (og citerer) i dtd booking om representable users}
+
+Our justification for limiting the testing to our expert end-user is based on several things. First, due to the system being custom made for the ITU, the value of testing with a broader audience diminish due to lack of domain knowledge held by the actual end-user(s). Secondly, the system is being developed under time constraints, and with the diminishing value in mind, we deemed the trade-off to be reasonable. 
+
+\subsubsection{Data views}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/sem1_room_assignments}
+\end{center}
+\caption{First version of the result screen from a succesful semester plan (with only 4 courses)}
+\label{fig:sem1_room_ass}
+\end{figure}
+
+On figure \ref{fig:sem1_room_ass} is the first effort for the result screen. The idea was to conceal data which was not immidiately critical to the assignment, thus leaving more room for relevant data.
+When this was put to the test, it was revealed that even though it was designed based on an interview, it was insufficient to our test subject; she wanted to see how each track was assigned.
+Moving along, the list view remained in place, though expanded with additional sortable columns, but a new view was added to assist in the track overview.
+
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/sem2_room_sche}
+\end{center}
+\caption{The schedule overview added in second iteration}
+\label{fig:sem2_room_sche}
+\end{figure}
+
+Figure \ref{fig:sem2_room_sche} shows an example schedule for a track.
+
+\todo{maybe more, else fuck it}
+
+\subsection{Proposed design}
+\label{subsec:proposed_design_sem}
+
+Following is a description of all the screens needed to complete a semester plan.
+
+\subsubsection{Add course}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/sem2_room_sche}
+\end{center}
+\caption{The schedule overview added in second iteration}
+\label{fig:sem2_room_sche}
+\end{figure}
+
+
+
+
 
