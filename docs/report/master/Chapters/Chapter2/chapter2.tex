@@ -114,7 +114,7 @@ Based on the task list above, we can finally put forth the list of quality requi
 
 \section{Tasks}
 \label{sec:tasks}
-The following tasks are the actions able to be performed within our system. The full list including subtasks covering all scenarios can be found in appendix \todo{ref til full task list}
+The following tasks are the actions able to be performed within our system. A full example task including subtasks can be found below, while the full list including subtasks covering all scenarios can be found in appendix \todo{ref til full task list}
 
 \begin{itemize}\itemsep1pt
 \item[\textbf{1.}] \textbf{Day-to-day booking}
@@ -130,6 +130,26 @@ The following tasks are the actions able to be performed within our system. The 
 \item[\textbf{T2.4}] Edit track.
 \item[\textbf{T2.5}] Plan semester. A full solution may or may not be possible
 \end{itemize}
+
+\begin{tabular}{|p{6cm}|p{6cm}|}
+\hline 
+	\multicolumn{2}{|l|}{\textbf{T1.1:} \hspace{26mm}Book room} \\
+	\multicolumn{2}{|l|}{Start: \hspace{26mm}User opens system } \\
+	\multicolumn{2}{|l|}{End: \hspace{28mm}User have gotten a room } \\
+	\multicolumn{2}{|l|}{Frequency: \hspace{17mm}Average of 10 bookings pr. day} \\
+	\multicolumn{2}{|l|}{Difficult when: \hspace{10mm}No rooms are available } \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Subtasks}} & \multicolumn{1}{c|}{\textbf{Example solution}} \\ \hline
+	1.  Find room & \\
+	1a. No specific room needed & System suggests any available room\\
+	1b. User has specific needs & System allows to search by parameters\\
+	1c. No available rooms & System allows to search at future dates\\ \hline
+	2.  Book room & \\
+	2a. User does not specify booking duration & System suggests a standard time duration \\
+	2b. User specifies time interval & \\ \hline
+	3. Confirm booking & \\
+	3a. User confirms & \\
+	3b. User declines & System cancels the booking \\ \hline
+\end{tabular}
 
 \section{Domain specific challenges}
 \label{sec:domain_challenges}

@@ -47,6 +47,8 @@ Another point of agreement among the experts, is that testing early and often wi
 
 The table in figure \ref{fig:usa_users} shows how many users have been tested for each part of the system for each round. As seen, we've opted to only test one user for the semester planning, which is simply due to the lack of people with the required knowledge, and the very narrow target audience.
 
+For the actual tests, we have used the tasks listed in section \ref{sec:tasks} to construct the questions, and ensure that we reach the critical parts of the system.
+
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
@@ -74,6 +76,23 @@ Figure \ref{fig:results_day} provides a full overview of our findings from the u
 What stands out here is that user 6 encountered two problems, one of which resulted in him not completing the assigned task. Naturally, this is not something we could wish for in the last round of testing, but it did provide insight as to how users with very little technical knowledge interpret our system.
 
 The full test documentation can be found in appendix \ref{app:tests}.
+
+\subsection{Gestalt laws}
+In usability theory, \emph{gestalt laws} (or gestalt principles) are often used to manipulate the users perception of elements. Listed here is a brief overview of the laws we have utilized in the design. For extensive walkthrough of each law, refer to Soren Lauesen\cite{lauesen}.
+\begin{itemize}
+\item \textbf{Law of proximity} \\
+Pieces that are close togehter are perceived as belonging together.
+\item \textbf{Law of closure} \\
+The area inside a closed line is perceived as a shape.
+\item \textbf{Law of good continuation} \\
+Pieces on a smooth line are perceived as belonging together.
+\item \textbf{Law of similarity} \\
+Things that look alike are perceived as belonging together.
+\item \textbf{Law of parallel movement} \\
+Things that move in parallel are perceived as belonging together.
+\end{itemize}
+
+It is vital to be aware of these principles when designing a user interface, as unintended gestalts may be confusing for users, and in severe cases cause complete task failures.\cite{lauesen}
 
 \section{Day to day booking}
 \label{sec:day_to_day_booking_ui}
@@ -335,7 +354,7 @@ Moving along, the list view remained in place, though expanded with additional s
 
 Figure \ref{fig:sem2_room_sche} shows an example schedule for a track.
 
-\todo{maybe more, else fuck it}
+\todo{maybe more, else fuck it - it is also mentioend further down.}
 
 \subsection{Proposed design}
 \label{subsec:proposed_design_sem}
@@ -346,13 +365,133 @@ Following is a description of all the screens needed to complete a semester plan
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
-\includegraphics[width=0.8\textwidth]{images/sem2_room_sche}
+\includegraphics[width=0.8\textwidth]{images/courseplan2_addcourse}
 \end{center}
-\caption{The schedule overview added in second iteration}
-\label{fig:sem2_room_sche}
+\caption{Tab for adding a new course to the system}
+\label{fig:courseplan2_addcourse}
+\end{figure}
+The first screen users of the semester planning will encounter is the 'Add course' shown on figure \ref{fig:courseplan2_addcourse}. It consists mainly of basic data input, but with a few key points to note:
+\begin{itemize}
+\item \textbf{Numbering of input fields} \\
+Different users have different habits when it comes to reading input forms. To avoid confusion, we simply numbered the fields so they are filled in a desired direction.
+\item \textbf{Use of Gestalt Laws} \\
+Our tests showed a bit of confusion regarding item 10, so we put a box around it in accordance to the \emph{Gestalt Law of Closure}. The same was applied for item 11.
+\item \textbf{Optional and Automatic} \\
+Although items 6, 8 and 9 was labeled as 'Optional' in the first test, it was not clear to our test subject that they would be filled automatically if left untouched. This was solved by having the same info twice: Keeping 'optional' in the label, and renaming the default value to 'Automatic'.
+\item \textbf{Explanatory text} \\
+Generally we have tried to avoid explanatory texts in the system as a whole, simply to reduce the noise level\cite{steve}. However, to further alleviate the confusion caused around item 10, we have put a text inside a box next to the relevant checkbox.
+\item \textbf{Active/Inactive} \\
+Item 11 is used on both the course management screens and the track management screen. As the courses at ITU usually run in either spring or winter each year, it is possible to reduce the workload from semester to semester by allowing courses and tracks to be put to inactive when a semester ends, instead of having to recreate the same courses every 6 months.
+\item \textbf{Course list} \\
+This tabbed list exist to allow the user to keep track of which courses have already been added. Our mockup does not make it clear, but it is of course sortable. The 'Edit' button on the list will open the course in the 'Edit course' tab.
+\item \textbf{Save and Clear} \\
+These buttons should be self-explanatory, but important to note that 'Save' will also clear the input fields to make ready for next course, and add the course to the course list on the right hand side.
+\end{itemize}
+
+\subsubsection{Edit course}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/courseplan2_editcourse}
+\end{center}
+\caption{Tab for editing and removing a course from the system}
+\label{fig:courseplan2_editcourse}
 \end{figure}
 
+The screen on figure \ref{fig:courseplan2_editcourse} looks very much like the 'Add course' screen, but was made as a seperate tab to emphasize that an existing course was open. Additionally, it allows us to block input when a course is currently assigned in a full semester plan. As shown on the mockup, the course code is always locked to avoid problems with unique identifiers. In case the course code changes, a new course will have to be added.
 
+\subsubsection{Manage tracks}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/courseplan2_managetracks}
+\end{center}
+\caption{Tab for creating, editing and removing tracks from the system}
+\label{fig:courseplan2_managetracks}
+\end{figure}
 
+Figure \ref{fig:courseplan2_managetracks} shows the track management. After courses have been added, the rest of the progression through the system is simply setting up constraints for the automated assignment, first of which is the tracks. 
+Points of interest include:
+\begin{itemize}
+\item \textbf{Active/Inactive and buttons} \\
+These two elements are the same as on previous screens, allowing the user to only have to 'learn' it once.
+\item \textbf{Track courses} \\
+We decided to make a list with all the courses currently in the system and another list which can be filled with selections from it. This eliminates the need for searching and typing. Not visible in the mockup, is that the lists are sortable by column.
+\item \textbf{Track list} \\
+The course list from previous screens have been substituted for a similar list of tracks with the familiar 'edit' button.
+\end{itemize}
 
+\subsubsection{Manage teachers}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/courseplan2_manageteachers}
+\end{center}
+\caption{Tab for creating, editing and removing teachers from the system}
+\label{fig:courseplan2_manageteachers}
+\end{figure}
 
+Figure \ref{fig:courseplan2_manageteachers} shows the tab for managing teachers. As it's main function is, like tracks, to provide constraints for the planning, it looks very similar to track management.
+Only thing worth making note of, is the removal of the 'Active' selection, and the corresponding change to 'Assigned' in the right-hand list view. The 'active'-selection have been removed due to it being redundant. If a teacher is inactive, he will simply not be assigned to any courses. The list view will show a teacher as 'Assigned' if they have at least one active course associated with them.
+
+\subsubsection{Room assignment - Clash resolution}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/courseplan2_Room_Assignments_clash}
+\end{center}
+\caption{The screen appearing when a full assignment is not possible due to constraints.}
+\label{fig:courseplan2_clash}
+\end{figure}
+When the huge 'Auto-assign' button in the bottom of all the tabs is pressed and a full assignment is not possible, the clash resolution screen on figure \ref{fig:courseplan2_clash} will appear.
+A clash happens when one or more constraints are in the way of filling all courses in to rooms. The constraints can be from tracks, teachers or course specific entries.
+The system will try to asses how the problem can be solved by loosening up constraints, affecting the smallest number of courses at a time, and sort them in that order. In the cases where a solution cannot be suggested, the view will inform of that, and manual editing of constraints will be required. This is out of our scope, so the specific algorithm design will not be discussed further.
+
+The example clash on the mockup suggests a problem was found on a thursday, and provides two example solutions. From our test and discussion with the study administration employee, we learned that what she really desired was a specific answer to ``what the problem was''. This is an expected reaction, but in reality a highly complex problem. The 'problem' is that an assignment was not possible. What exactly causes the problem, is not one singular thing, but a combination of \emph{everything} and our approach to simplifying it is therefore to suggest the solution that requires the least amount of changes.
+
+If a proposed solution is not selected, but a manuel edit is performed instead, the auto-assignment will have to run again.
+Once a solution is selected, or an assignment have been made without clashes, the room assignment tab will remain visible.
+
+\subsubsection{Completed room assignment}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/courseplan2_Room_Assignments}
+\end{center}
+\caption{The screen appearing when a full assignment have been made}
+\label{fig:courseplan2_assign}
+\end{figure}
+
+Figure \ref{fig:courseplan2_assign} shows the evolved version of the view discussed in section \ref{subsec:design_phase_sem}. The changes made can be summarized as:
+\begin{itemize}
+\item \textbf{Columns added} \\
+The columns 'Teacher' and 'Track' have been added, and all columns have been emphasized as sortable. In the cases where a course belongs to several tracks and/or teachers they will simply be duplicated when sorting by those two options, as it is the easiest way to provide the overviews required. In general, duplicate data is to be avoided, but in this specific case it provides some flexibility by allowing grouping of entries, no matter how the constraints are put.
+\item \textbf{Export} \\
+The option to export the plan can be valuable for data manipulation at later stages, and due to the format of our assignment will be a triviel implementation to common formats.
+\item \textbf{Schedules} \\
+This button opens the schedule overview described in section \ref{subsec:design_phase_sem} and in the following section. An explanatory text have again been added, to assist the user in discovering the view on first visit. 
+\item \textbf{Clearing the plan} \\
+Placed in the top right corner is the button to clear the plan. Naturally, warnings and confirmations will be served on click.
+\end{itemize}
+
+\subsubsection{Completed room assignment - Schedules}
+\begin{figure}[htb]
+\begin{center}
+\leavevmode
+\includegraphics[width=0.8\textwidth]{images/courseplan2_Room_Assignments_schedules}
+\end{center}
+\caption{The schedules overview for tracks.}
+\label{fig:courseplan2_assign_sche}
+\end{figure}
+
+The view on figure \ref{fig:courseplan2_assign_sche} was, as mentioned, added as direct result of our tests with the study administration representative. The different parts are:
+\begin{itemize}
+\item \textbf{Dropdown menus} \\
+The two dropdown menus control the area below. The 'Viewing track' lists all the active tracks in the plan, and the 'Week' lists the weeks of the year. A year selector has been omitted, as the week menu will simply contain weeks for eg. a year ahead and default to the current week.
+\item \textbf{Calendar} \\
+A small calendar have also been added in approximately the same position as in the day to day booking part of the system, which will update the week-dropdown to the selected week. Current date will be highlighted as shown on the mockup.
+\item \textbf{Schedule view} \\
+The main area of this screen contains the weekly schedule for the selected track and week. Note that the boxes do not scale in height with time, as that would make short courses unreasonably small, or long courses very large. We also opted to omit the full course names, as the unique course codes are usually sufficient for our target audience.
+\item \textbf{Overview button} \\
+A click on this button will simply return to the previus list view of full assignments.
+\end{itemize}
