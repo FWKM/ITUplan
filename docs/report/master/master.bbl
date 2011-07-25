@@ -16,6 +16,11 @@ Tabulex ApS.
 \newblock Home of tabulex.
 \newblock \url{http://www.tabulex.dk/}.
 
+\bibitem{ems_campus}
+DEA.
+\newblock Ems campus home.
+\newblock \url{http://www.dea.com/ProductsAndServices/Campus/Default.aspx}.
+
 \bibitem{garrett}
 Jesse~James Garrett.
 \newblock {\em The Elements of User Experience: User-Centered Design for the
@@ -34,6 +39,11 @@ Steve Krug.
 Soren Lauesen.
 \newblock {\em User Interface Design; A software Engineering Perspective}.
 \newblock Pearson Education Ltd., Essex, 2005.
+
+\bibitem{meeting_room_manager}
+NetSimplicity.
+\newblock Meeting room manager home.
+\newblock \url{http://www.netsimplicity.com/}.
 
 \bibitem{nielsen_metrics}
 Jakob Nielsen.
