@@ -6,8 +6,6 @@
 %Change the header of Abstrect to Executive summary
 \AtBeginDocument{%
 	\addto\captionsenglish{%
-  \renewcommand{\abstractname}%
-    {Executive Summary}%
 	}}
 
 %Usepackages - should always be before any text.
@@ -53,6 +51,15 @@
 \date{}
 \maketitle
 
+\begin{abstract}
+Vi har i dette projekt arbejdet med udviklingen af et interface, samt en delvis implementering af et lokaleplanlægningssystem til IT Universitetet i København.\\
+Vi har inden udviklingen undersøgt de eksisterende systemer tilgængelige på universitetet, samt kravene for et sådan system, og konkluderet at der på nuværende tidspunkt enten ikke er systemer der er tilstrækkelige, eller slet ikke findes.\\
+Vi har derfor baseret projektet på udvikling af et delvist implementeret system specifikt til ITU, der tilbyder reservation af lokaler, samt lokale planlægning. Den domæne specifikke viden vi har tilegnet os gennem projektet, har vi brugt i vores udvikling af programmet. Vi har lagt fokus på udvikling af brugergrænsefladen, da vi mener dette er en meget central del for at et sådan system kan benyttes med succes. En brugervenlig grænseflade kan gøre det nemt for brugere af universitetet at få et overblik over de pågældende rum, og dermed nemt reservere et lokale at arbejde i. Samtidig kan brugergrænsefladen hjælpe de ansvarlige med planlægning af lokaler for et semester, og yde dem støtte i denne process.\\
+Vi har baseret projektet og udviklingen af brugergrænsefladen på en iterativ process, hvorfor vi meget tidligt i processen har udviklet forslag til design, som vi efterfølgende har testet, vha. tænke højt tests. Dette har ført til flere iterationer af de samme skærmbilleder, og det endelige design er også blevet testet for at sikre at målgruppen ikke ville have problemer med at bruge applikationen.\\
+For at vise et eksempel på en faktisk fungerende applikation, har vi foruden interfacet, udviklet en webbaseret prototype af programmet. Vi har implementeret rum reservationsdelen i prototypen, så det er muligt at reservere et rum vha. 3 forskellige metoder, alt afhængig af behov.\\
+Vi har ved efterfølgende tests kunne konkludere at vores brugergrænseflade har givet en øget støtte til lokaleplanlægningen, der har givet de ansvarlige et større overblik. Vores applikation har samtidig tilføjet et system, der gør det nemmere for brugere af universitetet at planlægge deres tid på universitetet, da de gennem programmet kan få information om hvornår et specifikt eller tilfældigt rum er ledigt, og dermed være sikre på at have et rum at arbejde i ved at reservere det.
+\end{abstract}
+
 \tableofcontents
 
 %Chapter 1
@@ -73,6 +80,7 @@
 %Appendices:
 \appendix
 \chapter{Appendices}
+%\import{./Chapters/Appendix/}{Setup_and_userguide}
 %\import{./Chapters/Appendix/}{tasks}
 %\import{./Chapters/Appendix/}{code_structure}
 %\import{./Chapters/Appendix/}{mockups1}
