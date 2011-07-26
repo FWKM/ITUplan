@@ -43,7 +43,7 @@ However, Steve Krug has a different view: \cite{steve}
 \end{quotation}
 
 What we can take away from their different arguments for and against, is that testing with representative users is \emph{good}, but not vital when it simply comes to eliminating problems.
-We have chosen to do both. The system is intended to be used by everyone at ITU, which will also include newly started students and faculty.
+We have chosen to do both. The system is intended to be used by everyone at ITU, which will also include newly started students and faculty. However, for the semester planning we value the knowledge held by representative users to be essential, and have therefore this limited test subjects to that.
 Another point of agreement among the experts, is that testing early and often will \emph{always} trump testing with many users at a later point. \cite{lauesen,steve,nielsen_five_users}
 
 The table in figure \ref{fig:usa_users} shows how many users have been tested for each part of the system for each round. As seen, we've opted to only test one user for the semester planning, which is simply due to the lack of people with the required knowledge, and the very narrow target audience.
@@ -295,6 +295,17 @@ If a date is clicked on the calendar, the week number and day is filled into the
 \end{figure}
 The personal reservation screen, reached by the link in the top menu, is displayed on figure \ref{fig:reservations}. We have decided to omit past bookings from the view, as they would serve no real purpose other than increasing clutter for very active users.
 
+\subsubsection*{Review of quality requirements}
+The quality requirements listed in section \ref{subsec:quality_requirements} state that:
+\begin{itemize}\itemsep1pt
+\item Without instructions, 90\% of novice users must be able to complete T1.1 to T1.4 without variants.
+\item Without instructions, 80\% of novice users must be able to complete T1.1 to T1.4 including variants.
+\end{itemize}
+Due to time constraints, we had to make the choice between many rounds of initial testing, and extensive test of final round. With the advice from aforementioned usability experts, we decided to focus out efforts on testing early and often, as opposed to late and extensive.
+
+With the collected feedback from all rounds of testing, many of which have been on small iterations of the same screens, we estimate that these requirements will indeed be met by our target audience.
+
+
 \section{Semester planning}
 \label{sec:semester_planning_ui}
 The key challenge for designing the semester planning user interface, is to find an optimal way to represent the data, and to provide a good overview to support the user in the planning phase. This includes suggesting alternative solutions to problems, and provide enough views to help the user solve problems that have to be sorted out manually.
@@ -327,8 +338,6 @@ We interviewed the member of Study Administration who currently handles the seme
 
 The advantages of having \emph{the} end-user available through the process are significant. It allows us to potentially leap over several iterations, as we can make the initial mockups a lot more detailed. Additionally, we can draw constant feedback and inspiration from a user with extensive domain-specific knowledge.
 It is important to note that there are potential pitfalls connected with this aswell. By narrowing down our test users, we run the risk of hiding potential issues that our specific test subject solves with tacit knowledge.
-
-\todo{forklar at dette er forskellen paa det vi siger (og citerer) i dtd booking om representable users}
 
 Our justification for limiting the testing to our expert end-user is based on several things. First, due to the system being custom made for the ITU, the value of testing with a broader audience diminish due to lack of domain knowledge held by the actual end-user(s). Secondly, the system is being developed under time constraints, and with the diminishing value in mind, we deemed the trade-off to be reasonable. 
 
@@ -499,3 +508,13 @@ The main area of this screen contains the weekly schedule for the selected track
 \item \textbf{Overview button} \\
 A click on this button will simply return to the previus list view of full assignments.
 \end{itemize}
+
+\subsubsection*{Review of quality requirements}
+The quality requirements listed in section \ref{subsec:quality_requirements} state that:
+\begin{itemize}\itemsep1pt
+\item With a maximum of 30 minutes instructions, 90\% of administration personel must be able to complete T2.1 to T2.5.
+\item Without instructions, 50\% administration personel must be able to complete T2.1 to T2.5.
+\end{itemize}
+For the first requirement, we can with certainty say that it is met, due to having designed the system with a lot of input from the representative from Study Administration that will be the end-user.
+
+The second requirement have not been tested, as we could not produce realistic test subjects who had no knowledge of our system, but as with the first point, we feel that their involvement will prove to greatly reduce the learning curve of a fully implemented system.
