@@ -10,13 +10,13 @@ We want to construct a system that centralizes the semester planning, and aids t
 
 The program has been implemented as a web based solution, to make it globally accessible. We have chosen a web framework named Lift, written in Scala, which provides us with some needed functionality out of the box. This allows us to put our main focus on creating a solid user interface. Due to this choice of focus, some parts of the system have not been implemented.\\
 
-Section xx presents a glossary explaining the various terms and definitions used throughout the report.
+Appendix \ref{sec:glossary} presents a glossary explaining the various terms and definitions used throughout the report.
 
 \pagebreak
 \section{Domain}
 \label{sec:domain}
 This sections contains information about the actual domain in question; the IT University in Copenhagen, and the various resources and people relevant to our application. \\
-ITU has 4 different room types, which is managed by two different departments.
+ITU has 3 different room types, which is managed by two different departments.
 
 \begin{itemize}
 	\item \textbf{Meeting rooms}\\
@@ -50,15 +50,15 @@ The Study Administration uses an Excel sheet to get an overview of the availabil
 
 \subsubsection*{Tabulex}
 \label{subsub:tabulex}
-Tabulex is the program used by the part of the Study Administration that allocates rooms for courses. In Tabulex, a user defines the relationship between classes, rooms, teachers and courses. Binding 1 of each together, you have an entity representing a class attending a specific course in a specific room held by a specific teacher. When all entities have been defined, Tabulex arranges them in a weekly schema, in such a way that no resources of different entities overlap, like making sure no teachers teach two course simoustanely and no rooms are used for two courses at the same time.\\
+Tabulex is the program used by the part of the Study Administration that allocates rooms for courses. In Tabulex, a user defines the relationship between classes, rooms, teachers and courses. Binding 1 of each together, you have an entity representing a class attending a specific course in a specific room held by a specific teacher. When all entities have been defined, Tabulex arranges them in a weekly schema, in such a way that no resources of different entities overlap, e.g. making sure no teachers teach two course simoustanely and no rooms are used for two courses at the same time.\\
 
 Tabulex is good at allocating general schemas, but it lack a lot of functionality relevant for ITU. When two courses overlap each other, which might happen if the distribution of resources makes it impossible for the algorithm to make a schema, Tabulex does not suggest any alternative solutions, or at least provide some information about the problematic entities in question. This makes it difficult, and very time consuming to come up with a proper alternative solution, as the user has to make a manual correction, which often results in another conflict. \\
 Tabulex also does not keep track of equipment in each room. This is possible to solve through Tabulex though, as you can assign custom rules for the program to respect. As this is just simple rules, it might be hard to understand why these rules were created in the first place, if you were not the person responsible. This makes it hard for more than one person to use the application.\\
-Finally, Tabulex does not keep track of the capacity of each rooms, which makes it hard to do a proper allocation, as you cannot put smaller classes in small rooms, and visa versa.
+Finally, Tabulex does not keep track of the capacity of each rooms, which makes it hard to do a proper allocation, as you cannot put smaller classes in small rooms, and vice versa.
 
 \label{sec:scope}
 \section{Scope}
- Since we want to focus on the creation of a solid interface that solves the above problems, the implementation has been a second priority. We have divided the project into two main tasks, which together constitute to the main body of such an application. The success of the project depends on how well the interfaces for these two tasks have been designed.\\
+ Since we want to focus on the creation of a solid interface that solves the above problems, the implementation has been a secondary priority. We have divided the project into two main tasks, which together constitute to the main body of such an application. The success of the project depends on how well the interfaces for these two tasks have been designed.\\
 In the following, we will describe the two main tasks and how they relate to each other. In general, we will work with all types of rooms except the offices, as they are handled differently. It would not make any sense to book an office, as they are assigned specifically to staff and students.
 
 \subsection{Day to day booking}
@@ -127,7 +127,7 @@ Not all users should have access to the semester planning. Only users defined as
 Some functionality are not relevant for the two main tasks in our scope. The following list presents components that will not be implemented, and will have little impact on the user interface.
 
 \begin{itemize}
-	\item A personal interface, listing all booking made by the user.\\ Through this interface, it should be possible to review, edit and delete bookings. Each administrator of the system, should have access to \emph{all} booking, and should be able to approve or disapprove bookings.
+	\item An administration panel.\\ Each administrator of the system, should have access to \emph{all} bookings, and should be able to change/delete bookings.
 	\item A communication protocol for sending and receiving messages.\\ This is nessesary if e.g. a booking is deleted by an administrator through the semester planning interface.
 	\item Some kind of restrictions to the day to day booking.\\ It should e.g. not be possible for a user to book all available rooms at the same time.
 \end{itemize}
