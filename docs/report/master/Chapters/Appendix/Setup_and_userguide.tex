@@ -1,5 +1,43 @@
 \section{Setup and user guide}
 \label{sec:setup_and_use}
+We have developed the application in a local environment, making it possible to run the program on any computer with the right setup. The server has been tested running on a Mac with OS X Snow Leopard / Lion and Windows 7 Pro 32bit. The client has been tested in Chrome version 11 and 12, but there should be no complications using any Webkit based browser.\\
 
-\subsection{Setup and requirements}
-We have developed the application in a local environment, making it possible to run the program on any computer with the right setup. The server has been tested running on a Mac with OS X Snow Leopard / Lion and Windows 7 Pro 32bit. The client has been tested in Chrome version 11 and 12, but there should be no complications using any Webkit based browser. 
+\subsection{Installation}
+The following should be installed on the system, and be present on the class path. 
+
+\begin{itemize}
+	\item Java version 1.5 or later.
+	\item Scala 2.8.1 or later.
+	\item Simple Build Tool (SBT) 0.7.4 or later.
+	\item MySQL version 5.1.44 or later.
+\end{itemize}
+
+\subsection{Setup}
+\begin{itemize}
+	\item Extract the content of the .zip archive \textbf{itu\_room\_booking.zip} to a new directory (here called \textbf{root}).
+	\item Open CMD on Windows, or Terminal on Mac and cd to \textbf{root}.
+	\item Start your MySQL server if it is not already running. We have used XAMPP for Mac, which comes with a built in interface to start and stop the server.
+	\item Type \textbf{mysql  \textendash u username \textendash p password \textless  database\_setup.sql} where \emph{username} is your MySQL username ('root' by default) and \emph{password} is your MySQL password.\\ This will create and setup the database. Note that you can skip the '\textendash p password' part if you do not use a password.
+	\item Open the file \textbf{root/src/main/scala/bootstrap/liftweb/Boot.scala} and edit this line:\\
+	
+	\emph{Full(DriverManager.getConnection('jdbc:mysql://localhost/ituplan','root',''))} \\
+	
+	to this:\\
+	
+\emph{Full(DriverManager.getConnection('jdbc:mysql://localhost/ituplan','mysql\_username', 'mysql\_password'))}\\
+
+where \emph{mysql\_username} and \emph{mysql\_password} is the same username and password as entered before. If you do not use a password, just use empty quotes ('').
+\end{itemize}
+
+\subsection{Running the application}
+\begin{itemize}
+	\item If you are not there already, cd to the \textbf{root} directory.
+	\item Type \textbf{sbt} and press enter.\\If SBT is present on the class path, the environment will load. 
+	\item Type \textbf{update}.\\SBT will locate and download all dependencies for the 					project, including the Lift framework.
+	\item Type \textbf{$\sim$jetty-run}.\\This will compile the application, and start the built in Jetty-server. Note that a bug might result in the Java virtual machine running out of memory. In that case, start sbt and jetty again.
+	\item Open your browser, and go to \textbf{localhost:8080}.
+	\item We have created a test user where the username is \textbf{a} and the password is \textbf{a} as well.\\ Use this to login to the application.
+\end{itemize}
+
+The QuickBooking function is fully implemented in the prototype. Also, the sitemap and session functionality gained through lift is working. The simple booking functionality is not connected with the server, but the day and time selector has been implemented.
+

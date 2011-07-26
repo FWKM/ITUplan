@@ -22,9 +22,7 @@ ITU has 4 different room types, which is managed by two different departments.
 	\item \textbf{Meeting rooms}\\
 	Used for small to medium sized meetings, student group work and exam preparation. 
 	\item \textbf{Class rooms}\\
-	Mainly used for lectures, exercises and examinations. Also used for meetings if none of the meeting rooms are available.
-	\item Auditoriums
-	Used for lectures, and large events.
+	Mainly used for lectures, exercises and examinations. Also used for events and meetings, if none of the meeting rooms are available or large enough. Class rooms also include the auditoriums.
 	\item \textbf{Offices}\\
 	Used by the professors, staff members and ph.d. students.
 \end{itemize}
@@ -32,7 +30,7 @@ ITU has 4 different room types, which is managed by two different departments.
 As of writing, room management is split between the Study Administration (SA) and the Facility Management (FM). Within the study administration, there is another division of labour which all in all adds to the confusion of handling the limited rooms efficiently.
 
 \subsection{Facilities Management}
-FM manages daily adhoc planning, event planning and a subset of the rooms. FM is in charge of the office rooms and the current day to day booking: When a person wishes to reserve or use a meeting room, the FM employee will refer to a binder with a paper-overview of the current status of each single room.\\
+FM manages daily adhoc planning, event planning and a subset of the rooms; the office rooms and the current day to day booking: When a person wishes to reserve or use a meeting room, the FM employee will refer to a binder with a paper-overview of the current status of each single room.\\
 
 This approach presents several problems:
 \begin{itemize}
@@ -42,7 +40,8 @@ This approach presents several problems:
 
 \subsection{Study Administration}
 The SA manages the class rooms and the auditoriums, thus also in charge of allocating rooms for lectures and examinations. \\
-In regards to room management, the Study Administrations biggest challenge is the planning of a semester. First step is to collect data from the course database to see which courses will be held in the coming semester. When a list of courses have been compiled, a system called Tabulex is used to create a draft schedule to avoid overlaps of teachers and courses required by several different educations. On the computers at ITU, it takes Tabulex up to 8 hours to generate this data. The output from Tabulex is finally used to manually create the room assignments for a standard week of the semester.\\
+In regards to room management, the Study Administrations biggest challenge is the planning of a semester. First step is to collect data from the course database to see which courses will be held in the coming semester. When a list of courses has been compiled, a system called Tabulex is used to create a draft schedule to avoid overlaps of teachers and courses. On the computers at ITU, it takes Tabulex up to 8 hours to generate this data. The output from Tabulex is finally used to manually create the room assignments for a standard week of the semester.\\
+Note that a semester contains several different classes and study programmes. The SA uses a term called tracks to divide the various study programmes into sections. A track is one specific study programme at one specific semester, e.g. \emph{Software Development 3. Semester}. Each track has a weekly schedule, which is created manually in the final process of the semester planning.
 
 \subsection{Current systems}
 \label{sub:current_systems}
@@ -79,36 +78,38 @@ The day to day booking should thus contain:
 The application should:
 
 \begin{itemize}
-	\item Suggest \emph{a single room} to the user, when using the quickbook function. The room suggested, should be the \emph{optimal} room, in terms of efficient room allocation. This means that the application should suggest the smallest room, with the least amount of equipment available.
+	\item Suggest \emph{a single room} to the user, when using the quickbook function. The room suggested, should be the \emph{optimal} room, in terms of efficient room allocation. This means that the application should suggest the smallest room.
 	\item Suggest a list of rooms that fulfil the maximum number of requirements, given as input by the user through the selective booking function. If all requirements can be fulfilled, only the optimal rooms (see above) should be presented to the user.
 \end{itemize}
 
-To exemplify a working application, we will implement major parts of the day to day booking interface.
+To exemplify a working application, we will implement some parts of the day to day booking interface.
 
 \subsection{Semester planning}
 \label{chap1:semester_planning}
 In addition to the day to day booking, we will design the user interface for a semester planning system. Planning a semester is in the case of ITU not just a matter of assignment. Each semester have more courses and day/time combinations than there is rooms, so the essence of it,is providing the tools to prioritize in an informed manner. At the point when a semester needs to be planned, most courses only have a start-week and an end-week, along with the number of enrolled students. Some courses can, eg. due to external teachers with busy schedules, have narrowed down their options, and we must of course including support for these scenarios.
-Worth noting, and part of our considerations in the design, is that there will only be a few people ever using this part of the system, and these people will be easily accessible for training.
+Worth noting, and part of our considerations in the design, is that there will only be a few people using this part of the system, and these people will be easily accessible for training.
 
 The semester planning should contain:
 
 \begin{itemize}
-	\item An interface to manage courses
-	\item An interface to manage the aforementioned tracks
-	\item An interface to handle any problems with planning that cannot be resolved automatically
-	\item An interface to view/review the current semester's allocation
+	\item An interface to manage courses.
+	\item An interface to manage tracks.
+	\item An interface to handle any problems with planning that cannot be resolved automatically.
+	\item An interface to view/review the current semester's allocation.
 \end{itemize}
 
 The application should:
 
 \begin{itemize}
-	\item Attempt to not put courses in meeting rooms, unless all class rooms are unavailable in all possible scenarios
-	\item Provide alternatives to assignments and allow for wishes/preferences
-	\item Provide suggestions for resolutions if no full semester plan is possible
+	\item Apply a constraint so that no teachers have to be attending two courses at the same or any overlapping time.
+	\item Apply a constraint so that no courses are held in the same room at the same, or any overlapping time.
+	\item Attempt to not put courses in meeting rooms, unless all class rooms are unavailable in all possible scenarios.
+	\item Provide alternatives to assignments and allow for wishes/preferences.
+	\item Provide suggestions for resolutions if no full semester plan is possible.
 \end{itemize}
 
 
-We will design the user interface for the semester planning, but not implement or add the required functionality. Doing the full scale implementation would be a possibility, but it is not crucial to prove our point of data presentation and usability. We have therefore chosen to perform the analytical work, and leave out large parts of the actual implementation.
+We will design the user interface for the semester planning, but not implement or add the required functionality. Doing the full scale implementation is not something we are able to do because of time constraints, while also not being crucial to prove our point of data presentation and usability.
 
 \subsection{Relations}
 \label{subsec:relations}
