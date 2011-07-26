@@ -28,7 +28,7 @@ With usability being our primary focus, choosing a proper method of testing is k
 
 Among the most widely used technique for testing user interfaces in development stages are the think aloud method.\cite{steve} As one can imagine, not all test subjects find it natural to explain their thoughts as they go, but with interesting questions from the test evaluator, most users get familiar with the concept very fast. We have chosen the think aloud test for two primary reasons.
 First, because even in the worst cases where a user does not adapt to explaining why and what they do, you can still get the same, if not better, results than with the \emph{observe only} test.
-Secondly, the \emph{cooperation} test has the potential danger of concealing usability problems. In the case where test subjects \emph{t1} and \emph{t2} are cooperating on a task, a problem t1 would have encountered alone, will not be discovered due to p2 solving it beforehand, and vice versa. This results in potentially only finding problems which both users would have encountered on their own.
+Secondly, the \emph{cooperation} test has the potential danger of concealing usability problems. In the case where test subjects \emph{t1} and \emph{t2} are cooperating on a task, a problem t1 would have encountered alone, will not be discovered due to t2 solving it beforehand, and vice versa. This results in potentially only finding problems which both users would have encountered on their own.
 
 Surprisingly, we have not found any description of this problem by the established experts, and can therefore not verify our theory, but have nonetheless decided to avoid this version of usability testing, based on this. \\
 \\
@@ -74,9 +74,9 @@ For the actual tests, we have used the tasks listed in section \ref{sec:tasks} t
 \end{figure}
 
 Figure \ref{fig:results_day} provides a full overview of our findings from the usability testing of the day to day system, which we will use as a reference in the day to day booking chapters. We have used the problem classification defined by Soren Lauesen\cite{lauesen}.\\
-What stands out here is that user 6 encountered two problems, one of which resulted in him not completing the assigned task. Naturally, this is not something we could wish for in the last round of testing, but it did provide insight as to how users with very little technical knowledge interpret our system.
+What stands out here is that user 6 encountered two problems, one of which resulted in him not completing the assigned task in a satisfactory manner. Naturally, this is not something we could wish for in the last round of testing, but it did provide insight as to how users with very little technical knowledge interpret our system.
 
-The full test documentation can be found in appendix \ref{xx}.
+The full test documentation can be found in appendix \ref{app:tests}.
 
 \subsection{Gestalt laws}
 In usability theory, \emph{gestalt laws} (or gestalt principles) are often used to manipulate the users perception of elements. Listed here is a brief overview of the laws we have utilized in the design. For extensive walkthrough of each law, refer to Soren Lauesen\cite{lauesen}. 
@@ -133,7 +133,7 @@ The front page serves as a portal to the rest of the system, and thus it should 
 \subsection{First round}
 \subsubsection{Mockup}
 \label{sub:first_mockup}
-The first thing we wanted to test was the booking dialogue, as this was a major part of the user interaction. When the user selected a room on the map, the dialogue seen in figure \ref{fig:book_room_mockup} should appear in the function panel (wire:5)
+The first thing we wanted to test was the booking dialogue, as this was a major part of the user interaction. When the user selected a room on the map, the dialogue seen in figure \ref{fig:book_room_mockup} should appear in the function panel (wire:5).
  We wanted to give the user the impression that they never left the homepage, and to make sure no-one got lost in subscreens and menus.
 \begin{figure}[htb]
 \begin{center}
@@ -155,9 +155,8 @@ In our first usability test, the users were to complete the following tasks:
 	\item Various variations of tasks involving finding rooms with specific requirements
 \end{enumerate}
 
-All the users had no problems completing task 1-3, but when the rooms needed to fulfil specific requirements, the  users felt overwhelmed by the amount of options, and did not spot the vital functions due to too much noise. This resultet in a task-failure for all test users. Also, our \emph{another day} button was often ignored. \\
-
-What may come as a surprise, is that both users at some point or the other, tried to complete the simple tasks by using the advanced search button (wire:5.2) instead of e.g. using the map to select a room (wire:4). \\
+What may come as a surprise, is that many users at some point or the other, tried to complete the simple tasks by using the advanced search button (wire:5.2) instead of e.g. using the map to select a room (wire:4). \\
+Additionally, our \emph{another day} button was often ignored. \\
 \pagebreak
 
 
@@ -172,13 +171,16 @@ What may come as a surprise, is that both users at some point or the other, trie
 \label{fig:book_room_mockup2}
 \end{figure}
 
-Second time around, we tried making it as basic as possible to reduce the clutter, to make the users realize that this screen was for very simple tasks. We simply presented the user with a dialogue for selecting how many hours from now the room should be booked. This made all the test users pass the simple booking task, and it made them realize that the advanced search button(wire:5.2) should be used for tasks including specific room requirements. It did present another problem though: Now, no test users were able to figure out the availability of a room in the near future, as there was no button indicating this functionality when you had selected a room. The calendar (wire:3) was actually intended for this purpose, but this was not used by any of the users.\\
+Second time around, we tried making it as basic as possible to reduce the clutter, to make the users realize that this screen was for very simple tasks. We simply presented the user with a dialogue for selecting how many hours from now the room should be booked. 
 
 \subsubsection{Test}
+These changes made all the test users pass the simple booking task, and it made them realize that the advanced search button(wire:5.2) should be used for tasks including specific room requirements. It did present another problem though: Now, no test users were able to figure out the availability of a room in the near future, as there was no button indicating this functionality when you had selected a room. The calendar (wire:3) was actually intended for this purpose, but this was not used by any of the users.\\
+
 This round of testing was probably the one with the biggest impact on the final design. As shown on the test results from figure \ref{fig:results_day}, \emph{quick booking} was not thought of yet in the first round. Even though it created another problem of not providing the needed functional for getting a weekly overview, we discovered general satisfaction with the simplicity of the overlaying panel seen in figure \ref{fig:book_room_mockup2}. We wanted to keep this simplicity, while still making sure users could find a week overview of each room, which led to a very different third iteration.
 \pagebreak
 
 \subsection{Third round}
+\label{sec:third_round}
 \subsubsection{Mockup}
 \begin{figure}[htb]
 \begin{center}
@@ -195,7 +197,7 @@ In this iteration, we changed the mockup to do exactly this. When the users clic
 As shown, we have decided to invert the x/y-axes as opposed to normal day-time overviews in eg. Outlook or Google Calendar. This is done because of the standard timeline being from left to right, and not top to bottom. We have simply added 7 timelines on top of each, as we thought it more intuitive when trying to get an overview. Our assumptions proved correct from every single test, as not a single user had a problem understanding the view immediately.\\
 
 \subsubsection{Test}
-All the test subjects used this overview effectively, when trying to book a room for a day not being the current. While the users passed the simple room booking tests in the second iteration, we did not test this again, but changed the function slightly due to new information gained through our domain research (see section \ref{xx}). The 'find me a room' button (wire:5.1) did not present the users with an option to choose the duration of the booking anymore, but simply booked the room for 4 hours. The user would then have the opportunity to extend the booking if necessary. Also, the room was now booked immediatly as the user clicked the button, to prevent problems with concurrent bookings, as discussed later in section \ref{xx}. Finally, we changed the label from 'Find me a room', to 'Quick Booking', to better reflect the actual functionality of the button.\\
+All the test subjects used this overview effectively, when trying to book a room for a day not being the current. While the users passed the simple room booking tests in the second iteration, we did not test this again, but changed the function slightly due to new information gained through previous tests. The 'find me a room' button (wire:5.1) did not present the users with an option to choose the duration of the booking anymore, but simply booked the room for 4 hours. The user would then have the opportunity to extend the booking if necessary. Also, the room was now booked immediatly as the user clicked the button, to prevent problems with concurrent bookings, as discussed later in section \ref{sub:challenges_concurrent_rooms}. Finally, we changed the label from 'Find me a room', to 'Quick Booking', to better reflect the actual functionality of the button.\\
 Figure \ref{fig:quick_overlay} in the proposed design section shows the quick booking dialogue as presented to the user.
 
 
@@ -213,7 +215,7 @@ Figure \ref{fig:quick_overlay} in the proposed design section shows the quick bo
 The final design to book a room, as shown on figure \ref{fig:week_final}, grants an availability overview of 7 days, starting with the current day. Through our tests, we noted test subjects trying to drag the mouse to select, and others clicking for a start time followed by a click on end time, so we have chosen to allow for both.
 To further assist the user in figuring out how it works, we have added highlighting of both the day and time when mouse is moved across the matrix.
 
-The test results in figure \ref{fig:results_day} show a task failure for simple booking in third round, which was caused by him not discovering that the map was clickable, but once we intervened and directed him towards this view, he did succeed.
+The test results in figure \ref{fig:results_day} show a medium problem for simple booking in third round, which was caused by him not discovering that the map was clickable, but he managed to succed by muddling through.
 
 We have not conducted extensive tests for the final round, but simply performed sanity checks with previous test subjects, due to the reasonably small amount of changes between the rounds.
 
@@ -260,9 +262,9 @@ It simply finds the smallest available room and books it for a default 4-hour sp
 \caption{The overview and simple booking screen used when a specific room is clicked on the map}
 \label{fig:simple_booking}
 \end{figure}
-When a specific room on the map overview is clicked, the screen displayed on figure \ref{fig:simple_booking} will be presented. The specifics of this part of the system has been discussed on in the example of the design process in section \ref{sec:design_process}.
+When a specific room on the map overview is clicked, the screen displayed on figure \ref{fig:simple_booking} will be presented. The specifics of this part of the system has been discussed on in the example of the design process in section \ref{sec:third_round}.
 It is worth noting that it only shows a 7-day overview, starting with today. We have considered to allow for scrolling back and forth in weeks, to allow the curious users to check bookings further in the future than a week.
-We decided to not implement it in the prototype, as it would be an unnecesarry distraction for almost all situations this view would be used for.
+We decided to not implement it in the prototype, as it would be an unnecesarry distraction for almost all situations this view would be used for, and the calendar already provides this functionality.
 Our tests revealed that users tend to utilize 'Advanced Search' for everything that was not immediately easy, and we concluded that if a booking needed to be made far in the future, that would be the function they used.
 
 \pagebreak
