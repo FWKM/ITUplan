@@ -47,7 +47,7 @@ Another point of agreement among the experts, is that testing early and often wi
 
 The table in figure \ref{fig:usa_users} shows how many users have been tested for each part of the system for each round. As seen, we've opted to only test one user for the semester planning, which is simply due to the lack of people with the required knowledge, and the very narrow target audience.
 
-For the actual tests, we have used the tasks listed in section \ref{sec:tasks} to construct the questions, and ensure that we reach the critical parts of the system.
+For the actual tests, we have used the tasks listed in section \ref{sec:tasks} to construct the questions, and ensure that we reach the critical parts of the system. The questions and scenarios presented to test subjects have to fullest extent possible been formulated so they provide no implicit help, and use as few domain specific words as possible.\cite{lauesen}
 
 \begin{figure}[htb]
 \begin{center}
@@ -173,7 +173,7 @@ What may come as a surprise, is that both users at some point or the other, trie
 
 Second time around, we tried making it as basic as possible to reduce the clutter, to make the users realize that this screen was for very simple tasks. We simply presented the user with a dialogue for selecting how many hours from now the room should be booked. This made all the test users pass the simple booking task, and it made them realize that the advanced search button(wire:5.2) should be used for tasks including specific room requirements. It did present another problem though: Now, no test users were able to figure out the availability of a room in the near future, as there was no button indicating this functionality when you had selected a room. The calendar (wire:3) was actually intended for this purpose, but this was not used by any of the users.\\
 
-\subsubsection{test}
+\subsubsection{Test}
 This round of testing was probably the one with the biggest impact on the final design. As shown on the test results from figure \ref{fig:results_day}, \emph{quick booking} was not thought of yet in the first round. Even though it created another problem of not providing the needed functional for getting a weekly overview, we discovered general satisfaction with the simplicity of the overlaying panel seen in figure \ref{fig:book_room_mockup2}. We wanted to keep this simplicity, while still making sure users could find a week overview of each room, which led to a very different third iteration.
 \pagebreak
 
