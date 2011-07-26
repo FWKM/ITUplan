@@ -25,7 +25,7 @@ This kind of software gives a good visualization of available rooms on a current
 While having nothing to do with semester planning, this representation works as a room booking system if you only have a few rooms. On a 800x600 resolution monitor, 5 rooms is enough to make horizontal scroll nessesary, making it hard to get an good overview of the current occupation of the rooms.
 
 \item \textbf{Schema based planning software}\\
-These applications are developed for primary schools and universities. They show weekdays on the the x-axis, time on the y-axis and a box in the schema represents a booked time slot. This gives a good weekly overview, but you cannot get an overview of how a specific room is used. More importantly, ITU needs another abstraction level, the tracks, representing one semester for a particular class, which is not possible to represent in any of the applications. This would make it hard to gather information from a particular track, as the related courses would be scattered throughout the overview. Figure \ref{app2} shows an example of a schema planning application.
+These applications are developed for primary schools and universities. They show weekdays on the the x-axis, time on the y-axis and a box in the schema represents a booked time slot. This gives a good weekly overview, but you cannot get an overview of how a specific room is used. More importantly, ITU needs another abstraction level, the tracks, representing one semester for a particular study programme, which is not possible to represent in any of the applications. This would make it hard to gather information from a particular track, as the related courses would be scattered throughout the overview. Figure \ref{fig:app2} shows an example of a schema planning application.
 \end{itemize}
 
 \begin{figure}[htb]
@@ -48,7 +48,7 @@ Our target audience can be divided into two groups:
 \end{itemize}
 
 \subsection*{Student body}
-The student body covers ages 18 - 40+ and with very different backgrounds. Based on the nature of the university, it is fair to assume that most students have atleast basic familiarity with IT and computer use in general.
+The student body covers ages 18 - 40+ and with very different backgrounds. Based on the nature of the university, it is fair to assume that most students have at least basic familiarity with IT and computer use in general.
 
 \subsection*{Employees}
 The computer proficiency of the employees can range from expert to novice, and no clear-cut distinctions can be made. We have, however, observed that the majority of the people our system would affect are using tools with some similarities, and are therefore assuming their proficiency to be above novice users.\\
@@ -60,7 +60,7 @@ No one outside of ITU (not being registrered in the userbase) should be able to 
 \label{sec:requirements}
 % Læs søren la om Requirements
 Since the ITU does not currently have a full system, we have put up initial requirements for such a system.
-As described in the target audience \ref{sec:xx}, the system will be used by a wide variety of people, and there will be virtually no way to train them, thus putting a very high bar for user-friendliness. We have met this problem head-on by writing up all the tasks our system must support, along with quality requirements describing to what level our users must have succesfull uses. \cite{lauesen}
+As described in the target audience \ref{sec:target_audience}, the system will be used by a wide variety of people, and there will be virtually no way to train them. We have met this problem by writing up all the tasks our system must support, along with quality requirements describing success criterias for our application. \cite{lauesen}
 
 \subsection{Non-functional requirements} % (fold)
 \label{subsec:non_functional_requirements}
@@ -76,7 +76,7 @@ We do not think this is an actual usability requirement, as it is merely concern
 	\item \textbf{Task efficiency}\\
 	Since the task of finding a room often will be done on the fly, on the way to school, or right before a meeting takes place, it is important that the application is responsive and gives the user a proper response to a booking query. It should give the user a good overview to support his decision, and suggest alternatives if his query cannot be met. In general, we have failed if the user finds it more effective to book a room the old fashioned way, by asking the Facility Management.
 	\item \textbf{Understandability}\\
-	The domain analysis suggested that the staff responsible for doing the semester planning had a large need to double-check that the important tasks performed by the system were done correctly. \ref{sec:xx}. In general, they had very little confidence in the system. Therefore, to avoid resistance towards change, it is important that the system communicates clearly with the user, during normal use, and expecially in error prone situations to avoid confusion.
+	Interviewing the Study Administration suggested that the staff responsible for doing the semester planning had a large need to double-check that the important tasks performed by the system were done correctly. \ref{app:interview}. In general, they had very little confidence in the system. Therefore, to avoid resistance towards change, it is important that the system communicates clearly with the user, during normal use, and expecially in error prone situations to avoid confusion.
 	\item \textbf{Ease of learning}\\
 	The set of people using our system is large and will change rapidly. It is therefore important that the system can be used "out of the box". If not, people will simply not use it, as it takes to much of their already limited time to get familiar with. Also, there is a close relation between ease of learning, and the effectiveness of the support the system offers. If the user does not understand how to use the system, they will indeed not be able to benefit from the support layer.
 	\item \textbf{Subjective satisfaction}\\
