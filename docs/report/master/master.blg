@@ -26,7 +26,7 @@ I was expecting a `,' or a `}'---line 85 of file bib.bib
  :  TITLE = {Alert box March 19, 2000: Why You Only Need to Test with 5 Users}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in nielsen_five_users
+Warning--to sort, need author or key in nielsenfiveusers
 Warning--to sort, need author or key in jqueryui
 Warning--to sort, need author or key in jqueryui_date
 (There were 5 error messages)
