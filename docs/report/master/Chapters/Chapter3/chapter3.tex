@@ -236,7 +236,7 @@ Following is a description of all the screens that have been implemented, and th
 \label{fig:frontpage}
 \end{figure}
 The frontpage shown on figure \ref{fig:frontpage} adheres a lot to the wireframe described above. 
-We have made a couple of important decisions with the design. First off, we have decided to resize the rooms on the overview so they do not match the actual size of the rooms in reality. We have of course kept the location, and the approximate scale to adjecent rooms, but all the very small rooms have been enlarged to allow for easier selection.
+We have made a couple of important decisions with the design. First off, we have decided to resize the rooms on the overview so the scale of the rooms compared to each other, is not the same scale as in reality. We have of course kept the location, and the approximate scale to adjecent rooms, but all the very small rooms have been enlarged to allow for easier selection.
 Secondly, all offices, bathrooms, closets and kitchens have been left out. This is done to reduce clutter, and emphasize the rooms we are concerned with.
 
 \pagebreak
@@ -250,7 +250,7 @@ Secondly, all offices, bathrooms, closets and kitchens have been left out. This 
 \label{fig:quick_overlay}
 \end{figure}
 Shown on figure \ref{fig:quick_overlay} is the overlay appearing when the 'Quick Booking'-button is pressed.
-It simply finds the smallest available room and books it for a default 4-hour span. The technicalities behind this function is described further in section \ref{XX}.
+It simply finds the smallest available room and books it for a default 4-hour span. The technicalities behind this function is described further in section \ref{sub:quickbooking}.
 
 \pagebreak
 \subsubsection*{Simple Booking}
@@ -262,7 +262,7 @@ It simply finds the smallest available room and books it for a default 4-hour sp
 \caption{The overview and simple booking screen used when a specific room is clicked on the map}
 \label{fig:simple_booking}
 \end{figure}
-When a specific room on the map overview is clicked, the screen displayed on figure \ref{fig:simple_booking} will be presented. The specifics of this part of the system has been discussed on in the example of the design process in section \ref{sec:third_round}.
+When a specific room on the map overview is clicked, the screen displayed on figure \ref{fig:simple_booking} will be presented. The specifics of this part of the system have been discussed in the example of the design process in section \ref{sec:third_round}.
 It is worth noting that it only shows a 7-day overview, starting with today. We have considered to allow for scrolling back and forth in weeks, to allow the curious users to check bookings further in the future than a week.
 We decided to not implement it in the prototype, as it would be an unnecesarry distraction for almost all situations this view would be used for, and the calendar already provides this functionality.
 Our tests revealed that users tend to utilize 'Advanced Search' for everything that was not immediately easy, and we concluded that if a booking needed to be made far in the future, that would be the function they used.
@@ -297,9 +297,8 @@ The personal reservation screen, reached by the link in the top menu, is display
 
 \section{Semester planning}
 \label{sec:semester_planning_ui}
-\todo{fill this} 
-%The key challenge for designing the semester planning user interface, is to find an optimal way to represent the data.
-%Bummelum, tralala.
+The key challenge for designing the semester planning user interface, is to find an optimal way to represent the data, and to provide a good overview to support the user in the planning phase. This includes suggesting alternative solutions to problems, and provide enough views to help the user solve problems that have to be sorted out manually.
+
 \subsection{Wireframe}
 \label{subsec:wire_sem}
 With our agile approach to designing the system, we have focused on getting testable mockups done as soon as possible. For most of the screens in the semester planning, this means drawing on a whiteboard where we can quickly add, remove and edit the screens until we have a satisfactory mockup, based on the data collected from interviews and analysis. However, for the screens which contains a lot of information, or requires a lot of user input, we have utilized the wireframe again to try and organize the data more systematic.
@@ -315,7 +314,7 @@ With our agile approach to designing the system, we have focused on getting test
 
 Our first whiteboard mockups had track assignment done via the course management, where the user would add the tracks to a course as it was created. We quickly realized that by decentralizing the track management and handling it on a course to course basis, an important overview would be lost.
 
-This lead us to take all things track related away from the course management, and add it to a wireframe, shown on figure \ref{fig:wireframe_tracks}. With a single view for all things track-related, confusion is less likely as users will not need to browse different screens, to gather all information the subject\cite{lauesen}.
+This lead us to take all things track related away from the course management, and add it to a wireframe, shown on figure \ref{fig:wireframe_tracks}. With a single view for all things track-related, confusion is less likely as users will not need to browse different screens, to gather all related information. \cite{lauesen}.
 
 The same view have been utilized for the teacher management, both out of convenience, and to reduce the amount of learning needed to succesfully use the system.
 
@@ -323,7 +322,7 @@ The same view have been utilized for the teacher management, both out of conveni
 \subsection{Design phase}
 \label{subsec:design_phase_sem}
 \subsubsection{Limiting the test}
-Our tests for the semester planning have not been as numourous as for the day to day booking, they have however been a lot more extensive in terms of time, tasks and discussions.
+Our tests for the semester planning have not been as numourous as for the day to day booking. They have however been a lot more extensive in terms of time, tasks and discussions.
 We interviewed the member of Study Administration who currently handles the semester planning, and tested our mockups with her aswell.
 
 The advantages of having \emph{the} end-user available through the process are significant. It allows us to potentially leap over several iterations, as we can make the initial mockups a lot more detailed. Additionally, we can draw constant feedback and inspiration from a user with extensive domain-specific knowledge.
@@ -356,9 +355,7 @@ Moving along, the list view remained in place, though expanded with additional s
 \label{fig:sem2_room_sche}
 \end{figure}
 
-Figure \ref{fig:sem2_room_sche} shows an example schedule for a track.
-
-\todo{maybe more, else fuck it - it is also mentioend further down.}
+Figure \ref{fig:sem2_room_sche} shows an example schedule for a track. This view is explained in section \ref{subsub:schedules}.
 
 \subsection{Proposed design}
 \label{subsec:proposed_design_sem}
@@ -377,11 +374,11 @@ Following is a description of all the screens needed to complete a semester plan
 The first screen users of the semester planning will encounter is the 'Add course' shown on figure \ref{fig:courseplan2_addcourse}. It consists mainly of basic data input, but with a few key points to note:
 \begin{itemize}
 \item \textbf{Numbering of input fields} \\
-Different users have different habits when it comes to reading input forms. To avoid confusion, we simply numbered the fields so they are filled in a desired direction.
+Different users have different habits when it comes to reading input forms. To avoid confusion, we simply numbered the fields so they are filled in a desired order.
 \item \textbf{Use of Gestalt Laws} \\
 Our tests showed a bit of confusion regarding item 10, so we put a box around it in accordance to the \emph{Gestalt Law of Closure}. The same was applied for item 11.
 \item \textbf{Optional and Automatic} \\
-Although items 6, 8 and 9 was labeled as 'Optional' in the first test, it was not clear to our test subject that they would be filled automatically if left untouched. This was solved by having the same info twice: Keeping 'optional' in the label, and renaming the default value to 'Automatic'.
+Although items 6, 8 and 9 were labeled as 'Optional' in the first test, it was not clear to our test subject that they would be filled out automatically if left untouched. This was solved by having the same info twice: Keeping 'optional' in the label, and renaming the default value to 'Automatic'.
 \item \textbf{Explanatory text} \\
 Generally we have tried to avoid explanatory texts in the system as a whole, simply to reduce the noise level\cite{steve}. However, to further alleviate the confusion caused around item 10, we have put a text inside a box next to the relevant checkbox.
 \item \textbf{Active/Inactive} \\
@@ -402,7 +399,7 @@ These buttons should be self-explanatory, but important to note that 'Save' will
 \label{fig:courseplan2_editcourse}
 \end{figure}
 
-The screen on figure \ref{fig:courseplan2_editcourse} looks very much like the 'Add course' screen, but was made as a seperate tab to emphasize that an existing course was open. Additionally, it allows us to block input when a course is currently assigned in a full semester plan. As shown on the mockup, the course code is always locked to avoid problems with unique identifiers. In case the course code changes, a new course will have to be added.
+The screen on figure \ref{fig:courseplan2_editcourse} looks very much like the 'Add course' screen, but was made as a seperate tab to emphasize that an existing course was open. Additionally, it allows us to block input when a course is currently assigned in a full semester plan. As shown on the mockup, the course code is colored gray, indicating that it is not editable, as course codes are unique and should not be edited once created. In case the course code changes, a new course will have to be added.
 
 \subsubsection{Manage tracks}
 \begin{figure}[htb]
@@ -423,6 +420,8 @@ These two elements are the same as on previous screens, allowing the user to onl
 We decided to make a list with all the courses currently in the system and another list which can be filled with selections from it. This eliminates the need for searching and typing. Not visible in the mockup, is that the lists are sortable by column.
 \item \textbf{Track list} \\
 The course list from previous screens have been substituted for a similar list of tracks with the familiar 'edit' button.
+\item \textbf{Room preference}
+The room preference list can be used to add a constraint about which exact room the course should be assigned. This is relevant if a course requires e.g. an auditorium.
 \end{itemize}
 
 \subsubsection{Manage teachers}
@@ -448,8 +447,8 @@ Only thing worth making note of, is the removal of the 'Active' selection, and t
 \label{fig:courseplan2_clash}
 \end{figure}
 When the huge 'Auto-assign' button in the bottom of all the tabs is pressed and a full assignment is not possible, the clash resolution screen on figure \ref{fig:courseplan2_clash} will appear.
-A clash happens when one or more constraints are in the way of filling all courses in to rooms. The constraints can be from tracks, teachers or course specific entries.
-The system will try to asses how the problem can be solved by loosening up constraints, affecting the smallest number of courses at a time, and sort them in that order. In the cases where a solution cannot be suggested, the view will inform of that, and manual editing of constraints will be required. This is out of our scope, so the specific algorithm design will not be discussed further.
+A clash happens when one or more constraints are in the way of assigning rooms to all courses. The constraints can be from tracks, teachers or course specific entries.
+The system will try to asses how the problem can be solved by loosening up constraints, affecting the smallest number of courses at a time, and sort them in that order. In the cases where a solution cannot be suggested, the user will be informed. The changes have to be done manually by the user. This is out of our scope, so the specific algorithm design will not be discussed further.
 
 The example clash on the mockup suggests a problem was found on a thursday, and provides two example solutions. From our test and discussion with the study administration employee, we learned that what she really desired was a specific answer to ``what the problem was''. This is an expected reaction, but in reality a highly complex problem. The 'problem' is that an assignment was not possible. What exactly causes the problem, is not one singular thing, but a combination of \emph{everything} and our approach to simplifying it is therefore to suggest the solution that requires the least amount of changes.
 
@@ -469,9 +468,9 @@ Once a solution is selected, or an assignment have been made without clashes, th
 Figure \ref{fig:courseplan2_assign} shows the evolved version of the view discussed in section \ref{subsec:design_phase_sem}. The changes made can be summarized as:
 \begin{itemize}
 \item \textbf{Columns added} \\
-The columns 'Teacher' and 'Track' have been added, and all columns have been emphasized as sortable. In the cases where a course belongs to several tracks and/or teachers they will simply be duplicated when sorting by those two options, as it is the easiest way to provide the overviews required. In general, duplicate data is to be avoided, but in this specific case it provides some flexibility by allowing grouping of entries, no matter how the constraints are put.
+The columns 'Teacher' and 'Track' have been added, and all columns have been emphasized as sortable. In the cases where a course belongs to several tracks and/or teachers they will simply be duplicated when sorting by those two options, as it is the easiest way to provide the overviews required. In general, duplicated data is to be avoided, but in this specific case it provides some flexibility by allowing grouping of entries, no matter how the constraints are put.
 \item \textbf{Export} \\
-The option to export the plan can be valuable for data manipulation at later stages, and due to the format of our assignment will be a triviel implementation to common formats.
+The option to export the plan can be valuable for data manipulation at later stages. Because our data is presented in a table like format, it would be easy to convert the data to common file formats, e.g. XML og CSV.
 \item \textbf{Schedules} \\
 This button opens the schedule overview described in section \ref{subsec:design_phase_sem} and in the following section. An explanatory text have again been added, to assist the user in discovering the view on first visit. 
 \item \textbf{Clearing the plan} \\
@@ -479,6 +478,7 @@ Placed in the top right corner is the button to clear the plan. Naturally, warni
 \end{itemize}
 
 \subsubsection{Completed room assignment - Schedules}
+\label{subsub:schedules}
 \begin{figure}[htb]
 \begin{center}
 \leavevmode
@@ -491,7 +491,7 @@ Placed in the top right corner is the button to clear the plan. Naturally, warni
 The view on figure \ref{fig:courseplan2_assign_sche} was, as mentioned, added as direct result of our tests with the study administration representative. The different parts are:
 \begin{itemize}
 \item \textbf{Dropdown menus} \\
-The two dropdown menus control the area below. The 'Viewing track' lists all the active tracks in the plan, and the 'Week' lists the weeks of the year. A year selector has been omitted, as the week menu will simply contain weeks for eg. a year ahead and default to the current week.
+The two dropdown menus control the area below. The 'Viewing track' lists all the active tracks in the plan, and the 'Week' lists the weeks of the year. A year selector has been omitted, as the week menu will simply contain weeks for e.g. a year ahead and default to the current week.
 \item \textbf{Calendar} \\
 A small calendar have also been added in approximately the same position as in the day to day booking part of the system, which will update the week-dropdown to the selected week. Current date will be highlighted as shown on the mockup.
 \item \textbf{Schedule view} \\
