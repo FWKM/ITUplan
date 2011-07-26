@@ -76,14 +76,13 @@ We do not think this is an actual usability requirement, as it is merely concern
 	\item \textbf{Task efficiency}\\
 	Since the task of finding a room often will be done on the fly, on the way to school, or right before a meeting takes place, it is important that the application is responsive and gives the user a proper response to a booking query. It should give the user a good overview to support his decision, and suggest alternatives if his query cannot be met. In general, we have failed if the user finds it more effective to book a room the old fashioned way, by asking the Facility Management.
 	\item \textbf{Understandability}\\
-	Interviewing the Study Administration suggested that the staff responsible for doing the semester planning had a large need to double-check that the important tasks performed by the system were done correctly. \ref{app:interview}. In general, they had very little confidence in the system. Therefore, to avoid resistance towards change, it is important that the system communicates clearly with the user, during normal use, and expecially in error prone situations to avoid confusion.
+	Interviewing the Study Administration suggested that the staff responsible for doing the semester planning had a large need to double-check that the important tasks performed by the system were done correctly. \ref{app:interview}. In general, they had very little confidence in the system. Therefore, to avoid resistance towards change, it is important that the system clearly communicates it's functionality to the user, during normal use, and expecially in error prone situations to avoid confusion.
 	\item \textbf{Ease of learning}\\
-	The set of people using our system is large and will change rapidly. It is therefore important that the system can be used "out of the box". If not, people will simply not use it, as it takes to much of their already limited time to get familiar with. Also, there is a close relation between ease of learning, and the effectiveness of the support the system offers. If the user does not understand how to use the system, they will indeed not be able to benefit from the support layer.
+	The set of people using our system is large and will change rapidly. It is therefore important that the system can be used "out of the box". If not, people will simply not use it, as it takes to much of their already limited time to get familiar with. Also, there is a close relation between ease of learning, and the effectiveness of the support the system offers. If the user does not understand how to use the system, they will not be able to benefit from the support layer.
 	\item \textbf{Subjective satisfaction}\\
 	Some might argue that the subjective satisfaction is not very relevant in our case, because we're developing a tool for daily support and not a program that in any way should be amusing or entertaining. \\
 However experts believe that users are more willing to accept the program and trust its efficiency if they find it visually appealing\cite{nielsen_metrics}. Apple is a good example of using design and pleasing aesthetics as major selling points. The iPad used this to brand itself, thus creating a need that in reality was not present. %Source?
 \end{itemize}
-%%%% REMEMBER TO ADD PERFORMANCE REQUIREMENTS AND STUFF %%%%
 
 \subsection{Functional requirements}
 \label{subsec:functional_requirements}
@@ -95,24 +94,14 @@ The system must... \begin{enumerate}
 \item support the user in performing the tasks specified in section \ref{sec:tasks}
 \end{enumerate}
 
-In regard to the first item, all students and faculty at the ITU already have unique logins, and it would be natural to reuse those for our system. Also, it should not be possible for non-authorized users to use our system. Being a webbased system, it comes as no surprise that we wish the data to be stored persistantly so different computers at different times, without the loss of bookings or the like.
+In regard to the first item, all students and faculty at the ITU already have unique logins, and it would be natural to reuse those for our system. Also, it should not be possible for non-authorized users to use our system. Being a webbased system, it comes as no surprise that we wish the data to be stored persistantly so different computers at different times can be used, without the loss of bookings or the like.
 Naturally, the system has no use without actually fulfilling the tasks it has been designed to, hence the listing as a functional requirement.\\
 
 Note that we have few functional requirements compared to some systems. This stems from the fact that the system, from an end-user perspective, is pretty simple. Our vision is simply to enforce this perspective, and provide the \emph{expected} functionality, without hindrance of high complexity and feature creep. \cite{porter}
 
-\subsection{Quality Requirements}
-\label{subsec:quality_requirements}
-Based on the task list above, we can finally put forth the list of quality requirements we wish to meet in able to consider the level of usability acceptable.
-\begin{enumerate}\itemsep1pt
-\item Without instructions, 90\% of novice users must be able to complete T1.1 to T1.4 without variants.
-\item Without instructions, 80\% of novice users must be able to complete T1.1 to T1.4 including variants.
-\item With a maximum of 30 minutes instructions, 90\% of administration personel must be able to complete T2.1 to T2.5.
-\item Without instructions, 50\% administration personel must be able to complete T2.1 to T2.5.
-\end{enumerate}
-
 \section{Tasks}
 \label{sec:tasks}
-The following tasks are the actions able to be performed within our system. A full example task including subtasks can be found below, while the full list including subtasks covering all scenarios can be found in appendix \todo{ref til full task list}
+The following tasks are the actions able to be performed within our system.
 
 \begin{itemize}\itemsep1pt
 \item[\textbf{1.}] \textbf{Day-to-day booking}
@@ -128,6 +117,8 @@ The following tasks are the actions able to be performed within our system. A fu
 \item[\textbf{T2.4}] Edit track.
 \item[\textbf{T2.5}] Plan semester. A full solution may or may not be possible
 \end{itemize}
+
+A full example task including subtasks can be found below, while the full list including subtasks covering all scenarios can be found in appendix \ref{app:tasks}.
 
 \begin{tabular}{|p{6cm}|p{6cm}|}
 \hline 
@@ -149,9 +140,19 @@ The following tasks are the actions able to be performed within our system. A fu
 	3b. User declines & System cancels the booking \\ \hline
 \end{tabular}
 
+\subsection{Quality Requirements}
+\label{subsec:quality_requirements}
+Based on the task list above, we can finally put forth the list of quality requirements we wish to meet in able to consider the level of usability acceptable.
+\begin{enumerate}\itemsep1pt
+\item Without instructions, 90\% of novice users must be able to complete T1.1 to T1.4 without variants.
+\item Without instructions, 80\% of novice users must be able to complete T1.1 to T1.4 including variants.
+\item With a maximum of 30 minutes instructions, 90\% of administration personel must be able to complete T2.1 to T2.5.
+\item Without instructions, 50\% administration personel must be able to complete T2.1 to T2.5.
+\end{enumerate}
+
 \section{Domain specific challenges}
 \label{sec:domain_challenges}
-Throughout the project, we encountered some very domain specific challenges, that ultimately should be answered by ITU. They are nevertheless important to our application and will be highlighted in this section. We have discussed these issues with a member of the study administration, and our default choices are based on that, but it is something that ITU is an institution must decide on policies for.
+Throughout the project, we encountered some very domain specific challenges, that ultimately should be answered by ITU. They are nevertheless important to our application and will be highlighted in this section. We have discussed these issues with a member of the study administration, and our default choices are based on that, but it is something that ITU as an institution must decide on policies for.
 
 \subsection{Approval}
 \label{subsec:approval}
