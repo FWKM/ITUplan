@@ -6,27 +6,6 @@ I was expecting a `,' or a `}'---line 48 of file bib.bib
  :  ADDRESS = {Berkeley}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 67 of file bib.bib
- :  
- :  TITLE = {Lift Framework}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 73 of file bib.bib
- :  
- :  TITLE = {Simple Build Tool for Scala}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 79 of file bib.bib
- :  
- :  TITLE = {Scala Language}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 85 of file bib.bib
- :  
- :  TITLE = {Alert box March 19, 2000: Why You Only Need to Test with 5 Users}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--to sort, need author or key in nielsenfiveusers
 Warning--to sort, need author or key in jqueryui
 Warning--to sort, need author or key in jqueryui_date
-(There were 5 error messages)
+(There was 1 error message)

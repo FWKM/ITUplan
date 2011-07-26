@@ -1,8 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{nielsenfiveusers}
-
-
 \bibitem{jqueryui_date}
 Datapicker/calendar widget reference.
 \newblock \url{http://jqueryui.com/demos/datepicker/}.
@@ -29,6 +26,8 @@ Jesse~James Garrett.
 
 \bibitem{sbt}
 Mark Harrak.
+\newblock Simple build tool for scala.
+\newblock \url{https://github.com/harrah/xsbt/wiki}.
 
 \bibitem{steve}
 Steve Krug.
@@ -50,11 +49,20 @@ Jakob Nielsen.
 \newblock Alert box january 21, 2001: Usability metrics.
 \newblock \url{http://www.useit.com/alertbox/20010121.html}.
 
+\bibitem{nielsenfiveusers}
+Jakob Nielsen.
+\newblock Alert box march 19, 2000: Why you only need to test with 5 users.
+\newblock \url{http://www.useit.com/alertbox/20000319.html}.
+
 \bibitem{scala}
 Martin Odersky.
+\newblock Scala language.
+\newblock \url{http://www.scala-lang.org/}.
 
 \bibitem{lift}
 David Pollak.
+\newblock Lift framework.
+\newblock \url{http://liftweb.net/}.
 
 \bibitem{porter}
 Joshua Porter.
