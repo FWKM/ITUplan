@@ -216,6 +216,27 @@ If the user for some reason changes his mind and wants to cancel his booking, th
 It might seem strange that we first book the room, and then cancels it, instead of just booking the room when the user accepts it. However, by booking the room immediately, we avoid concurrency issues which could occur if user \textbf{Y} books the same room as user \textbf{X} is about to accept.
 
 \subsection{Simple Booking}
+The entry to simple booking interface is the map on the left hand side of the application. As mentioned in section \ref{sub:req_client}, the map should be clickable. The image of the map has been created from scratch in Photoshop. We used the map of the floors of ITU located in the elevators, to draw the rooms and their approximate size. The finished image was then sliced into 1 image for each floor. The images are simply put on top of each other in the HTML structure, and an attribute referencing the correct HTML map has been added:
+
+\begin{verbatim}
+	<img src="img/floor4.png" usemap="floor4map" />
+	<img src="img/floor3.png" usemap="floor3map" />
+	<img src="img/floor2.png" usemap="floor2map" />
+	<img src="img/floor1.png" usemap="floor1map" />
+	<img src="img/floor0.png" usemap="floor0map" />
+\end{verbatim}
+
+A map element contains x number of area elements, which represents a clickable area on the map. The following map represents the clickable areas of the first floor:
+
+\begin{verbatim}
+	<map name="floor1map">
+		<area shape="rect" coords="68,2,147,59" id="aud2" />
+		<area shape="rect" coords="68,149,173,207" id="aud1" />
+	</map>
+\end{verbatim}
+
+The coordinates had to be inserted manually, by using a digital ruler to measure the pixel values of the corners. A Javascript listener has been added to all area elements. When an area element is clicked, the Javascript function fetches the id attribute and uses this to redirect the user to a weekly overview of the correct room.
+
 The Simple Booking time selector function had to be implemented from scratch. We wanted to make a function that allowed the user to select a time range, on a specific day of the week. (See section \ref{sec:proposed_design_dtd} for screenshots of this functionality). \\
 We decided to only use Javascript for this, by including all relevant information in the HTML-tags, and only use Lift to call a function to book the room in the selected time span. Each day is divided into blocks from 7 in the morning to 21 in the evening. It is possible to select even and half hour blocks:
 
