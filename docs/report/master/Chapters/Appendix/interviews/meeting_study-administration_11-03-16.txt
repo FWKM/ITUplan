@@ -1,0 +1,36 @@
+Møde med Malene de Bruin fra studieadministrationen.
+
+Undervisnerne booker ikke selv lokaler til undervisning, men kan afgive ønsker til studieadministrationen, der står for planlægningen.
+
+System låst (så elever ikke kan booke) når der laves lokaleplanlægning. 
+
+Ingen begrænsninger på hvad elever må booke (undtagen måske auditorie 1 og 2), eller hvor mange rum de må booke af gangen, men alle bookinger skal godkendes.
+
+3 instanser: FM står for "event" planlægning. Skal koordineres med studieadministrationen. Studieadministrationen står for skemaplanlægning i tabulex. "John Arne" står for at overføre data fra tabulex til excel-ark, som giver et centralt overblik over lokaleallokering. Tabulex er decentraliseret; det ligger kun på én computer. John Arne står også for ad-hoc lokale-booking og eksamensplanlægning.
+
+Lige nu er der ikke særlig god lokaleudnyttelse: Mange små rum, der ikke er store nok til undervisning. Man burde kunne slå mange af dem sammen. (fysisk). PC rum står tit tomme. 
+
+Vigtigt at vide hvor mange der er plads til i et lokale, og hvad der er til rådighed. 
+
+Tabulex kan tage højde for hvornår undervisningen skal foregå osv. Virker til at fungere som et godt system til overblik over kursus-aktivitet, men det er ikke et lokaleplanlægningssytem.
+
+De største fordele ved et nyt system:
+	- Distribuerede booking. Fedt hvis alle kan benytte et centralt system.
+	- Sikkert system. Lige nu er der mange fejlkilder. Største (og værste) er dobbeltbookinger. Da de 3 instanser ikke	bruger samme system, er risikoen betydende.
+
+Ønsker:
+	- Mulighed for at ændre på lokale-opsætningen. "Nu er disse to (tilstødende lokaler) ét samlet, så der er plads til flere mennesker" -> bedre lokale-udnyttelse.
+	- Integration med kursusbasen.
+	Integration af alle 3 instanser. (Løser formentlig sig selv, evt. ved brugerroller).
+
+
+
+
+
+
+
+
+
+
+
+Hvad sker der hvis x booker lokale n klokken 14, mens y sidder og arbejde i det? Hvem har retten til lokalet?

@@ -1,0 +1,13 @@
+"Kan man sortere, kan man printe, kan det blive til en plan. Det ville være nice at kunne en masse ting herfra. Vi printer tit rum og til os selv, men også til andre. Sorterer næsten altid efter linie -> tracks. Sorterer til efter udbyder linie".
+
+"Også helt oplagt at sortere på lokale, så man kan se om der er huller". 
+
+
+
+
+
+- Der skal være mulighed for efterfølgende at ændre ting. Evt. få et "uge view", og kunne flytte lidt rundt som man har lyst til.
+- Malene ville gerne kunne se de forskellige clashes visuelt. "For mig er det noget med noget visuelt, så man kan se problemet". 
+- Understøttelse af at kurser ikke følger lige efter hinanden.
+- Man skal kunne godkende clashes. Dette skal vise en liste over kurser der bliver påvirket af dette.
+- Automatic i stedet for optional.
