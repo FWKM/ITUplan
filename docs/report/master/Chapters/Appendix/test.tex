@@ -61,6 +61,7 @@ Informs that room is available from 13.00 today \\
 Clicks calendar \\
 Informs that monday 9.00 is free \\
 \textbf{Result: Pass - no remarks}
+\end{enumerate}
 
 \subsubsection{Round 2}
 The following scenarios were presented to the test subjects:
@@ -124,7 +125,7 @@ Starts reading the interface \\
 Clicks room \\
 Cancel \\
 Gives up \\
-\textbf{Result: Task failure - Subject not able to complete assigned task (calendar + room click combo would have solved)
+\textbf{Result: Task failure - Subject not able to complete assigned task (calendar + room click combo would have solved)}
 \item Add-on skipped due to task failure
 \item Instantly starts checking top menu \\
 Clicks reservations \\
@@ -156,7 +157,7 @@ Presses 'instant booking' and accepts \\
 \textbf{Result: Pass - seems to have grasped how 'instant booking' works right from the get go}
 \item Clicks 'advanced' \\
 Fills in, and selects projector \\
-\textbf{Result: Pass - no remarks
+\textbf{Result: Pass - no remarks}
 \item Clicks assigned room on map \\
 Uses week overview to provide options \\
 \textbf{Result: Pass - test subject comments that the week overview is very nice}
@@ -209,244 +210,9 @@ suggests new date \\
 \subsection{Semester planning}
 
 \subsubsection{Round 1}
-\begin{verbatim}
-Round 1: Semester planning 
-
----------------------------------
-Purpose of test
----------------------------------
-The purpose of this test is to find out whether our UI fills the following criteria:
-
-1. Contains enough functionality to support the full task of assigning rooms to courses for a semester
-2. Is designed so that the target-user will be able to fulfill the task with little or no instructions
-
-
-More specifically, the points we need to address is:
-
-3. Is our attempt at 'clash resolution' satisfactory?
-4. Is the 'track management' efficient enough for the problem at hand?
-5. Will the target-user protest against the manual entering of courses etc, even though there is possibilty for re-use over the course of years?
-
-
----------------------------------
-Tasks to perform
----------------------------------
-The following tasks are what we need the user to perform:
-
----------- Initiation tasks ----------
-I1. Add a course
-I2. Add a course that cannot be moved by auto-assignment
-I3. Remove the restriction from the course added by T2/T1
-I4. De-active a course that is already created
-I5. Create a new track
-I6. Edit a track (add a course and remove another one eg.)
----------- Main tasks -----------
-M1. Plan a semester (no clash happens)
-M2. Plan a semester (clash happens)
- M2.1. Resolve the clash automatically
- M2.2. Resolve the clash manually
----------- Rare task -----------
-R1. Clear the room assignment to make next semester ready
-
-
-
----------------------------------
-Test course
----------------------------------
-I1
-I2
-I4
-I5
-I6
-M2
-M2.1
-M2.2
-I3
-M1
-R1
-
-
----------------------------------
-Lead-ins
----------------------------------
-I1 - Add a course
-
-We already added a few courses to the system, but forgot one. Please add BTES
-[ TEST ]|[ BTES ]
-[ Week 30 ]|[ Week 49 ]
-[ 4 hours ]|[  ]
-[ 42 ]|[  ]
-[  ]|[  ]
-
-Correct solution:
-- 'Add new course' tab
-- fill in
-- 'Save'
-
-
-I2 - Add a course that cannot be moved by auto-assignment
-
-Another course has been forgot, this one needs to be in AUD4 for some wierd reason
-[ AUD ]|[ BAUD ]
-[ Week 30 ]|[ Week 49 ]
-[ 4 hours ]|[  ]
-[ 42 ]|[  ]
-[ AUD4 ]|[ X ]
-
-Correct solution:
-- 'Add new course' tab
-- fill in
-- 'Save'
-
-
-I4 - De-active a course that is already created
-
-Oops, turns out that BTES didn't get enough students this semester and have been put on hold this semester. Lets not delete it, but make sure it daasn't get a room.
-
-Correct solution:
-- 'Edit course' tab
-- Click BTES
-- Click Edit
-- Check 'Inactive box'
-- 'Save'
-
-
-I5 - Create a new track
-
-BPRD and BSDB are on the same track, and should therefore not be planned at the same time. Lets add the track.
-
-Correct solution:
-- 'Manage tracks' tab
-- fill in name
-- Select courses using the arrows
-- 'Save'
-
-
-
-I6 - Edit a track (add a course and remove another one eg.)
-
-DMD has taken a new direction and now needs more programming. Thus, BPRD have been added to the first semester. Fix it!
-
-Correct solution:
-- 'Manage tracks' tab
-- Click 'DMD - sem 1' in the list
-- Click 'Edit
-- Select courses using the arrows
-- 'Save'
-
-
-M2 - Plan a semester (clash happens)
-Alright, we're all set. Lets assign the rooms!
-
-Correct solution:
-- Any tab
-- Click 'Auto-assign'
-- BAM CLASH
-
-Depending on initial reaction, go to either m2.1 or m2.2
-
-M2.1 - Resolve the clash automatically
-
-Fix it!
-
-Correct solution:
-- Accept one of the solutions
-
-M2.2 - Resolve the clash manually
-
-Fix it!
-
-Correct solution:
-- Switch tab to edit course
-- Edit shit until it works
-- try again
-
-
-
-I3 - Remove the restriction from the course added by I2/I1
-
-The course BAUD have lost it's privileges and can no longer claim AUD4
-
-Correct solution:
-- 'Edit course' tab
-- Click BAUD
-- Click Edit
-- Check 'required off' / Clear room box
-- 'Save'
-
-
-
-
-M1 - Plan a semester (no clash happens)
-
-We've fixed all the stuff that could clash, lets do it!
-
-Correct solution:
-- 'Auto-assign'
-- ???
-- Profit
-
-
-
-R1 - Clear the room assignment to make next semester ready
-
-This semester was a blast, lets try again.
-
-Correct solution:
-- 'Room assignment' tab
-- Click the danger button
-- accept the insane warning (possible text input)
-
-RESULTS OF USABILITY TEST
-
-USER	Malene de Bruin
-	Studieadministration
-
-	Malene is head of semester planning. At the start of each semester, she plans and coordinates the rooms for the various courses, using tabulex and a homemade spreadsheet.
-	She is thus the exact person that will be using the semester planning part of our application.
-
-
----------- Initiation tasks ----------
-I1. Add a course
-Skriver kursus, trykker paa start week. Vaelger 30. Er i tvivl om antal uger (?). Vaelger duration. "NÅÅÅÅH, gaar altid ned af og ikke hen af.
-"Starttidspunkt, ville jeg umiddelbart lade staa blankt. Ville det vaere tydeligt at systemet vaelger det for mig. Tror jeg ville vaelge klokken 8, uden at vide hvorfor!".
-"Weekdays, not selected. Der er ikke noget room-request. Ville proeve at klikke paa room required, da der er en checkbox". Forstaar meningen.
-
-
-I2. Add a course that cannot be moved by auto-assignment
-Skriver navnet og kode, vaelger det samme som foer. "Jeg er meget i tvivl om optional, og hvad der sker naar jeg ikke vaelger det". Vaelger required og gemmer.
-
-
-I3. Remove the restriction from the course added by T2/T1
-Trykker paa edit course. Vaelger kurset fra listen, trykker edit. Fjerner required - save.
-
-
-I4. De-active a course that is already created
-Trykker paa edit courses. "Ahhh, jeg skal fremkalde BTES". Vaelger i listen, og trykker edit. Vaelger inactive, save.
-
-
-I5. Create a new track
-Klikker paa manage track. Flytter dem til added, og skriver et navn. Trykker paa save.
-
-
-I6. Edit a track (add a course and remove another one eg.)
-Markerer track, trykker paa edit. Markere og flytter, save.
-
-
----------- Main tasks -----------
-M1. Plan a semester (no clash happens)
-
-
-M2. Plan a semester (clash happens)
-"Det jeg ikke kan se er hvad problemet er. Ellers ret god loesning at den foreslaar alternativer. Hvad saa hvis man ikke accepterer?. Jeg vil gerne selv goere det manuelt, men det kan jeg ikke. AHHHH, det er da klart". (Efter Bird har vist hende firkanten med tekst).
-
- M2.1. Resolve the clash automatically
- M2.2. Resolve the clash manually
-
----------- Rare task -----------
-R1. Clear the room assignment to make next semester ready
-"Ville have det daarligt med at slette alle kurserne een for een. Ville hellere goere dem inaktive; ville foeles bedre hvis de ligger der, og ikke bliver slettet".
-Finder clear plan efter Bird har uddybet. Finder knappen. "Det er meget rarere at knappen er der, clearer og ikke sletter".
-\end{verbatim}
+\begingroup
+\obeylines
+\input{tests.txt}
+\endgroup
 \subsubsection{Round 2}
 Round 2 followed immediately after round 1, as changes were made to mockups as we moved along by the person not evaluating the test, to conserve the test subjects time.
