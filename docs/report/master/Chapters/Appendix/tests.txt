@@ -20,19 +20,20 @@ More specifically, the points we need to address is:
 Tasks to perform
 ---------------------------------
 The following tasks are what we need the user to perform:
+The annotations in parenthesis after are the task from the comprehensive task list they refer to.
 
 ---------- Initiation tasks ----------
-I1. Add a course
-I2. Add a course that cannot be moved by auto-assignment
-I3. Remove the restriction from the course added by T2/T1
-I4. De-active a course that is already created
-I5. Create a new track
-I6. Edit a track (add a course and remove another one eg.)
+I1. Add a course (T2.1)
+I2. Add a course that cannot be moved by auto-assignment (T2.1)
+I3. Remove the restriction from the course added by I1/I2 (T2.3)
+I4. De-active a course that is already created (T2.3)
+I5. Create a new track (T2.2)
+I6. Edit a track (add a course and remove another one eg.) (T2.4)
 ---------- Main tasks -----------
-M1. Plan a semester (no clash happens)
-M2. Plan a semester (clash happens)
- M2.1. Resolve the clash automatically
- M2.2. Resolve the clash manually
+M1. Plan a semester (no clash happens) (T2.5)
+M2. Plan a semester (clash happens) (T2.5)
+ M2.1. Resolve the clash automatically (T2.5)
+ M2.2. Resolve the clash manually (T2.5)
 ---------- Rare task -----------
 R1. Clear the room assignment to make next semester ready
 
