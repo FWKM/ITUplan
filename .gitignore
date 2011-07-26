@@ -4,7 +4,6 @@ ituplan/lib_managed/
 ituplan/target/
 ituplan/project/boot/
 *.psd
-*.pdf
 *.blg
 *.bbl
 docs/report/master/bib.bib
