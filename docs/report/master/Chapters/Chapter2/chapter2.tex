@@ -86,7 +86,7 @@ However experts believe that users are more willing to accept the program and tr
 
 \subsection{Functional requirements}
 \label{subsec:functional_requirements}
-To establish a foundation for the requirements of our system, we have considered the functionality our system must contain. These functional requirements only contains high level goals, and not \emph{how} they must be met, as we will adjust the way they take place based on usability factors.
+To establish a foundation for the requirements of our system, we have considered the functionality our system must contain. These functional requirements only contains high level goals, and not \emph{how} they must be met, as we will adjust the way they take place based on an evaluation of usability factors, tests and the domain analysis.
 
 The system must... \begin{enumerate}
 \item distinguish users from each other
@@ -94,14 +94,14 @@ The system must... \begin{enumerate}
 \item support the user in performing the tasks specified in section \ref{sec:tasks}
 \end{enumerate}
 
-In regard to the first item, all students and faculty at the ITU already have unique logins, and it would be natural to reuse those for our system. Also, it should not be possible for non-authorized users to use our system. Being a webbased system, it comes as no surprise that we wish the data to be stored persistantly so different computers at different times can be used, without the loss of bookings or the like.
+In regard to the first item, all students and faculty at the ITU already have unique logins, and it would be natural to reuse those for our system. Also, it should not be possible for non-authorized users to use our system. Being a webbased system, we want the data to be stored persistantly and centrally, so different computers at different times can be used to retrieve the same data.
 Naturally, the system has no use without actually fulfilling the tasks it has been designed to, hence the listing as a functional requirement.\\
 
 Note that we have few functional requirements compared to some systems. This stems from the fact that the system, from an end-user perspective, is pretty simple. Our vision is simply to enforce this perspective, and provide the \emph{expected} functionality, without hindrance of high complexity and feature creep. \cite{porter}
 
 \section{Tasks}
 \label{sec:tasks}
-The following tasks are the actions able to be performed within our system.
+The following tasks are the actions one should be able to be perform within our system.
 
 \begin{itemize}\itemsep1pt
 \item[\textbf{1.}] \textbf{Day-to-day booking}
@@ -142,7 +142,7 @@ A full example task including subtasks can be found below, while the full list i
 
 \subsection{Quality Requirements}
 \label{subsec:quality_requirements}
-Based on the task list above, we can finally put forth the list of quality requirements we wish to meet in able to consider the level of usability acceptable.
+Based on the task list above is the quality requirements we wish to meet in able to consider the level of usability acceptable.
 \begin{enumerate}\itemsep1pt
 \item Without instructions, 90\% of novice users must be able to complete T1.1 to T1.4 without variants.
 \item Without instructions, 80\% of novice users must be able to complete T1.1 to T1.4 including variants.
@@ -166,12 +166,12 @@ To prevent abuse, such as a student booking the whole school for a month straigh
 \label{subsec:overriding_bookings}
 We mention  in section \ref{subsec:relations} that semester planning should take precedency over day to day booking, and that it might not always be the case in reality. This is a policy that ITU internally have to sort out, and we will have to adjust the application according to their final decision. By default, we will however allow day to day bookings to be overwritten, as it is our belief that a good room allocation is more important than a single meeting/appointment. \\
 \\
-Another concern regarding prioritizing bookings, are the cases of extending bookings. If a users wishes to extend a booking for a room they currently occupy, and another booking has been made already, it could be considered if the current occupant should be allowed to extend if a replacement room can be found automatically for the secondary booking. By default however, extending is only possible if the room is not booked.
+Another concern regarding prioritizing bookings, are the cases of extending bookings. If a users wishes to extend a booking for a room they currently occupy, and another booking for the same room has been made already, it could be considered if the current occupant should be allowed to extend if a replacement room can be found automatically for the secondary booking. By default however, extending is only possible if the room is not booked.
 
 \subsection{Occupation of rooms without booking}
 \label{subsec:occupation}
-If a user books a room that according to our system is available, but in reality is occupied, ownership of the room can become a point of argument. One would think that the day to day booking functionality is there to make it easier for people to book rooms, but still being an optional tool to use if you find it useful. \\
-This might not be possible in reality though, because of situations like the before mentioned. We therefore assume that rooms should be booked before you have the right to use them. This is a very important point, as this will force some people to use the program, ever though they dont want to. The program should thus be very easy and quick to use, so the users dont feel they waste time booking a room, when they could have just avoided it. 
+If a user books a room that according to our system is available, but in reality is occupied, ownership of the room can become a point of argument. One would think that the day to day booking functionality should be a convenient tool to use if you find it useful, but not required. \\
+This might not be possible in reality though, because of situations like the before mentioned. We therefore assume that rooms should be booked before you have the right to use them. This is a very important point, as this will force some people to use the program, ever though they do not want to. The program should thus be very easy and quick to use, so the users dont feel they waste time booking a room, when they could have just avoided it. 
 
 
 
